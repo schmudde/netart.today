@@ -5,6 +5,9 @@
 
 (def artworks (edn/read-string (slurp "resources/art.edn")))
 
+(defn get-image [art]
+  (str "resources/img/" (:image art)))
+
 (defn head-template []
   [:head
    [:title "net.art today"]
@@ -13,19 +16,19 @@
    [:link {:rel "icon" :href "/favicon.ico" :type "image/x-icon"}]
    #_[:link {:rel "stylesheet" :href "/css/fontawesome/all.min.css"}]
 
-   [:meta {:name "description" :content "TODO"}]
+   [:meta {:name "description" :content "The culture of a generation, lost to time."}]
    [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0, user-scalable=no"}]
    [:meta {:name "twitter:card" :content "summary_large_image"}]
    [:meta {:name "twitter:creator" :content "@dschmudde"}]
    [:meta {:property "og:url" :content "http://www.netart.today/"}]
    [:meta {:property "og:title" :content "net.art today"}]
    [:meta {:property "og:author" :content "David Schmudde"}]
-   [:meta {:property "og:image" :content "TODO"}]
-   [:meta {:property "og:description" :content "TODO"}]
+   [:meta {:property "og:image" :content (get-image (first artworks))}]
+   [:meta {:property "og:description" :content "The culture of a generation, lost to time."}]
    [:link {:rel "stylesheet" :href "resources/css/netart.css"}]])
 
 (defn art->hiccup [art]
-  (let [img-url (str "resources/img/" (:image art))]
+  (let [img-url (get-image art)]
     [:div
      [:img {:alt (:title art) :src img-url}]
      [:p (:title art)]]))
