@@ -1,5 +1,9 @@
 (ns core
-  (:require [hiccup.page :as page]))
+  (:require [hiccup.page :as page]
+            [clojure.edn :as edn]
+            [meta-csv.core :as csv]))
+
+(def artworks (edn/read-string (slurp "resources/art.edn")))
 
 (defn head-template []
   [:head
@@ -18,13 +22,19 @@
    [:meta {:property "og:author" :content "David Schmudde"}]
    [:meta {:property "og:image" :content "TODO"}]
    [:meta {:property "og:description" :content "TODO"}]
-   [:link {:rel "stylesheet" :href "/css/tachyons.min.css"}]
+   [:link {:rel "stylesheet" :href "resources/css/netart.css"}]])
 
-   ])
+(defn art->hiccup [art]
+  (let [img-url (str "resources/img/" (:image art))]
+    [:div
+     [:img {:alt (:title art) :src img-url}]
+     [:p (:title art)]]))
 
 (defn -main []
   (print (page/html5 {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
                (head-template)
                [:body
-                [:header [:h1 "net.art today"]]
-                [:img {:title "net.art" :src "resources/img/gallery9-walker-20201005155928-1922x1055.png"}]])))
+                [:header [:h1 "net.art today"]
+                 [:h2 "Revisiting net.art sites in 2020"]]
+                [:main
+                 (art->hiccup (first artworks))]])))
