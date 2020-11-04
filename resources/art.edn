@@ -1,14 +1,13 @@
 [{:title "Walker Arts Center: Gallery 9"
   :url "https://walkerart.org/gallery9"
-  :artist nil
-  :date "1996-"
+  :artist "Steve Dietz (director)"
+  :date "1997-2003"
   :retrieved "2020-10-5"
   :image "gallery9-walker-20201005155928-1922x1055.png"
   :link-from "Internet Retrograde: The Rise of Infomercials "
   :link-from-url "http://felix.openflows.com/html/airworld.html"
-  :desc "1996: New Media Initiatives Department is formed with Gallery 9, a web site for net art, launches with Piotr Szyhalski, 'Ding an sich (The Canon Series)' (1997), the first new-media commission."
-  :desc-source "https://en.wikipedia.org/wiki/Walker_Art_Center"
-  :current-archive nil
+  :desc "Gallery 9 is the Walker Art Center's online exhibition space. Gallery 9 presented the work of more than 100 artists and became one of the most recognized online venues for the exhibition and contextualization of Internet-based art."
+  :desc-source "http://gallery9.walkerart.org/"
   :notes nil}
 
  {:title "Nasty Nets"
@@ -21,7 +20,8 @@
   :link-from-url "http://classic.rhizome.org/portfolios/artwork/53981/)"
   :desc "Nasty Nets was a 'Surf Club' founded in August of 2006. 'Surf Club' is a term that has been used to describe collaborative artist-run blogs. Surf Clubs specifically served as an outlet for the cultural artifacts that their members excavated from the depths of the web."
   :desc-source "http://classic.rhizome.org/portfolios/artwork/53981/"
-  :current-archive "[Rhizome Artbase](http://archive.rhizome.org/artbase/53981/nastynets.com/)" }
+  :current-archive "Rhizome Artbase"
+  :current-archive-url "http://archive.rhizome.org/artbase/53981/nastynets.com/" }
 
  {:title "Transborder Immigrant Tool"
   :url "http://pactac.net/?ddownload=1761"
@@ -30,10 +30,11 @@
   :retrieved "2020-10-5"
   :image "tbt-20201005190715-1922x1055.png"
   :link-from "Rhizome Anthology"
-  :link-from-url ""
-  :desc "Project Catalog"
+  :link-from-url "https://anthology.rhizome.org/transborder-immigrant-tool"
+  :desc "The Transborder Immigrant Tool was a mobile phone application intended to guide individuals who were making their way to the United States through the deserts of the U.S./Mexico borderlands to water. The application delivered poetry to its users in an effort to assist in their emotional and mental well-being while offering information about survival during the dangerous journey."
   :desc-source "https://anthology.rhizome.org/transborder-immigrant-tool"
-  :current-archive "[Internet Archive](https://web.archive.org/web/20180412033102if_/http://pactac.net:80/?ddownload=1761)"}
+  :current-archive "Internet Archive"
+  :current-archive-url "https://web.archive.org/web/20180412033102if_/http://pactac.net:80/?ddownload=1761"}
 
  {:title "Who is Flora?"
   :url "http://www.whoisflora.net/"
@@ -45,7 +46,8 @@
   :link-from-url "https://rhizome.org/art/artbase/artwork/who-is-flora/"
   :desc "Inspired by an abandoned pile of postcards Who Is Flora is an interactive narrative that follows a woman traveling across America in the 1940s."
   :desc-source "https://rhizome.org/art/artbase/artwork/who-is-flora/"
-  :current-archive "[Who is Flora? on Conifer](https://conifer.rhizome.org/schmudde/who-is-flora)"
+  :current-archive "Who is Flora? on Conifer"
+  :current-archive-url "https://conifer.rhizome.org/schmudde/who-is-flora"
   :notes "audio does not work"}
 
  {:title "Telequitter"
@@ -58,7 +60,8 @@
   :link-from-url "https://web.archive.org/web/20120110020835/http://www.telequitter.com/"
   :desc "TeleQuitter: the next generation of telecommuting."
   :desc-source "https://web.archive.org/web/20120110020835/http://www.telequitter.com/"
-  :current-archive "[Internet Archive](https://web.archive.org/web/20120110020835/http://www.telequitter.com/)"
+  :current-archive "Internet Archive"
+  :current-archive-url "https://web.archive.org/web/20120110020835/http://www.telequitter.com/"
   :notes "artwork does not work on the Internet Archive"}
 
  {:title "Toy War"
@@ -71,7 +74,8 @@
   :link-from-url "http://history.etoy.com/stories/entries/49/index.html"
   :desc "The TOYWAR.com resistance game was launched to protect etoy from aggressive take-over attempts and to win the historic domain name battle between the etoy.CORPORATION (legendary internet art giant incorporated 1994) and eToys Inc. (one of the biggest e-commerce companies incorporated 1996)"
   :desc-source "https://web.archive.org/web/20000510102028/http://toywar.com/"
-  :current-archive "[Internet Archive](https://web.archive.org/web/20000510102028/http://toywar.com/)"
+  :current-archive "Internet Archive"
+  :current-archive-url "https://web.archive.org/web/20000510102028/http://toywar.com/"
   :notes "only the landing page works correctly"}
 
  {:title "1 + 1"
@@ -80,11 +84,10 @@
   :date "2001"
   :retrieved "2020-11-04"
   :image "1plus1-20201104115250-1922x1055.png"
-  :link-from-url "Digital Art Archive"
-  :link-from "https://www.digitalartarchive.at/database/general/work/1-1.html"
+  :link-from "Digital Art Archive"
+  :link-from-url "https://www.digitalartarchive.at/database/general/work/1-1.html"
   :desc "1 + 1 is an artwork for the internet. It is created as a growing exposition of reflections on the Tower of Babel, an allegory about the architectural origin of telecommunication technology."
   :desc-source "http://www.thing.net/%7Esawad/1+1/"
-  :current-archive ""
   :notes ""}
 
  {:title "Digital Landfill"
@@ -99,5 +102,4 @@
 Besides the unreadable texts in this computer-generated collage, familiar icons from the Net appear here and there. The Yahoo! Logo, the homapage of the CIA, press releases from Microsoft and playmates from Playboy’s Web site emerge from the digital chaos, looking as if they really were slowly rotting there on Napier’s server, decaying on some Internet-based compost-heap. […]
 One could call «Digital Landfill» a work of automated Pop Art. The multiple layers of pop culture icons and ‹found footage› from the Internet are reminiscent of Robert Rauschenberg’s silk screens, with at least one obvious yet important difference: with «Digital Landfill», it’s not a single artist who determines the theme and its arrangement. The work is far more the result of the contributions of all its ‹users’› who end up creating a sort of collective art work."
   :desc-source "Tilman Baumgärtel, [net.art] New Materials towards Net art, Nürnberg, 2001. (http://www.medienkunstnetz.de/works/digital-landfill/)"
-  :current-archive ""
   :notes ""}]
