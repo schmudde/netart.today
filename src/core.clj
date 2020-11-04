@@ -28,7 +28,10 @@
    [:meta {:property "og:author" :content "David Schmudde"}]
    [:meta {:property "og:image" :content (str "http://www." (:domain metadata) "/" (get-image-url resource-url (first artworks)))}]
    [:meta {:property "og:description" :content "The culture of a generation, lost to time."}]
-   [:link {:rel "stylesheet" :href (str resource-url "css/netart.css")}]])
+   [:link {:rel "stylesheet" :href (str resource-url "css/netart.css")}]]
+
+  ;; TODO: Add goat counter: https://www.goatcounter.com/
+  )
 
 (defn art->hiccup [resource-url art]
   (let [img-url (get-image-url resource-url art)]
