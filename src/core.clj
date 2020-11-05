@@ -1,7 +1,6 @@
 (ns core
   (:require [hiccup.page :as page]
-            [clojure.edn :as edn]
-            [meta-csv.core :as csv]))
+            [clojure.edn :as edn]))
 
 (def artworks (edn/read-string (slurp "resources/art.edn")))
 (def metadata {:domain "netart.today"})

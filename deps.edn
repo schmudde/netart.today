@@ -1,3 +1,4 @@
 {:deps {org.clojure/clojure {:mvn/version "1.10.1"}
         hiccup {:mvn/version "1.0.5"}
-        meta-csv {:mvn/version "0.1.0"}}}
+        meta-csv {:mvn/version "0.1.0"}
+        org.clojure/data.csv {:mvn/version "1.0.0"}}}
