@@ -11,12 +11,23 @@
 (def header [:header.pl2 [:h1 [:a.link.dim.navy {:href (str "http://" (:domain metadata))} "Gallery 404"]]
              [:h2 "The net.art Gallery"]])
 
+#_[:a {:rel "license" :href "http://creativecommons.org/licenses/by/4.0/"}
+ [:img {:alt "Creative Commons License" :style "border-width:0" :src "https://i.creativecommons.org/l/by/4.0/80x15.png"}]]
+
+(def footer [:footer.pv4.ph3.ph5-m.ph6-l.mid-gray
+             [:small.f6.db.tc "This work is licensed under a " [:a {:rel "license" :href "http://creativecommons.org/licenses/by/4.0/"} "Creative Commons Attribution 4.0 International License"]]
+             [:div.tc.mt3
+              [:div [:i {:class "fab fa-mastodon" }] [:i {:class "fas fa-envelope"}]
+               [:a.f6.dib.ph2.link.mid-gray.dim
+                {:href "https://mastodon.social/@schmudde"} "Mastodon"]]]])
+
 (defn head-template [resource-url]
   [:head
    [:title "net.art today"]
    [:meta {:charset "utf-8"}]
    [:meta {:http-equiv "Content-Type" :content "text/html"}]
    [:link {:rel "icon" :href "/favicon.ico" :type "image/x-icon"}]
+   [:link {:rel "stylesheet" :href (str resource-url "css/fontawesome/all.min.css")}]
 
    [:meta {:name "description" :content "The culture of a generation, lost to time."}]
    [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0, user-scalable=no"}]
@@ -27,7 +38,7 @@
    [:meta {:property "og:author" :content "David Schmudde"}]
    [:meta {:property "og:image" :content (str "http://www." (:domain metadata) "/" (get-image-url resource-url (first artworks)))}]
    [:meta {:property "og:description" :content "The culture of a generation, lost to time."}]
-   [:link {:rel "stylesheet" :href "https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"}]
+   [:link {:rel "stylesheet" :href (str resource-url "css/tachyons.min.css")}]
    [:link {:rel "stylesheet" :href (str resource-url "css/netart.css")}]]
 
   ;; TODO: Add goat counter: https://www.goatcounter.com/
@@ -37,12 +48,19 @@
   (let [img-url (get-image-url resource-url art)
         current-archive (:current-archive art)]
     [:div
-     [:img {:alt (:title art) :src img-url}]
+     [:h2.tc [:i (:title art)]
+      [:small.normal (str "&nbsp;(" (:date art)  ") " )]]
+     [:figure {:vocab "http://schema.org/" :typeof "ImageObject"}
+      [:img {:alt (:title art) :title resource-url :src img-url :property "contentUrl"}]
+      [:figcaption
+       [:small.fr
+        [:span {:property "license"}
+         [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"} "CC"]]
+        "&nbsp;"
+        [:a {:href (:url art)}  "retrieved " (:retrieved art)]]
+       [:i (:title art)] "&nbsp;"]
+      [:meta {:property "acquireLicensePage" :content "https://schmud.de/pages/about.html"}]]
      [:div
-      [:small.fr [:a {:href (:url art)}  "retrieved " (:retrieved art)]]
-      [:p [:i (:title art)]
-       (str "&nbsp;(" (:date art)  ") " )
-       ]
       [:p [:stong (:artist art) "&nbsp;"]]
       [:blockquote.athelas.ml0.mt0.pl4.black-90.bl.bw2.b--blue (:desc art)
        [:cite.f6.ttu.tracked.fs-normal " ~ " [:a {:href (:desc-source art)} " source"]]]
@@ -58,9 +76,10 @@
               (head-template "resources/")
               [:body
                header
-               [:main.pa3.pa5-ns
+               [:main.ph3.ph5-ns
                 [:p [:a {:href "pages/1.html"} "next &rarr;"]]
-                (art->hiccup "resources/" artwork)]]))
+                (art->hiccup "resources/" artwork)]
+               ]))
 
 (defn make-art-page [artwork filename next-artwork]
   (spit (str "pages/" filename)
@@ -68,11 +87,12 @@
                     (head-template "../resources/")
                     [:body
                      header
-                     [:main.pa3.pa5-ns
+                     [:main.ph3.ph5-ns
                       [:p (if next-artwork
                             [:a {:href next-artwork} "next &rarr;"]
                             [:a {:href "../index.html"} "home"])]
-                      (art->hiccup "../resources/" artwork)]])))
+                      (art->hiccup "../resources/" artwork)]
+                     #_footer])))
 
 (defn make-pages [artworks]
   (loop [artworks artworks
