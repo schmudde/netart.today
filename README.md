@@ -38,6 +38,10 @@ Here is the explanation of each data point:
     - **current-archive**: if the artwork has been moved or archived in a publicly available site, this is the name of the site.
     - **current-archive-url**: the url of the **current-archive** where the artwork is publicly available and running today.
 
+## External Dependencies
+
+Goat Counter
+
 ## Further Reading
 
 - Berry, David M. "[The Post-Archival Constellation: The Archive under the Technical Conditions of Computational Media](https://doi.org/10.2307/j.ctt1jd94f0.8)". *Memory In Motion*, 2017, 103-126. doi:10.2307/j.ctt1jd94f0.8.
@@ -46,3 +50,8 @@ Here is the explanation of each data point:
 - Collections
     - Grau, Oliver, Janina Hoth, and Eveline Wandl-Vogt. *Digital Art Through the Looking Glass: New Strategies For Archiving, Collecting and Preserving in Digital Humanities*. Austrian Academy of Sciences Press, 2019.
     - Baas, Jacquelynn. *Buddha Mind In Contemporary Art*. Berkeley, CA: University of California Press, 2004.
+
+## Resources
+
+- [History of Creative Coding](https://groups.google.com/g/history-of-creative-coding)
+- [Artists and Hackers Podcast](https://www.artistsandhackers.org/about.html)

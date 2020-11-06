@@ -79,6 +79,9 @@
                [:main.ph3.ph5-ns
                 [:p [:a {:href "pages/1.html"} "next &rarr;"]]
                 (art->hiccup "resources/" artwork)]
+               #_footer
+               [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
+                         :async true :src "//gc.zgo.at/count.js"} ]
                ]))
 
 (defn make-art-page [artwork filename next-artwork]
@@ -92,7 +95,10 @@
                             [:a {:href next-artwork} "next &rarr;"]
                             [:a {:href "../index.html"} "home"])]
                       (art->hiccup "../resources/" artwork)]
-                     #_footer])))
+                     #_footer
+                     [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
+                               :async true :src "//gc.zgo.at/count.js"}]
+                     ])))
 
 (defn make-pages [artworks]
   (loop [artworks artworks
