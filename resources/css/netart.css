@@ -2,6 +2,10 @@ body {
     background-color: #fdfefe;
 }
 
+figure {
+    margin: 0px;
+}
+
 img {
     width: 100%;
     height: 100%;
