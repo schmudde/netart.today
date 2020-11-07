@@ -53,5 +53,26 @@ Goat Counter
 
 ## Resources
 
+### Research Groups
+
 - [History of Creative Coding](https://groups.google.com/g/history-of-creative-coding)
 - [Artists and Hackers Podcast](https://www.artistsandhackers.org/about.html)
+
+### Digital Archives
+
+- Individual curation
+    - [Conifer](https://conifer.rhizome.org/) #host
+    - [The Recode Project](http://www.recodeproject.com/) #host, #link
+    - [Monoskop](https://monoskop.org/Monoskop) #host
+- Institutional curation
+    - [Rhizome](https://rhizome.org/) #host, #link
+    - [Digital Art Archive](https://www.digitalartarchive.at/nc/home.html) #link
+- Indiscriminate curation
+    - [Internet Archive](https://archive.org) #host
+
+Archives that feature the artwork often #link to the work rather than #host it. These links fall into four categories.
+
+1. There may be no link to the original work.
+2. There may be a link to the original work which is no longer hosted at the domain.
+3. There may be a link to the original work which is still hosted at the domain, but the artwork no longer works (e.g. [1+1](https://www.digitalartarchive.at/database/general/work/1-1.html) on the Digital Art Archive))
+4. There may be a valid link to the original work.
