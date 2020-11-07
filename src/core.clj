@@ -8,10 +8,9 @@
 (defn get-image-url [resource-url art]
   (str resource-url "img/" (:image art)))
 
-(defn header [nav]
+(def header
   [:header.ph5.pv2 [:h1 [:a.link.dim.navy {:href (str "http://" (:domain metadata))} "Gallery 404"]]
-   [:h2 "The net.art Gallery"]
-   [:p nav]])
+   [:h2 "The net.art Gallery"]])
 
 #_[:a {:rel "license" :href "http://creativecommons.org/licenses/by/4.0/"}
  [:img {:alt "Creative Commons License" :style "border-width:0" :src "https://i.creativecommons.org/l/by/4.0/80x15.png"}]]
@@ -81,7 +80,7 @@
                [:main
                 [:h1.f-headline.lh-solid "Gallery 404"]
                 [:h1.f-subheadline.lh-solid "The net.art Gallery"]
-                [:div.pa3 [:a.f4.no-underline.black.hover-blue.inline-flex {:href "pages/0.html"} "Enter &rarr;"]]]
+                [:div.pa3 [:a.f3.b.link.underline-hover.hover-blue.red {:href "pages/0.html"} "Enter &rarr;"]]]
                #_footer
                [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
                          :async true :src "//gc.zgo.at/count.js"} ]
@@ -90,13 +89,13 @@
 
 (defn make-art-page [artwork filename next-artwork]
   (let [nav (if next-artwork
-              [:a.f4.no-underline.black.hover-blue.inline-flex {:href next-artwork} "next &rarr;"]
-              [:a.f4.no-underline.black.hover-blue.inline-flex {:href "../index.html"} "home"])]
+              [:a.f3.b.link.underline-hover.hover-blue.red {:href next-artwork} "next &rarr;"]
+              [:a.f3.b.link.underline-hover.hover-blue.red {:href "../index.html"} "home"])]
     (spit (str "pages/" filename)
           (page/html5 {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
                       (head-template "../resources/")
                       [:body.sans-serif
-                       (header nil)
+                       header
                        [:main
                         [:div.pl5 nav]
                         (art->hiccup "../resources/" artwork)]
