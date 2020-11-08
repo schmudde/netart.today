@@ -393,13 +393,13 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :link-from "Digital Art Archive",
   :desc-source
   "https://www.digitalartarchive.at/database/general/work/recentevents.html",
-  :artist "Ed Burton ",
+  :artist "Ed Burton",
   :title "Recentevents",
   :notes "",
   :url
   "https://www.digitalartarchive.at/fileadmin/exhibition_html/recentevents.htm",
   :retrieved "2020-11-08",
-  :image "recent-events- 2020-11-08 18-13-51.png",
+  :image "recent-events-2020-11-08 18-13-51.png",
   :tech "applet",
   :link-from-url
   "https://www.digitalartarchive.at/database/general/work/recentevents.html"}
@@ -418,11 +418,11 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :tech "javascript",
   :link-from-url
   "https://www.digitalartarchive.at/database/general/work/re-reading-the-news.html"}
- {:desc "",
+ {:desc "View the generative process of an incestuous family-structure - depending on the Triangular structure between father, mother and child.",
   :date "2003",
   :link-from "Digital Art Archive",
   :desc-source
-  "https://www.digitalartarchive.at/database/general/work/pedigree.html",
+  "https://www.digitalartarchive.at/fileadmin/exhibition_html/krautgasser_code.html",
   :artist "Mandl/ Krautgasser",
   :title "Pedigree",
   :notes "",
