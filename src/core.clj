@@ -9,7 +9,7 @@
   (str resource-url "img/" (:image art)))
 
 (def header
-  [:header.ph5.pv2 [:h1 [:a.link.dim.navy {:href (str "http://" (:domain metadata))} "Gallery 404"]]
+  [:header.ph5-ns.ph3.pv2 [:h1 [:a.link.dim.navy {:href (str "http://" (:domain metadata))} "Gallery 404"]]
    [:h2 "The net.art Gallery"]])
 
 #_[:a {:rel "license" :href "http://creativecommons.org/licenses/by/4.0/"}
@@ -97,7 +97,7 @@
                       [:body.sans-serif
                        header
                        [:main
-                        [:div.pl5 nav]
+                        [:div.ph5-ns.ph3 nav]
                         (art->hiccup "../resources/" artwork)]
                        #_footer
                        [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"

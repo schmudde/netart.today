@@ -5,6 +5,8 @@
 
 (def artworks (edn/read-string (slurp "resources/art.edn")))
 
+
+
 (defn write-csv
   "Takes a file (path, name and extension) and
    csv-data (vector of vectors with all values) and
@@ -27,3 +29,20 @@
    writes csv file."
   [file maps]
   (->> maps maps->csv-data (write-csv file)))
+
+
+(defn csv-data->maps [csv-data]
+  (map zipmap
+       (->> (first csv-data) ;; First row is the header
+            (map keyword) ;; Drop if you want string keys instead
+            repeat)
+       (rest csv-data)))
+
+
+
+(comment
+
+  (spit "test.csv" (do (csv-data->maps (csv/read-csv (io/reader "resources/art.csv")))))
+
+  (csv/read-csv (io/reader "resources/art.csv"))
+  )

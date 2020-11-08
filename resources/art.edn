@@ -1,3 +1,5 @@
+
+
 [{:title "Walker Arts Center: Gallery 9"
   :url "https://walkerart.org/gallery9"
   :artist "Steve Dietz (director)"
@@ -102,4 +104,333 @@
 Besides the unreadable texts in this computer-generated collage, familiar icons from the Net appear here and there. The Yahoo! Logo, the homapage of the CIA, press releases from Microsoft and playmates from Playboy’s Web site emerge from the digital chaos, looking as if they really were slowly rotting there on Napier’s server, decaying on some Internet-based compost-heap. […]
 One could call «Digital Landfill» a work of automated Pop Art. The multiple layers of pop culture icons and ‹found footage› from the Internet are reminiscent of Robert Rauschenberg’s silk screens, with at least one obvious yet important difference: with «Digital Landfill», it’s not a single artist who determines the theme and its arrangement. The work is far more the result of the contributions of all its ‹users’› who end up creating a sort of collective art work."
   :desc-source "Tilman Baumgärtel, [net.art] New Materials towards Net art, Nürnberg, 2001. (http://www.medienkunstnetz.de/works/digital-landfill/)"
-  :notes ""}]
+  :notes ""}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+ {:desc
+  "ASCIIImage aims at creating an online tool to generate ASCII art from jpg images uploaded by its visitors. This net-art work discusses the intersections of words and images by implementing an algorithm that recognizes luminance of different areas of an image translating the resulting values to characters with different pixel densities, thus creating a textual representation of the original file.",
+  :date "2015",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/asciiimage.html",
+  :artist "Pedro Veneroso",
+  :title "asciiimage",
+  :notes "",
+  :url "http://lab.sumbioun.com/asciiimage",
+  :retrieved "2020-11-07",
+  :image "asciiimage-2020-11-08 10-42-08.png",
+  :tech "",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/asciiimage.html"}
+
+ {:desc
+  "crack it!' was the information and encouragement the computer magazine PC Online offered to readers in issue 10/2000, followed by precise instructions on how to take part in the boldly announced scheme: 'The CD supplied with this issue contains the brute force attack software you need to participate to crack the password.",
+  :date "2000",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/crack-it.html",
+  :artist "Knowbotic Research ",
+  :title "Crack it",
+  :notes "",
+  :url "http://www.krcf.org/krcfhome/cfa/",
+  :retrieved "2020-11-07",
+  :image "crack-it-2020-11-08 14-03-15.png",
+  :tech "",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/crack-it.html"}
+
+  {:desc
+  "The TeleGarden is an art installation that allows web users to view and interact with a remote garden filled with living plants. Members can plant, water, and monitor the progress of seedlings via the tender movements of an industrial robot arm. ``In linking their garden to the World Wide Web and creating an intuitive interface for the control of the arm and camera, the artists transformed what most would consider a fit of over-engineering into a subtle rumination on the nature of the Commons.'' -- Peter Lunenfeld, Flash Art , XXIX, 187, March 1996. ``The Telegarden creates a physical garden as an environment to stage social interaction and community in virtual space. The Telegarden is a metaphor for the care and feeding of the delicate social ecology of the net.'' -- Randall Packer, San Jose Museum of Art, April 1998. The Telegarden went online in June of 1995 and has been online continuously for seven years. It currently is located in the Ars Electonica Museum in Austria. Anyone can view the garden as a guest; the rights to plant and water are granted to those who agree to share their email addresses with other members of the cooperative. Activity is recorded in logs so that the cooperative can be self-governing.",
+  :date "1995",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/the-telegarden.html",
+  :artist "Ken Goldberg ",
+  :title "The Telegarden",
+  :notes "",
+  :url "http://queue.ieor.berkeley.edu/~goldberg/garden/Ars/",
+  :retrieved "2020-11-07",
+  :image "telegarden-2020-11-08 14-15-27.png",
+  :tech "",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/the-telegarden.html"}
+
+ {:desc
+  "Tweetopia are data-scrolls, documenting the passing of time, through minute changes in a fixed structure, using data from the evolving DiGi-FLiP project @jtwinedotcom on the micro-blogging site Twitter over the course of three years from 2013 to 2015. Tweetopia is available in three versions either lasting one hour, one minute, or one second.",
+  :date "2016",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/tweetopia.html",
+  :artist "Jürgen Trautwein",
+  :title "Tweetopia",
+  :notes "",
+  :url "http://www.jtwine.com/015tweetopia.htm",
+  :retrieved "2020-11-07",
+  :image "tweetopia-2020-11-08 14-19-52.png",
+  :tech "",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/tweetopia.html"}
+
+ {:desc
+  "UHD is an overdosing project, a critical reflection on the severely irritating advertisement bombardments of commercial pseudo-informative super flashy waste of time- and commercial social-networking and data-mining sites.",
+  :date "2015",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/ultrahyperdrone.html",
+  :artist "Jürgen Trautwein ",
+  :title "UltraHyperDrone",
+  :notes "",
+  :url "http://www.jtwine.com/014ultrahyperdrone.htm",
+  :retrieved "2020-11-07",
+  :image "ultrahyperdrove-2020-11-08 14-18-13.png",
+  :tech "flash",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/ultrahyperdrone.html"}
+ {:desc
+  "Cinema sem Volta aborda as ambivalências da rede como espaço onde confluem todas as multidões e as turbas, revelando os discursos mais extremos no espectro político contemporâneo.",
+  :date " 2014",
+  :link-from "Digital Art Archive",
+  :desc-source "http://www.desvirtual.com/multitude/sobre.html",
+  :artist "Giselle Beiguelman",
+  :title "Unlooping Film | Cinema sem Volta",
+  :notes
+  "website not working properly but some art work shown but website is broken",
+  :url "http://www.desvirtual.com/multitude/view/interact.php?language=en",
+  :retrieved "2020-11-07",
+  :image "cinema-sem-volta-2020-11-08 14-23-07.png",
+  :tech "",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/unlooping-film-cinema-sem-volta.html"}
+ {:desc
+  "Where are you from?_Stories, 2002-2009, is a net-art piece supported by a one-year research grant from the Canada Council for the Arts. The videos for the net-art piece were selected from approximately 200 15-minute videos captured in special events organized in 6 world cities. The 55 videos selected are hyperlinked to a vocabulary of keywords extracted from the videos in three languages (English, Spanish, French).",
+  :date "2002",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/where-are-you-from-stories.html",
+  :artist "Pat Badani",
+  :title "Where are you from?_Stories",
+  :notes
+  "website is broken but art work is showing when click the different buttons",
+  :url "http://www.hometransfer.org/where/stories.html",
+  :retrieved "2020-11-07",
+  :image "home-transfer-2020-11-08 14-31-36.png",
+  :tech "flash",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/where-are-you-from-stories.html"}
+ {:desc
+  "Wordotcomnodot is an essay on the condition of the word in the digital context. It presents an anthology of literature created for the Internet, a commented guide of websites on the creation and development of hypertext content, and a forum open to the public on the impact of electronic production on the printed culture.",
+  :date "2000",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/wordotcomnodot.html",
+  :artist "Giselle Beiguelman",
+  :title "Wordotcomnodot",
+  :notes
+  "website is broken but art work is showing when click the  different buttons",
+  :url "https://www.sescsp.org.br/sesc/hotsites/palavrapontocom/",
+  :retrieved "2020-11-07",
+  :image "wordotcomnodot-2020-11-08 14-32-47.png",
+  :tech "",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/wordotcomnodot.html"}
+ {:desc
+  "\"Kevin's program is a clear reminder about how mathematics is an essential foundation for computational design. It's an astonishing fact that drafting something as simple as a circle -- a favorite pastime, let us say, of any crayon-wielding three-year-old -- requires a reasonably solid foundation in high school trigonometry. Novice programmers would do well to study Kevin's code: his equations",
+  :date "2002",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/circler.html",
+  :artist "Kevin McCoy ",
+  :title "Circler",
+  :notes "",
+  :url "https://artport.whitney.org/commissions/codedoc/McCoy/code_woc.html",
+  :retrieved "2020-11-07",
+  :image "circler-2020-11-08 15-20-08.png",
+  :tech "applet",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/circler.html"}
+ {:desc
+  "Indeed, as Martin said, VERY competent programming, runs like a charm and is a pleasure to look at. I notice that Golan uses the \"official\" United Nations map projection, rather than a strict lat/lon projection. Don't you think it over-emphasizes Europe and Africa? I love the sense of humor (if you can call it humor) and the very \"professional\" code comments (\"...and a secret handshake. Ours is wicked cool.\"). I also very much appreciate the content-driven approach. Sometimes the axis \"description\" is a little forced and redundant, but often it is quite funny, and certainly points to the redundancy of political agendas in the first place. The funniest descriptions depend on the countries one chooses. This highlights a certain property common to many interactive and generative pieces, it really matters what the user does. This is not a bad thing, I think it is ultimately very much the point.",
+  :date " 2002",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/axis.html",
+  :artist "Golan Levin",
+  :title "Axis Applet",
+  :notes "",
+  :url "https://artport.whitney.org/commissions/codedoc/Levin/index.html",
+  :retrieved "2020-11-07",
+  :image "axis-2020-11-08 15-17-57.png",
+  :tech "applet",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/axis.html"}
+ {:desc
+  "I love how the code \"eats itself.\" The writing style is not as smooth as Golan's, for example -- in code, if not in drawing, I definitely favor the \"easy on the eyes,\" but in the case of this work, it seems the only way to get the job done is through brute force. It's a fascinating piece because as I write code, I always have an image in mind of how the routines are calling each other, passing control here and there and back again, and it's great to see an actual picture of this happening. Not surprisingly, it is as boggling an image in actuality as it often is in my head.\" ",
+  :date "2002",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/code-profiles.html",
+  :artist "Bradford W. Paley",
+  :title "Code Profiles",
+  :notes "",
+  :url "https://artport.whitney.org/commissions/codedoc/Paley/code.html",
+  :retrieved "2020-11-07",
+  :image "code-profiles-2020-11-08 15-23-14.png",
+  :tech "applet",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/code-profiles.html"}
+ {:desc
+  "The orderliness of Sawad's tapestry was a real surprise for me. I'd seen other collages of shredded news -- I'm thinking of Burroughs' mid-century experiments, and Napier's well-known piece -- and hadn't realized how malleable the news-substance could be, or how clearly it could reveal the artist's hand, until now.",
+  :date "2002",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/global-city.html",
+  :artist "Sawad Brooks",
+  :title "Global City",
+  :notes "",
+  :url
+  "https://artport.whitney.org/commissions/codedoc/Brooks/globalcity.html",
+  :retrieved "2020-11-07",
+  :image "global-city-2020-11-08 15-28-02.png",
+  :tech "perl",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/global-city.html"}
+ {:desc
+  "\"How does the Inconsistent work, practically?\"  6497641 acaatgttta atgcactttt aaagccacat gcgttgtttt",
+  :date "2005",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/how-does-the-inconsistence-work-practically.html",
+  :artist "Marcello Mercado",
+  :title "How does the Inconsistent work, practically?",
+  :notes "",
+  :url "http://www1.khm.de/~marcello/html/Net-Art/m3.htm",
+  :retrieved "2020-11-07",
+  :image "how-does-inconsistent-work-practically-2020-11-08 15-38-37.png",
+  :tech "",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/how-does-the-inconsistence-work-practically.html"}
+ {:desc
+  "HOME TRANSFER looks at the relationship between home, architecture and new technologies. The interactive and participatory ‘net-art’ work unfolds via a menu composed of three 'chapters': Guest, Host, and Parasite.",
+  :date "1999",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/home-transfer.html",
+  :artist "Pat Badani",
+  :title "Home Transfer",
+  :notes "",
+  :url "http://www.hometransfer.org/",
+  :retrieved "2020-11-07",
+  :image "home-transfer-2020-11-08 15-44-03.png",
+  :tech "",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/home-transfer.html"}
+ {:desc
+  "In the search for new forms of urbanity the influence of media technologies on the perception of and on the engagement with social constructed spaces becomes evident. ",
+  :date "1997",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/io-dencies-series-tokyosao-pauloruhrgebietvenice.html",
+  :artist "Knowbotic Research ",
+  :title "IO_dencies Series [Tokyo/Sao Paulo/Ruhrgebiet/Venice]",
+  :notes "",
+  :url "http://www.krcf.org/krcfhome/IODENS_SAOPAULO/1IOdencies.htm",
+  :retrieved "2020-11-07",
+  :image "io-dencies-2020-11-08 15-46-31.png",
+  :tech "",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/io-dencies-series-tokyosao-pauloruhrgebietvenice.html"}
+ {:desc
+  "\"I really love the hard edges and jarring animation of Scott's piece. It's also just plain funny, and weird, in a purely visual sense. I very much like how Scott's personality comes across in this work, as it does in all his work. Something I sometimes say, with gentle humor, when describing Scott's art: ",
+  :date "2002",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/tripolar.html",
+  :artist "Scott Sona Snibbe",
+  :title "Tripolar",
+  :notes "",
+  :url
+  "https://artport.whitney.org/commissions/codedoc/Snibbe/Tripolar_java_wc.html",
+  :retrieved "2020-11-08",
+  :image "tripolar-2020-11-08 16-52-50.png",
+  :tech "applet",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/tripolar.html"}
+ {:desc
+  "I was hoping someone would do ASCII art with the code and sure enough, Maciej did. His \"main\" is indeed only seven lines but in his \"library,\" where all the work gets done, the code becomes a form of concrete poetry. It also serves to make the code completely unreadable. Sheesh Maciej, you just won't give anything away for free!",
+  :date "2002",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/the-meaning-of-life-expressed-in-seven-lines-of-code.html",
+  :artist "Maciej Wisniewski",
+  :title "The Meaning of Life as Expressed in Seven Lines of Code",
+  :notes "",
+  :url
+  "https://artport.whitney.org/commissions/codedoc/Wisniewski/Couplet.html",
+  :retrieved "2020-11-08",
+  :image "life-support-2020-11-08 17-06-45.png",
+  :tech "applet",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/the-meaning-of-life-expressed-in-seven-lines-of-code.html"}
+ {:desc
+  "Mark merges the inherent chaos of a Double Pendulum with the noisy personality of an Euler integrator, to great effect. There are some nice patterns to be found in the code: iteration, simulation, a delicately hand-rolled Bresenham's line, alpha blending. I think the Javascript reload is forceful and a little risky: having been burned one too many times by browsers, I might have tried to find a way to clear the scene from within the applet code itself. It doesn't matter. The piece has good staying power. Run it overnight.\"",
+  :date "2002",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/3-dots.html",
+  :artist "Mark Napier",
+  :title "SpringyDots",
+  :notes "",
+  :url "http://artport.whitney.org/commissions/codedoc/Napier/code.html",
+  :retrieved "2020-11-08",
+  :image "springy-dots-2020-11-08 17-09-59.png",
+  :tech "applet",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/3-dots.html"}
+ {:desc
+  "\"recentevents\" consists of a flowing stream of letter tokens. As the tokens intermingle, they extend sticky tendrils to one another that form clots of letters, or words. Letters and clots that find many potential partners grow forked spidery bundles of tendrils as they compete to attract their prospective neighbours. As the process continues, the clots eventually coalesce to reveal three recent events siphoned from a BBC world service news feed.",
+  :date "2003",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/recentevents.html",
+  :artist "Ed Burton ",
+  :title "Recentevents",
+  :notes "",
+  :url
+  "https://www.digitalartarchive.at/fileadmin/exhibition_html/recentevents.htm",
+  :retrieved "2020-11-08",
+  :image "recent-events- 2020-11-08 18-13-51.png",
+  :tech "applet",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/recentevents.html"}
+ {:desc
+  "Re-reading the News (2002) downloads the front page of newspapers as essentially raw data, enabling users to reformat it to their own specifications. The raw data appears in one browser window, reformatting occurs in a second. \"",
+  :date "2002",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/re-reading-the-news.html",
+  :artist "Myron Turner",
+  :title "Re-reading the News",
+  :notes "",
+  :url "http://www.room535.org/news/reading.html",
+  :retrieved "2020-11-08",
+  :image "re-reading-2020-11-08 18-16-54.png",
+  :tech "javascript",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/re-reading-the-news.html"}
+ {:desc "",
+  :date "2003",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/pedigree.html",
+  :artist "Mandl/ Krautgasser",
+  :title "Pedigree",
+  :notes "",
+  :url
+  "https://www.digitalartarchive.at/fileadmin/exhibition_html/krautgasser_code.html",
+  :retrieved "2020-11-08",
+  :image "pedigree-2020-11-08 18-23-13.png",
+  :tech "applet",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/pedigree.html"}
+ ]
