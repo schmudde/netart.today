@@ -31,7 +31,9 @@
   (->> maps maps->csv-data (write-csv file)))
 
 
-(defn csv-data->maps [csv-data]
+(defn csv-data->maps
+  "Originally from https://github.com/clojure/data.csv"
+  [csv-data]
   (map zipmap
        (->> (first csv-data) ;; First row is the header
             (map keyword) ;; Drop if you want string keys instead
