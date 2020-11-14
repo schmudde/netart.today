@@ -19,7 +19,8 @@
 (def footer [:footer.pv4.ph3.ph5-m.ph6-l.mid-gray
              [:small.f6.db.tc "This work is licensed under a " [:a {:rel "license" :href "http://creativecommons.org/licenses/by/4.0/"} "Creative Commons Attribution 4.0 International License"]]
              [:div.tc.mt3
-              [:div [:i {:class "fab fa-mastodon" }] [:i {:class "fas fa-envelope"}]
+              [:div
+               [:i {:class "fab fa-mastodon" }] [:i {:class "fas fa-envelope"}]
                [:a.f6.dib.ph2.link.mid-gray.dim
                 {:href "https://mastodon.social/@schmudde"} "Mastodon"]]]])
 
@@ -54,7 +55,7 @@
        [:figcaption
         [:small.fr
          [:span {:property "license"}
-          [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"} "CC"]]
+          [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"} [:i {:class "fab fa-creative-commons"}]]]
          "&nbsp;"
          [:a {:href (:url art)}  "retrieved " (:retrieved art)]]
         [:i (:title art)] "&nbsp;"]
