@@ -82,7 +82,15 @@
                 [:h1.f-headline.lh-solid "Gallery 404"]
                 [:h1.f-subheadline.lh-solid "The net.art Gallery"]
                 [:div.pa3 [:a.f3.b.link.underline-hover.hover-blue.red {:href "pages/0.html"} "Enter &rarr;"]]
-                [:iframe {:src jodi :height 200 :width 300 :title "JODI"}]]
+                [:div.pa3.tj [:p.w-50 "The culture of a generation, lost to time."]
+                 [:img.ph2 {:src (str "resources/img/icons/netscape.png") :alt "netscape missing image icon" :class "icons"}]
+                 [:img.ph2 {:src (str "resources/img/icons/netscape-plugin.gif") :alt "netscape missing plugin icon" :class "icons"}]
+                 [:img.ph2 {:src (str "resources/img/icons/chrome.png") :alt "chrome can't find page icon" :class "icons"}]
+                 [:img.ph2 {:src (str "resources/img/icons/firefox.png") :alt "firefox can't find page icon" :class "icons"}]
+                 [:img.ph2 {:src (str "resources/img/icons/chrome-error-code.png") :alt "chrome crash icon" :class "icons"}]
+                 [:img.ph2 {:src (str "resources/img/icons/plugin-1.png") :alt "chrome missing plugin icon" :class "icons"}]]
+                [:div.h-100-ns.absolute-ns.top-0-ns.w-100 {:class "jodi"}
+                 [:iframe.h-100-ns.fr-ns {:src jodi :width 300 :title "JODI"}]]]
                #_footer
                [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
                          :async true :src "//gc.zgo.at/count.js"} ]
