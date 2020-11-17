@@ -10,7 +10,10 @@
   :link-from-url "http://felix.openflows.com/html/airworld.html"
   :desc "Gallery 9 is the Walker Art Center's online exhibition space. Gallery 9 presented the work of more than 100 artists and became one of the most recognized online venues for the exhibition and contextualization of Internet-based art."
   :desc-source "http://gallery9.walkerart.org/"
-  :notes nil}
+  :notes nil
+  :current-archive "Walker Art Center"
+  :current-archive-url "http://gallery9.walkerart.org/"
+  :current-archive-type :host}
 
  {:title "Nasty Nets"
   :url "http://nastynets.com/"
@@ -23,7 +26,24 @@
   :desc "Nasty Nets was a 'Surf Club' founded in August of 2006. 'Surf Club' is a term that has been used to describe collaborative artist-run blogs. Surf Clubs specifically served as an outlet for the cultural artifacts that their members excavated from the depths of the web."
   :desc-source "http://classic.rhizome.org/portfolios/artwork/53981/"
   :current-archive "Rhizome Artbase"
-  :current-archive-url "http://archive.rhizome.org/artbase/53981/nastynets.com/" }
+  :current-archive-url "http://archive.rhizome.org/artbase/53981/nastynets.com/"
+  :current-archive-type :host}
+
+ {:title "The Story of X"
+  :url "http://turbulence-org.eliterature.org/Works/_X/"
+  :artist "X, et al."
+  :date "9/1997"
+  :retrieved "2020-11-15"
+  :image "turbulence-2020-11-15 18-38-46.png"
+  :link-from "The beginning of the story."
+  :link-from-url "http://turbulence-org.eliterature.org/Works/_X/1b.html"
+  :desc "Again, I feel the limpness of my body as I feel myself slipping into a semi-conscious state. No! I can’t sleep! I remember one thing, that everytime I sleep I wake up in a different place, looking down into a different body, sometimes male and sometimes female. Always human. Always here, always now. Never knowing where or who or when, just waking and going with whatever is in front of me now."
+  :desc-source "http://turbulence.org/project/help-write-the-story-of-x-or-the-flys-birthday"
+  :notes "Archived version is not functional."
+  :tech nil
+  :current-archive "Turbulence"
+  :current-archive-url "http://turbulence.org/project/help-write-the-story-of-x-or-the-flys-birthday"
+  :current-archive-type :host}
 
  {:title "Transborder Immigrant Tool"
   :url "http://pactac.net/?ddownload=1761"
@@ -36,7 +56,8 @@
   :desc "The Transborder Immigrant Tool was a mobile phone application intended to guide individuals who were making their way to the United States through the deserts of the U.S./Mexico borderlands to water. The application delivered poetry to its users in an effort to assist in their emotional and mental well-being while offering information about survival during the dangerous journey."
   :desc-source "https://anthology.rhizome.org/transborder-immigrant-tool"
   :current-archive "Internet Archive"
-  :current-archive-url "https://web.archive.org/web/20180412033102if_/http://pactac.net:80/?ddownload=1761"}
+  :current-archive-url "https://web.archive.org/web/20180412033102if_/http://pactac.net:80/?ddownload=1761"
+  :current-archive-type :host}
 
  {:title "Who is Flora?"
   :url "http://www.whoisflora.net/"
@@ -50,6 +71,7 @@
   :desc-source "https://rhizome.org/art/artbase/artwork/who-is-flora/"
   :current-archive "Who is Flora? on Conifer"
   :current-archive-url "https://conifer.rhizome.org/schmudde/who-is-flora"
+  :current-archive-type :host
   :notes "audio does not work"}
 
  {:title "Telequitter"
@@ -64,7 +86,8 @@
   :desc-source "https://web.archive.org/web/20120110020835/http://www.telequitter.com/"
   :current-archive "Internet Archive"
   :current-archive-url "https://web.archive.org/web/20120110020835/http://www.telequitter.com/"
-  :notes "artwork does not work on the Internet Archive"}
+  :current-archive-type :host
+  :notes "Artwork does not work on the Internet Archive."}
 
  {:title "Toy War"
   :url "http://toywar.com/"
@@ -78,7 +101,8 @@
   :desc-source "https://web.archive.org/web/20000510102028/http://toywar.com/"
   :current-archive "Internet Archive"
   :current-archive-url "https://web.archive.org/web/20000510102028/http://toywar.com/"
-  :notes "only the landing page works correctly"}
+  :current-archive-type :host
+  :notes "Only the landing page works correctly."}
 
  {:title "1 + 1"
   :url "http://www.thing.net/%7Esawad/1+1/"
@@ -105,8 +129,6 @@ Besides the unreadable texts in this computer-generated collage, familiar icons 
 One could call «Digital Landfill» a work of automated Pop Art. The multiple layers of pop culture icons and ‹found footage› from the Internet are reminiscent of Robert Rauschenberg’s silk screens, with at least one obvious yet important difference: with «Digital Landfill», it’s not a single artist who determines the theme and its arrangement. The work is far more the result of the contributions of all its ‹users’› who end up creating a sort of collective art work."
   :desc-source "Tilman Baumgärtel, [net.art] New Materials towards Net art, Nürnberg, 2001. (http://www.medienkunstnetz.de/works/digital-landfill/)"
   :notes ""}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;
 
  {:desc
   "ASCIIImage aims at creating an online tool to generate ASCII art from jpg images uploaded by its visitors. This net-art work discusses the intersections of words and images by implementing an algorithm that recognizes luminance of different areas of an image translating the resulting values to characters with different pixel densities, thus creating a textual representation of the original file.",
@@ -327,7 +349,7 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   "https://www.digitalartarchive.at/database/general/work/home-transfer.html"}
 
 
- {:desc "Allowing users to contribute to a never-ending sentence, it anticipated today’s blog environments and ongoing posts. In early 2012 the Whitney Museum undertook a preservation effort spearheaded by Carol Mancusi-Ungaro, Associate Director of Conservation and Research and Christiane Paul, Adjunct Curator of New Media, in concert with Farris Wahbeh, Manager, Cataloguing and Documentation, and implemented by Ben Fino-Radin, digital conservator at Rhizome, and the Museum's Digital Media department. The result of the initiative are the two versions of the Sentence accessible here.",
+ {:desc "Launched 1994, Restored 2013. Allowing users to contribute to a never-ending sentence, it anticipated today’s blog environments and ongoing posts. In early 2012 the Whitney Museum undertook a preservation effort spearheaded by Carol Mancusi-Ungaro, Associate Director of Conservation and Research and Christiane Paul, Adjunct Curator of New Media, in concert with Farris Wahbeh, Manager, Cataloguing and Documentation, and implemented by Ben Fino-Radin, digital conservator at Rhizome, and the Museum's Digital Media department. The result of the initiative are the two versions of the Sentence accessible here.",
   :desc-source "https://whitney.org/artport/douglas-davis",
   :date "1994",
   :link-from "How to Join in Making the World's First Collaborative Sentence",

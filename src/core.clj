@@ -55,7 +55,7 @@
        [:figcaption
         [:small.fr
          [:span {:property "license"}
-          [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"} [:i {:class "fab fa-creative-commons"}]]]
+          [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"} [:i {:class "fab fa-creative-commons"}][:i {:class "fab fa-creative-commons-by"}]]]
          "&nbsp;"
          [:a {:href (:url art)}  "retrieved " (:retrieved art)]]
         [:i (:title art)] "&nbsp;"]

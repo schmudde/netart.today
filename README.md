@@ -64,9 +64,11 @@ Goat Counter
     - [Conifer](https://conifer.rhizome.org/) #host
     - [The Recode Project](http://www.recodeproject.com/) #host, #link
     - [Monoskop](https://monoskop.org/Monoskop) #host
+    - [archive.today](http://archive.today/) #host
 - Institutional curation
     - [Rhizome](https://rhizome.org/) #host, #link
     - [Digital Art Archive](https://www.digitalartarchive.at/nc/home.html) #link
+    - [Turbulence](http://turbulence.org/): Commissioning and supporting net, web, hybrid art since 1996 (on [GitHub](https://github.com/turbulence-org))
 - Indiscriminate curation
     - [Internet Archive](https://archive.org) #host
 
@@ -76,3 +78,7 @@ Archives that feature the artwork often #link to the work rather than #host it. 
 2. There may be a link to the original work which is no longer hosted at the domain.
 3. There may be a link to the original work which is still hosted at the domain, but the artwork no longer works (e.g. [1+1](https://www.digitalartarchive.at/database/general/work/1-1.html) on the Digital Art Archive))
 4. There may be a valid link to the original work.
+
+### Mainstream Reporting on Digital Art Preservation
+
+- "[When Artworks Crash: Restorers Face Digital Test](https://www.nytimes.com/2013/06/10/arts/design/whitney-saves-douglas-daviss-first-collaborative-sentence.html)", *New York Times* (2013)
