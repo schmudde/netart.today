@@ -1,10 +1,22 @@
 (ns core
-  (:require [hiccup.page :as page]
+  (:require [about :as about]
+            [hiccup.page :as page]
             [clojure.edn :as edn]))
 
 (def artworks (edn/read-string (slurp "resources/art.edn")))
 (def metadata {:domain "netart.today"})
 (def jodi "http://asdfg.jodi.org/-------------------------------/-------------------------------/-------------------------------/-------------------------------/-----------------------401qe663/vb663e.html")
+
+(defn dispatch-link
+  ([link]
+   (case link
+     :home [:a.f3.b.link.underline-hover.hover-blue.red {:href "../index.html"} "home"]
+     :first-artwork [:a.f3.b.link.underline-hover.hover-blue.red {:href "pages/0.html"} "Enter &rarr;"]
+     :about [:a.f3.b.link.underline-hover.hover-blue.red {:href "about.html"} "about"]))
+  ([link next-artwork]
+   [:a.f3.b.link.underline-hover.hover-blue.red {:href next-artwork} "next &rarr;"]))
+
+
 
 (defn get-image-url [resource-url art]
   (str resource-url "img/" (:image art)))
@@ -75,45 +87,65 @@
            [:a {:href (:current-archive-url art)} current-archive]])]]]
      ]))
 
+
 (defn make-index-page [artwork]
-  (page/html5 {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
-              (head-template "resources/")
-              [:body.sans-serif
-               [:main
-                [:h1.f-headline.lh-solid "Gallery 404"]
-                [:h1.f-subheadline.lh-solid "The net.art Gallery"]
-                [:div.pa3 [:a.f3.b.link.underline-hover.hover-blue.red {:href "pages/0.html"} "Enter &rarr;"]]
-                [:div.pa3.tj [:p.w-50 "The culture of a generation, lost to time."]
-                 [:img.ph2 {:src (str "resources/img/icons/netscape.png") :alt "netscape missing image icon" :class "icons"}]
-                 [:img.ph2 {:src (str "resources/img/icons/netscape-plugin.gif") :alt "netscape missing plugin icon" :class "icons"}]
-                 [:img.ph2 {:src (str "resources/img/icons/chrome.png") :alt "chrome can't find page icon" :class "icons"}]
-                 [:img.ph2 {:src (str "resources/img/icons/firefox.png") :alt "firefox can't find page icon" :class "icons"}]
-                 [:img.ph2 {:src (str "resources/img/icons/chrome-error-code.png") :alt "chrome crash icon" :class "icons"}]
-                 [:img.ph2 {:src (str "resources/img/icons/plugin-1.png") :alt "chrome missing plugin icon" :class "icons"}]]
-                [:div.h-100-ns.absolute-ns.top-0-ns.w-100 {:class "jodi"}
-                 [:iframe.h-100-ns.fr-ns {:src jodi :width 300 :title "JODI"}]]]
-               #_footer
-               [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
-                         :async true :src "//gc.zgo.at/count.js"} ]
-               ]))
+  (page/html5
+   {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
+   (head-template "resources/")
+   [:body.sans-serif
+    [:main
+     [:h1.f-headline.lh-solid "Gallery 404"]
+     [:h1.f-subheadline.lh-solid "The net.art Gallery"]
+     [:div.pa3 (dispatch-link :first-artwork)]
+     [:div.pa3.tj [:p.w-50 "The culture of a generation, lost to time."]
+      [:img.ph2 {:src (str "resources/img/icons/netscape.png") :alt "netscape missing image icon" :class "icons"}]
+      [:img.ph2 {:src (str "resources/img/icons/netscape-plugin.gif") :alt "netscape missing plugin icon" :class "icons"}]
+      [:img.ph2 {:src (str "resources/img/icons/chrome.png") :alt "chrome can't find page icon" :class "icons"}]
+      [:img.ph2 {:src (str "resources/img/icons/firefox.png") :alt "firefox can't find page icon" :class "icons"}]
+      [:img.ph2 {:src (str "resources/img/icons/chrome-error-code.png") :alt "chrome crash icon" :class "icons"}]
+      [:img.ph2 {:src (str "resources/img/icons/plugin-1.png") :alt "chrome missing plugin icon" :class "icons"}]]
+     [:div.h-100-ns.absolute-ns.top-0-ns.w-100 {:class "jodi"}
+      [:iframe.h-100-ns.fr-ns {:src jodi :width 300 :title "JODI"}]]]
+    #_footer
+    [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
+              :async true :src "//gc.zgo.at/count.js"} ]
+    ]))
+
+(defn make-about-page []
+  (page/html5
+   {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
+   (head-template "../resources/")
+   [:body.sans-serif
+    header
+    [:main.ph5-ns.ph3.pv2
+     [:nav
+      (dispatch-link :home) "&nbsp;&nbsp;"
+      (dispatch-link :next-artwork "0.html")]
+     (about/about-article "../resources/")]
+    #_footer
+    [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
+              :async true :src "//gc.zgo.at/count.js"} ]]))
 
 
 (defn make-art-page [artwork filename next-artwork]
   (let [nav (if next-artwork
-              [:a.f3.b.link.underline-hover.hover-blue.red {:href next-artwork} "next &rarr;"]
-              [:a.f3.b.link.underline-hover.hover-blue.red {:href "../index.html"} "home"])]
+              (dispatch-link :next-artwork next-artwork)
+              (dispatch-link :home))]
     (spit (str "pages/" filename)
-          (page/html5 {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
-                      (head-template "../resources/")
-                      [:body.sans-serif
-                       header
-                       [:main
-                        [:div.ph5-ns.ph3 nav]
-                        (art->hiccup "../resources/" artwork)]
-                       #_footer
-                       [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
-                                 :async true :src "//gc.zgo.at/count.js"}]
-                       ]))))
+          (page/html5
+           {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
+           (head-template "../resources/")
+           [:body.sans-serif
+            header
+            [:main
+             [:nav.ph5-ns.ph3
+              (dispatch-link :about)
+              "&nbsp;&nbsp;" nav]
+             (art->hiccup "../resources/" artwork)]
+            #_footer
+            [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
+                      :async true :src "//gc.zgo.at/count.js"}]
+            ]))))
 
 (defn make-pages [artworks]
   (loop [artworks artworks
@@ -124,12 +156,13 @@
           next-artwork (when (second coll) (str (second coll) ".html"))]
       (when-not (empty? artworks)
         (print "[" last-artwork " | " this-artwork " | " next-artwork "]")
-        (make-art-page (first artworks) this-artwork next-artwork)
+        (make-art-page (first artworks) this-artwork next-artwork )
         (recur (rest artworks) (rest coll) (inc cnt) this-artwork)))))
 
 (defn -main []
   (do
-    (spit "index.html" (make-index-page (first artworks))) ;; TODO: make landing page
+    (spit "index.html" (make-index-page (first artworks)))
+    (spit "pages/about.html" (make-about-page))
     (make-pages artworks)))
 
 (-main)

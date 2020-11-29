@@ -8,7 +8,7 @@ Digital artifacts are trivial to copy but very difficult to preserve. This galle
 
 ## To Run
 
-`clj -m core > index.html`
+`clj -m core`
 
 ## Submissions
 
@@ -69,6 +69,8 @@ Goat Counter
     - [Rhizome](https://rhizome.org/) #host, #link
     - [Digital Art Archive](https://www.digitalartarchive.at/nc/home.html) #link
     - [Turbulence](http://turbulence.org/): Commissioning and supporting net, web, hybrid art since 1996 (on [GitHub](https://github.com/turbulence-org))
+    - [Post-Digital Publishing Archive](http://p-dpa.net/)
+    - [V2_Lab for the Unstable Media Archive](https://v2.nl/archive/latest-added-works) #link
 - Indiscriminate curation
     - [Internet Archive](https://archive.org) #host
 
@@ -79,6 +81,12 @@ Archives that feature the artwork often #link to the work rather than #host it. 
 3. There may be a link to the original work which is still hosted at the domain, but the artwork no longer works (e.g. [1+1](https://www.digitalartarchive.at/database/general/work/1-1.html) on the Digital Art Archive))
 4. There may be a valid link to the original work.
 
+There are also interesting opportunities emerging on IPFS. For example, [The Hampster Dance](https://ipfs.io/ipfs/QmT85wMjWsywH6K6dQFZz7q93SYiVpDp5y8LEapp42kvHj/).
+
 ### Mainstream Reporting on Digital Art Preservation
 
 - "[When Artworks Crash: Restorers Face Digital Test](https://www.nytimes.com/2013/06/10/arts/design/whitney-saves-douglas-daviss-first-collaborative-sentence.html)", *New York Times* (2013)
+
+### Bookstore
+
+- [Cheap Truth](http://fanac.org/fanzines/Cheap_Truth/index.html?), the [blog](http://cheap-truth.blogspot.com/)
