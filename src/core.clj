@@ -59,7 +59,7 @@
 (defn art->hiccup [resource-url art]
   (let [img-url (get-image-url resource-url art)
         current-archive (:current-archive art)]
-    [:article.cf.ph3.ph5-ns.pv3
+    [:div.cf.ph3.ph5-ns.pv3
      ;; image
      [:div.fn.fl-ns.w-60-l.pr4-l
       [:figure {:vocab "http://schema.org/" :typeof "ImageObject"}
@@ -93,20 +93,25 @@
    {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
    (head-template "resources/")
    [:body.sans-serif
-    [:main
+    [:main.flex.flex-column.min-vh-100
      [:h1.f-headline.lh-solid "Gallery 404"]
      [:h1.f-subheadline.lh-solid "The net.art Gallery"]
-     [:div.pa3 (dispatch-link :first-artwork)]
-     [:div.pa3.tj [:p.w-50 "The culture of a generation, lost to time."]
-      [:img.ph2 {:src (str "resources/img/icons/netscape.png") :alt "netscape missing image icon" :class "icons"}]
-      [:img.ph2 {:src (str "resources/img/icons/netscape-plugin.gif") :alt "netscape missing plugin icon" :class "icons"}]
-      [:img.ph2 {:src (str "resources/img/icons/chrome.png") :alt "chrome can't find page icon" :class "icons"}]
-      [:img.ph2 {:src (str "resources/img/icons/firefox.png") :alt "firefox can't find page icon" :class "icons"}]
-      [:img.ph2 {:src (str "resources/img/icons/chrome-error-code.png") :alt "chrome crash icon" :class "icons"}]
-      [:img.ph2 {:src (str "resources/img/icons/plugin-1.png") :alt "chrome missing plugin icon" :class "icons"}]]
+     [:section.flex-auto
+      [:div.pa3 (dispatch-link :first-artwork)]
+      [:div.pa3.tj
+       [:p.w-50-ns "The culture of a generation, lost to time."]
+       [:p.w-50-ns [:a {:href "pages/about.html"} "About Gallery 404"] " and the preservation of digital artifacts."]
+       [:div
+        [:img.ph2 {:src (str "resources/img/icons/netscape.png") :alt "netscape missing image icon" :class "icons"}]
+        [:img.ph2 {:src (str "resources/img/icons/netscape-plugin.gif") :alt "netscape missing plugin icon" :class "icons"}]
+        [:img.ph2 {:src (str "resources/img/icons/chrome.png") :alt "chrome can't find page icon" :class "icons"}]
+        [:img.ph2 {:src (str "resources/img/icons/firefox.png") :alt "firefox can't find page icon" :class "icons"}]
+        [:img.ph2 {:src (str "resources/img/icons/chrome-error-code.png") :alt "chrome crash icon" :class "icons"}]
+        [:img.ph2 {:src (str "resources/img/icons/plugin-1.png") :alt "chrome missing plugin icon" :class "icons"}]]
+       [:div
+        [:p.w-50-ns "The net.art embedded on this page is " [:em "ASDFG.JODI.ORG"] " by JODI from 1998."]]]]
      [:div.h-100-ns.absolute-ns.top-0-ns.w-100 {:class "jodi"}
       [:iframe.h-100-ns.fr-ns {:src jodi :width 300 :title "JODI"}]]]
-    #_footer
     [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
               :async true :src "//gc.zgo.at/count.js"} ]
     ]))
@@ -121,7 +126,9 @@
      [:nav
       (dispatch-link :home) "&nbsp;&nbsp;"
       (dispatch-link :next-artwork "0.html")]
-     (about/about-article "../resources/")]
+     (about/about-article "../resources/")
+
+     ]
     #_footer
     [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
               :async true :src "//gc.zgo.at/count.js"} ]]))
@@ -136,13 +143,14 @@
            {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
            (head-template "../resources/")
            [:body.sans-serif
-            header
-            [:main
+            [:main.flex.flex-column.min-vh-100
+             header
              [:nav.ph5-ns.ph3
               (dispatch-link :about)
               "&nbsp;&nbsp;" nav]
-             (art->hiccup "../resources/" artwork)]
-            #_footer
+             [:section.flex-auto
+              (art->hiccup "../resources/" artwork)]
+             footer]
             [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
                       :async true :src "//gc.zgo.at/count.js"}]
             ]))))

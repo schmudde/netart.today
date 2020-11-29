@@ -10,9 +10,9 @@
     "About Gallery 404"]
    [:p "net.art is artwork that is made for the internet. It is handcrafted and the results "
     [:em "happen"] " in cyberspace, an ephemeral place between machines."]
-   [:figure {:class "fullwidth"}
-    [:img {:src (str root "img/netartdiagram.gif") :alt "Simple Net Art Diagram MTAA (1997)"}]
-    [:figcaption [:a {:href "http://www.mtaa.net/mtaaRR/off-line_art/snad.html"}
+   [:figure
+    [:img.db.center {:src (str root "img/netartdiagram.gif") :alt "Simple Net Art Diagram MTAA (1997)"}]
+    [:figcaption.tc [:a {:href "http://www.mtaa.net/mtaaRR/off-line_art/snad.html"}
                   [:em "Simple Net Art Diagram"]] " MTAA (1997) "
      [:small
       [:span {:property "license"}
@@ -82,9 +82,9 @@
       " webring"] ". Cultural artifacts are the best evidence of what kind of internet is not only possible, but just as plausible."]
     [:h1 {:id "about-the-curator"}
      "About the Curator"]
-    [:p "David Schmudde writes about information and technology in the public interest at"
+    [:p "David Schmudde writes about information and technology in the public interest at "
      [:a {:href "https://schmud.de/"}
-      " Beyond the Frame"] ". He worked as an artist in Chicago and New York City for over a decade. He has since moved to Europe to work on problems in open science, digital identity, and software preservation."]
+      "Beyond the Frame"] ". He worked as an artist in Chicago and New York City for over a decade. He has since moved to Europe to work on problems in open science, digital identity, and software preservation."]
 
    [:h1 "Footnotes"]
    [:ol
