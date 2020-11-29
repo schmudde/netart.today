@@ -16,8 +16,6 @@
   ([link next-artwork]
    [:a.f3.b.link.underline-hover.hover-blue.red {:href next-artwork} "next &rarr;"]))
 
-
-
 (defn get-image-url [resource-url art]
   (str resource-url "img/" (:image art)))
 
@@ -25,16 +23,24 @@
   [:header.ph5-ns.ph3.pv2 [:h1 [:a.link.dim.navy {:href (str "http://" (:domain metadata))} "Gallery 404"]]
    [:h2 "The net.art Gallery"]])
 
-#_[:a {:rel "license" :href "http://creativecommons.org/licenses/by/4.0/"}
- [:img {:alt "Creative Commons License" :style "border-width:0" :src "https://i.creativecommons.org/l/by/4.0/80x15.png"}]]
-
 (def footer [:footer.pv4.ph3.ph5-m.ph6-l.mid-gray
-             [:small.f6.db.tc "This work is licensed under a " [:a {:rel "license" :href "http://creativecommons.org/licenses/by/4.0/"} "Creative Commons Attribution 4.0 International License"]]
+             [:div.tc {:property "license"}
+              [:small
+               [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"}
+                [:i {:class "fab fa-creative-commons"}] "&nbsp;"
+                [:i {:class "fab fa-creative-commons-by"}]]
+               [:span " David Schmudde 2020"]]]
              [:div.tc.mt3
               [:div
-               [:i {:class "fab fa-mastodon" }] [:i {:class "fas fa-envelope"}]
-               [:a.f6.dib.ph2.link.mid-gray.dim
-                {:href "https://mastodon.social/@schmudde"} "Mastodon"]]]])
+               [:a.f5.dib.ph2.link.dim
+                {:href "https://twitter.com/dschmudde"}
+                [:i {:class "fab fa-twitter" }]]
+               [:a.f5.dib.ph2.link.dim
+                {:href "https://mastodon.social/@schmudde"}
+                [:i {:class "fab fa-mastodon"}]]
+               [:a.f5.dib.ph2.link.dim
+                {:href "mailto:d@schmud.de"}
+                [:i {:class "fas fa-envelope"}]]]]])
 
 (defn head-template [resource-url]
   [:head
@@ -67,7 +73,7 @@
        [:figcaption
         [:small.fr
          [:span {:property "license"}
-          [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"} [:i {:class "fab fa-creative-commons"}][:i {:class "fab fa-creative-commons-by"}]]]
+          [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"} [:i {:class "fab fa-creative-commons"}] "&nbsp;" [:i {:class "fab fa-creative-commons-by"}]]]
          "&nbsp;"
          [:a {:href (:url art)}  "retrieved " (:retrieved art)]]
         [:i (:title art)] "&nbsp;"]
@@ -95,12 +101,11 @@
    [:body.sans-serif
     [:main.flex.flex-column.min-vh-100
      [:h1.f-headline.lh-solid "Gallery 404"]
-     [:h1.f-subheadline.lh-solid "The net.art Gallery"]
+     [:h1.f-subheadline.lh-solid.mt0 "The net.art Gallery"]
      [:section.flex-auto
       [:div.pa3 (dispatch-link :first-artwork)]
       [:div.pa3.tj
        [:p.w-50-ns "The culture of a generation, lost to time."]
-       [:p.w-50-ns [:a {:href "pages/about.html"} "About Gallery 404"] " and the preservation of digital artifacts."]
        [:div
         [:img.ph2 {:src (str "resources/img/icons/netscape.png") :alt "netscape missing image icon" :class "icons"}]
         [:img.ph2 {:src (str "resources/img/icons/netscape-plugin.gif") :alt "netscape missing plugin icon" :class "icons"}]
@@ -108,8 +113,9 @@
         [:img.ph2 {:src (str "resources/img/icons/firefox.png") :alt "firefox can't find page icon" :class "icons"}]
         [:img.ph2 {:src (str "resources/img/icons/chrome-error-code.png") :alt "chrome crash icon" :class "icons"}]
         [:img.ph2 {:src (str "resources/img/icons/plugin-1.png") :alt "chrome missing plugin icon" :class "icons"}]]
-       [:div
-        [:p.w-50-ns "The net.art embedded on this page is " [:em "ASDFG.JODI.ORG"] " by JODI from 1998."]]]]
+       [:br]
+       [:p.w-50-ns [:a {:href "pages/about.html"} "About Gallery 404"] " and the preservation of digital artifacts."]
+       [:p.w-50-ns "The net.art embedded on this page is " [:em "ASDFG.JODI.ORG"] " by JODI from 1998."]]]
      [:div.h-100-ns.absolute-ns.top-0-ns.w-100 {:class "jodi"}
       [:iframe.h-100-ns.fr-ns {:src jodi :width 300 :title "JODI"}]]]
     [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
@@ -121,15 +127,14 @@
    {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
    (head-template "../resources/")
    [:body.sans-serif
-    header
-    [:main.ph5-ns.ph3.pv2
-     [:nav
+    [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
+     header
+     [:nav.ph5-ns.ph3
       (dispatch-link :home) "&nbsp;&nbsp;"
       (dispatch-link :next-artwork "0.html")]
-     (about/about-article "../resources/")
-
-     ]
-    #_footer
+     [:section.flex-auto.ph5-ns.ph3
+      (about/about-article "../resources/")]
+    footer]
     [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
               :async true :src "//gc.zgo.at/count.js"} ]]))
 

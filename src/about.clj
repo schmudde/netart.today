@@ -12,11 +12,11 @@
     [:em "happen"] " in cyberspace, an ephemeral place between machines."]
    [:figure
     [:img.db.center {:src (str root "img/netartdiagram.gif") :alt "Simple Net Art Diagram MTAA (1997)"}]
-    [:figcaption.tc [:a {:href "http://www.mtaa.net/mtaaRR/off-line_art/snad.html"}
+    [:figcaption.tc.f6 [:a {:href "http://www.mtaa.net/mtaaRR/off-line_art/snad.html"}
                   [:em "Simple Net Art Diagram"]] " MTAA (1997) "
      [:small
       [:span {:property "license"}
-       [:a.link {:href "https://creativecommons.org/licenses/by/2.5/" :rel "license"} [:i {:class "fab fa-creative-commons"}][:i {:class "fab fa-creative-commons-by"}]]]
+       [:a.link {:href "https://creativecommons.org/licenses/by/2.5/" :rel "license"} [:i {:class "fab fa-creative-commons"}] "&nbsp;" [:i {:class "fab fa-creative-commons-by"}]]]
       "&nbsp;"]]]
    [:p
     [:a {:href "http://www.netart.today/"}
@@ -48,7 +48,7 @@
      [:a {:href "https://en.wikipedia.org/wiki/Telematic_art"}
       "telematic art"] " that existed in the years prior."
      [:a {:href "#fn-4"} "[4]"]]
-    [:ul
+    [:ul.pl4-ns.pl2
      [:li "30 August 1969: the ARPANET, an early "
       [:strong "military computer network"] ", comes online in the United States. The network is used to coordinate information and share computing resources."]
      [:li "15 July 1980: Minitel, a popular "
@@ -87,7 +87,7 @@
       "Beyond the Frame"] ". He worked as an artist in Chicago and New York City for over a decade. He has since moved to Europe to work on problems in open science, digital identity, and software preservation."]
 
    [:h1 "Footnotes"]
-   [:ol
+   [:ol.pl4-ns.pl2
     [:li {:id "fn-1"}
        " The Whitney’s "
        [:a {:href "https://whitney.org/artport/douglas-davis"}

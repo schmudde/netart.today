@@ -16,5 +16,17 @@ img.icons {
 
 .jodi iframe {
     border: none;
-    width: 5%;
+    width: 100%;
 }
+
+@media screen and (min-width: 30em) {
+    .jodi iframe {
+        border: none;
+        width: 5%;
+    }
+}
+
+
+/* @custom-media --breakpoint-not-small screen and (min-width: 30em); */
+/* @custom-media --breakpoint-medium screen and (min-width: 30em) and (max-width: 60em); */
+/* @custom-media --breakpoint-large screen and (min-width: 60em); */
