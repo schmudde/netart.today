@@ -87,6 +87,13 @@ There are also interesting opportunities emerging on IPFS. For example, [The Ham
 
 - "[When Artworks Crash: Restorers Face Digital Test](https://www.nytimes.com/2013/06/10/arts/design/whitney-saves-douglas-daviss-first-collaborative-sentence.html)", *New York Times* (2013)
 
-### Bookstore
+# TODO
 
-- [Cheap Truth](http://fanac.org/fanzines/Cheap_Truth/index.html?), the [blog](http://cheap-truth.blogspot.com/)
+- Copy edit each artwork caption
+- Add [*This and that thought.*](http://turbulence.org/project/this-and-that-thought/) (requires Flash)
+- Add the gift shop and publications.
+    - [Douglas Davis:
+The World's First Collaborative Sentence](https://whitney.org/artport/douglas-davis)
+        - [How to Join in Making the World's First Collaborative Sentence](https://artport.whitney.org/collection/DouglasDavis/live/writesentence.html)
+        - [sentence](https://artport.whitney.org/collection/DouglasDavis/live/Sentence/sentence1.html)
+    - [The Art of Unix Programming](https://www.arp242.net/the-art-of-unix-programming/)
