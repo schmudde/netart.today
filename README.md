@@ -4,7 +4,9 @@ The net.art Gallery at [netart.today](http://www.netart.today/).
 
 ## About
 
-Digital artifacts are trivial to copy but very difficult to preserve. This gallery highlights over twenty years of misplaced and broken works of art. [Net.art](https://en.wikipedia.org/wiki/Net.art) embodies the work of a generation of internet pioneers and much of it has already been lost to time.
+Digital artifacts are trivial to copy but very difficult to preserve. This gallery highlights over twenty years of misplaced and broken works of art. [net.art](https://en.wikipedia.org/wiki/Net.art) embodies the work of a generation of internet pioneers and much of it has already been lost to time.
+
+Read more about the gallery, net.art, and the historical context at Gallery 404's [about page](http://www.netart.today/pages/about.html).
 
 ## To Run
 
@@ -12,9 +14,9 @@ Digital artifacts are trivial to copy but very difficult to preserve. This galle
 
 ## Submissions
 
-Pull requests are welcome! If you found a corner of the internet that was once dedicated to a work of net/digital/telematic art, please make a submission or eMail me. My contact information is [here](https://schmud.de/pages/about.html).
+Pull requests are welcome! If you find a place on the internet that holds net.art debris, please make a submission or eMail me. Formal submission requirements are below. If that's too intimidating, please simply eMail me. My contact information is [here](https://schmud.de/pages/about.html).
 
-To maintain the integrity of the gallery, the submission modest requirements are somewhat strict. Please attempt to fill out as many data points as possible. The format is available under `resources/art.edn` - also available as a [spreadsheet](https://airtable.com/shrhfvcQCI9R30J5F/tbl9PWDyk2nyBLy7R) if you think it is more readable.
+To maintain the integrity of the gallery, I do ask you to fill in as many requisite data points as possible. The format is available under `resources/art.edn` - also available as a [spreadsheet](https://airtable.com/shrhfvcQCI9R30J5F/tbl9PWDyk2nyBLy7R) if you think it is more readable.
 
 Here is the explanation of each data point:
 
@@ -65,6 +67,7 @@ Goat Counter
     - [The Recode Project](http://www.recodeproject.com/) #host, #link
     - [Monoskop](https://monoskop.org/Monoskop) #host
     - [archive.today](http://archive.today/) #host
+    - GitHub is a #host to many gems, such as runnable Csound versions of Richard Boulanger's “[Trapped in Convert](https://github.com/csound/csound/blob/develop/examples/trapped.csd)” (1979/1997), Joeseph T Kung's “[Xanadu](https://github.com/csound/csound/blob/develop/examples/xanadu.csd)” (1988), and Jean-Claude Risset's [orchestras and scores](https://github.com/csound/csound/blob/develop/examples/xanadu.csd) ported from Music V (1969-1982).
 - Institutional curation
     - [Rhizome](https://rhizome.org/) #host, #link
     - [Digital Art Archive](https://www.digitalartarchive.at/nc/home.html) #link
@@ -90,7 +93,6 @@ There are also interesting opportunities emerging on IPFS. For example, [The Ham
 # TODO
 
 - Copy edit each artwork caption
-- Add [*This and that thought.*](http://turbulence.org/project/this-and-that-thought/) (requires Flash)
 - Add the gift shop and publications.
     - [Douglas Davis:
 The World's First Collaborative Sentence](https://whitney.org/artport/douglas-davis)

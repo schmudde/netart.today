@@ -1,6 +1,50 @@
 
 
-[{:title "Walker Arts Center: Gallery 9"
+[
+ {:title "Toy War"
+  :url "http://toywar.com/"
+  :artist "etoy"
+  :date "1999-2000"
+  :retrieved "2020-10-13"
+  :image "toywar-20201013182351-1922x1055.png"
+  :link-from "eToy.com"
+  :link-from-url "http://history.etoy.com/stories/entries/49/index.html"
+  :desc "The TOYWAR.com resistance game was launched to protect etoy from aggressive take-over attempts and to win the historic domain name battle between the etoy.CORPORATION (legendary internet art giant incorporated 1994) and eToys Inc. (one of the biggest e-commerce companies incorporated 1996)"
+  :desc-source "https://web.archive.org/web/20000510102028/http://toywar.com/"
+  :current-archive "Internet Archive"
+  :current-archive-url "https://web.archive.org/web/20000510102028/http://toywar.com/"
+  :current-archive-type :host
+  :notes "Only the landing page works correctly."}
+
+ {:title "1 + 1"
+  :url "http://www.thing.net/%7Esawad/1+1/"
+  :artist "Sawad Brooks and Beth Stryker"
+  :date "2001"
+  :retrieved "2020-11-04"
+  :image "1plus1-20201104115250-1922x1055.png"
+  :link-from "Digital Art Archive"
+  :link-from-url "https://www.digitalartarchive.at/database/general/work/1-1.html"
+  :desc "1 + 1 is an artwork for the internet. It is created as a growing exposition of reflections on the Tower of Babel, an allegory about the architectural origin of telecommunication technology."
+  :desc-source "http://www.thing.net/%7Esawad/1+1/"
+  :notes ""}
+
+ {:title "This and that thought."
+  :url "http://turbulence-org.eliterature.org/Works/BFFA3AE/"
+  :artist "BFFA3AE"
+  :date "2011-02"
+  :retrieved "2020-12-06"
+  :image "this-that-thought-2020-12-06 22-12-39.png"
+  :link-from "Turbulence"
+  :link-from-url "http://turbulence.org/project/this-and-that-thought/"
+  :desc "One of their really striking pieces is This and that thought, a minimalist, interactive website which employs the soft-spoken speech recognition cyborg lady from the good old days of floppy discs and beige-toned bubble monitors. Her familiar voice speaks in a paradoxically stress-inducing monotone and rambles on about TV, office parties, and even her internal agony about picking out a color for her new car. &ldquo;The new iPods are out of stock,&rdquo; she laments, &ldquo;I want to kill myself.&rdquo; The piece as a whole is a clever comment on digital-age induced alienation, but one that goes beyond the typical rhetoric. Shallowness and banality are unfortunately inherent in the human experience. Yet underneath the monotonous diary-like ruminations of this bore-of-a-cyborg, there are flashes of &ldquo;true&rdquo; emotion. Loneliness reigns even for this normy as she cooes, &ldquo;this is the best part of my day because I know I won’t be bothered.&rdquo;"
+  :desc-source "http://turbulence.org/project/this-and-that-thought/"
+  :notes "Sound does not work on the archived version."
+  :current-archive "Turbulence"
+  :current-archive-url "http://turbulence.org/project/this-and-that-thought/"
+  :current-archive-type :host
+  :tech "flash"}
+
+ {:title "Walker Arts Center: Gallery 9"
   :url "https://walkerart.org/gallery9"
   :artist "Steve Dietz (director)"
   :date "1997-2003"
@@ -88,33 +132,6 @@
   :current-archive-url "https://web.archive.org/web/20120110020835/http://www.telequitter.com/"
   :current-archive-type :host
   :notes "Artwork does not work on the Internet Archive."}
-
- {:title "Toy War"
-  :url "http://toywar.com/"
-  :artist "etoy"
-  :date "1999-2000"
-  :retrieved "2020-10-13"
-  :image "toywar-20201013182351-1922x1055.png"
-  :link-from "eToy.com"
-  :link-from-url "http://history.etoy.com/stories/entries/49/index.html"
-  :desc "The TOYWAR.com resistance game was launched to protect etoy from aggressive take-over attempts and to win the historic domain name battle between the etoy.CORPORATION (legendary internet art giant incorporated 1994) and eToys Inc. (one of the biggest e-commerce companies incorporated 1996)"
-  :desc-source "https://web.archive.org/web/20000510102028/http://toywar.com/"
-  :current-archive "Internet Archive"
-  :current-archive-url "https://web.archive.org/web/20000510102028/http://toywar.com/"
-  :current-archive-type :host
-  :notes "Only the landing page works correctly."}
-
- {:title "1 + 1"
-  :url "http://www.thing.net/%7Esawad/1+1/"
-  :artist "Sawad Brooks and Beth Stryker"
-  :date "2001"
-  :retrieved "2020-11-04"
-  :image "1plus1-20201104115250-1922x1055.png"
-  :link-from "Digital Art Archive"
-  :link-from-url "https://www.digitalartarchive.at/database/general/work/1-1.html"
-  :desc "1 + 1 is an artwork for the internet. It is created as a growing exposition of reflections on the Tower of Babel, an allegory about the architectural origin of telecommunication technology."
-  :desc-source "http://www.thing.net/%7Esawad/1+1/"
-  :notes ""}
 
  {:title "Digital Landfill"
   :url "http://www.potatoland.org/landfill/"
@@ -364,12 +381,10 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :image "longest-sentence-2020-11-14 21-56-43.png",
   :tech "cgi"}
 
- {:desc
-  "In the search for new forms of urbanity the influence of media technologies on the perception of and on the engagement with social constructed spaces becomes evident. ",
+ {:desc "In the search for new forms of urbanity the influence of media technologies on the perception of and on the engagement with social constructed spaces becomes evident. ",
   :date "1997",
   :link-from "Digital Art Archive",
-  :desc-source
-  "https://www.digitalartarchive.at/database/general/work/io-dencies-series-tokyosao-pauloruhrgebietvenice.html",
+  :desc-source "https://www.digitalartarchive.at/database/general/work/io-dencies-series-tokyosao-pauloruhrgebietvenice.html",
   :artist "Knowbotic Research ",
   :title "IO_dencies Series [Tokyo/Sao Paulo/Ruhrgebiet/Venice]",
   :notes "",
@@ -377,8 +392,8 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :retrieved "2020-11-07",
   :image "io-dencies-2020-11-08 15-46-31.png",
   :tech "",
-  :link-from-url
-  "https://www.digitalartarchive.at/database/general/work/io-dencies-series-tokyosao-pauloruhrgebietvenice.html"}
+  :link-from-url "https://www.digitalartarchive.at/database/general/work/io-dencies-series-tokyosao-pauloruhrgebietvenice.html"}
+
  {:desc
   "\"I really love the hard edges and jarring animation of Scott's piece. It's also just plain funny, and weird, in a purely visual sense. I very much like how Scott's personality comes across in this work, as it does in all his work. Something I sometimes say, with gentle humor, when describing Scott's art: ",
   :date "2002",
