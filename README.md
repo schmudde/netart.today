@@ -93,9 +93,12 @@ There are also interesting opportunities emerging on IPFS. For example, [The Ham
 # TODO
 
 - Copy edit each artwork caption
+- Add the [net.art generator](http://artwarez.org/projects/nagBOOK/).
+- Add footer link to home and index (utility links), add index, and add exhibit numbers for each artwork (e.g. 3/31, 4/31, etc...)
 - Add the gift shop and publications.
     - [Douglas Davis:
 The World's First Collaborative Sentence](https://whitney.org/artport/douglas-davis)
         - [How to Join in Making the World's First Collaborative Sentence](https://artport.whitney.org/collection/DouglasDavis/live/writesentence.html)
         - [sentence](https://artport.whitney.org/collection/DouglasDavis/live/Sentence/sentence1.html)
     - [The Art of Unix Programming](https://www.arp242.net/the-art-of-unix-programming/)
+- Automate gallery announcements (i.e. Today marks a new addition to Gallery 404's illustrious collection of broken net art. "This and that thought." by BFFA3AE via @turbulenceorg. http://www.netart.today/)
