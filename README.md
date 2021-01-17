@@ -90,6 +90,11 @@ There are also interesting opportunities emerging on IPFS. For example, [The Ham
 
 - "[When Artworks Crash: Restorers Face Digital Test](https://www.nytimes.com/2013/06/10/arts/design/whitney-saves-douglas-daviss-first-collaborative-sentence.html)", *New York Times* (2013)
 
+# Keywords
+
+- Keywords: fine art, internet history, net art, art preservation, telematic art
+- [Long tail keywords](https://keywordtool.io/): net art anthology, what is net art, what is net art, when did net.art begin, net artist, net art definition, net art examples, net art artists, net art exhibition
+
 # TODO
 
 - Copy edit each artwork caption
