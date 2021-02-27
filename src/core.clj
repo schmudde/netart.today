@@ -138,7 +138,6 @@
     [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
               :async true :src "//gc.zgo.at/count.js"} ]]))
 
-
 (defn make-art-page [artwork filename next-artwork]
   (let [nav (if next-artwork
               (dispatch-link :next-artwork next-artwork)

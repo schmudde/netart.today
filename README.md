@@ -84,7 +84,7 @@ Archives that feature the artwork often #link to the work rather than #host it. 
 3. There may be a link to the original work which is still hosted at the domain, but the artwork no longer works (e.g. [1+1](https://www.digitalartarchive.at/database/general/work/1-1.html) on the Digital Art Archive))
 4. There may be a valid link to the original work.
 
-There are also interesting opportunities emerging on IPFS. For example, [The Hampster Dance](https://ipfs.io/ipfs/QmT85wMjWsywH6K6dQFZz7q93SYiVpDp5y8LEapp42kvHj/).
+There are also interesting opportunities emerging on IPFS. For example, [The Hampster Dance](https://ipfs.io/ipfs/QmT85wMjWsywH6K6dQFZz7q93SYiVpDp5y8LEapp42kvHj/). Monoskop also hosts [a list of archives](https://monoskop.org/Net_art).
 
 ### Mainstream Reporting on Digital Art Preservation
 

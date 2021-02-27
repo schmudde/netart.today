@@ -1,6 +1,21 @@
 
 
 [
+ {:title "Improved Tele-vision"
+  :url "http://artwarez.org/projects/improvedTV/"
+  :artist "Cornelia Sollfrank"
+  :date "2001/2011"
+  :retrieved "2020-02-27"
+  :image "improved-tele-vision-2021-02-27.png"
+  :link-from "monoskop.org"
+  :link-from-url "https://monoskop.org/Cornelia_Sollfrank"
+  :desc "A web-based conceptual music project &ldquo;In &lsquo;Improved Tele-vision&rsquo; [Cornelia Sollfrank] immodestly inscribed herself in the genealogy of avant-garde artists such as Arnold Schönberg, Nam June Paik and Dieter Roth.&rdquo;"
+  :desc-source "https://monoskop.org/Cornelia_Sollfrank"
+  :current-archive nil
+  :current-archive-url nil
+  :current-archive-type :host
+  :notes "Only the landing page works correctly."
+  :tech "flash"}
  {:title "Toy War"
   :url "http://toywar.com/"
   :artist "etoy"
