@@ -52,6 +52,7 @@
 
    [:meta {:name "description" :content "The culture of a generation, lost to time."}]
    [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0, user-scalable=no"}]
+   [:meta {:name "keywords" :content "netart rhizome Monoskop"}]
    [:meta {:name "twitter:card" :content "summary_large_image"}]
    [:meta {:name "twitter:creator" :content "@dschmudde"}]
    [:meta {:property "og:url" :content (str "http://" (:domain metadata))}]

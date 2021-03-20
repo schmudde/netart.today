@@ -1,6 +1,22 @@
 
 
 [
+ {:title "NewHive"
+  :url "https://newhive.com/"
+  :artist "Artist Platform"
+  :date "2014-02-18" ; public launch
+  :retrieved "2020-03-20"
+  :image "newhive-2021-03-20 23-21-44.png"
+  :link-from "Annie Howard in Compost Magazine"
+  :link-from-url "https://one.compost.digital/repairing-the-broken-links/"
+  :desc "Today NewHive’s homepage teases the imminent return of an archive of all previously created work. It’s a promise that’s been unfulfilled for over a year. On the web, nothing is ever certain to remain. Step away, and you’re likely to find dead links and inaccessible archives when you return."
+  :desc-source "https://one.compost.digital/repairing-the-broken-links/"
+  :current-archive nil
+  :current-archive-url nil
+  :current-archive-type nil
+  :notes nil
+  :tech "Python, MongoDB, JavaScript, AWS" ; https://www.maketecheasier.com/newhive-social-place-for-expression/
+  }
  {:title "Improved Tele-vision"
   :url "http://artwarez.org/projects/improvedTV/"
   :artist "Cornelia Sollfrank"
@@ -13,7 +29,7 @@
   :desc-source "https://monoskop.org/Cornelia_Sollfrank"
   :current-archive nil
   :current-archive-url nil
-  :current-archive-type :host
+  :current-archive-type nil
   :notes "Only the landing page works correctly."
   :tech "flash"}
  {:title "Toy War"
