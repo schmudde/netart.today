@@ -22,7 +22,7 @@
     [:a {:href "http://www.netart.today/"}
       "Gallery 404"] " collects and displays hyperlinks to prominent net.art artworks on the world wide web. These links point to a place where net.art "
     [:em "happened"] ". The links are displayed along side of more traditional media: written biographical information and images of the artwork’s current state."]
-    [:p "The holdings of Gallery 404 no longer function as the artists originally intended. Each artwork has yielded to the passing of time. But like all things computable, time passes faster in a digital space. Some of these works are less than a decade old."]
+    [:p "The holdings of Gallery 404 no longer function as the artists originally intended. Each artwork has yielded to the passing of time. But in a medium where calculations are made at unimaginable speeds, time itself seems to pass faster. Some of these artworks took less than a decade to decay into unrecognizable states."]
     [:p "Gallery 404 is net.art today. Much of what was created by the first generation of digital natives is now broken. While some works of net.art have benefited from institutional preservation, even these are vulnerable to software updates, infrastructure changes, and negligence." [:a {:href "#fn-1"} "[1]"]
       " As software eats the world, it also consumes itself."]
     [:h1 {:id "the-preservation-of-net.art"}
@@ -68,11 +68,11 @@
        "Scientific and Advanced-Technology Act"] " is passed, allowing the US taxpayer-funded internet backbone (NSFNET) to “be used substantially for additional purposes”"
       [:strong " beyond research and education"] " (i.e. commercial use)."]
      [:li "April 1995: the "
-      [:strong "world wide web becomes the most popular service"] " on the internet backbone (NSFNET)."]
+      [:strong "world wide web becomes the most popular protocol"] " on the internet backbone (NSFNET)."]
      [:li "30 April 1995: the public internet backbone (NSFNET) is officially decommissioned, marking the birth of today’s "
       [:strong "commercial internet"] "."]
      ]
-    [:p "net.art arrives in the early 1990s, after the invention of the world wide web and the legislative move to open the internet up for “additional purposes.” Artists immediately created work that reflected the cultural milieu of the time. For example, the internet started to shift from interoperable public spaces to siloed corporate spaces by the turn of the millennium; parallel concerns about the corporatization of the internet are reflected in prominent net.art artworks like "
+    [:p "net.art arrives in the early 1990s, after the invention of the world wide web and the legislative move to open the internet up for “additional purposes.” Artists immediately created work that reflected the cultural milieu of the time. For example, as the internet started to shift from interoperable public spaces to siloed corporate spaces by the turn of the millennium, parallel concerns about the corporatization of the internet are reflected in prominent net.art artworks like "
      [:em [:a {:href "http://history.etoy.com/stories/entries/49/index.html"}
       "Toywar"]] " (1999) and the aforementioned "
      [:em [:a {:href "https://sites.rhizome.org/anthology/airworld.html"}
