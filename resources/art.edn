@@ -1,6 +1,37 @@
 
 
-[
+[{:title "Snuff"
+  :url "http://turbulence.org/Works/Skibell/snuffgate.html"
+  :artist "Harris Skibell and Damon Horowitz"
+  :date "1996-09"
+  :retrieved "2020-04-13"
+  :image "snuff-2021-04-13.png"
+  :link-from "Works of net.art"
+  :link-from-url "http://www.hgb-leipzig.de/artnine/netzkunst/werke.html"
+  :desc "Snuff is a web-based media-destruction agent. Its purpose is to sniff out, retrieve and collate “competing” media on the Web, and visibly and perceptibly filter text, graphic and audio content, leaving its remains on the snuff site. Snuff took requests from users. By culling text and graphics from an external site and providing a sandbox in which users could manipulate, destroy and rearrange these elements, Snuff implemented an initial stab (prototype) at what would now be called a “mashup.” Horowitz wrote a number of Java classes to facilitate playback of sounds on rollover, importing of graphics and motion graphics, etc."
+  :desc-source "http://turbulence.org/project/snuff-a-media-destruction-agent/"
+  :current-archive "Turbulence"
+  :current-archive-url "http://turbulence.org/project/snuff-a-media-destruction-agent/"
+  :current-archive-type nil
+  :notes "With support from the Jerome Foundation. Harris Skibell and Helen Thorington found the award-winning online art site Turbulence in 1996. Turbulence has commissioned over 60 artist's works for its online site, with funds from the NEA, NYFA, Greenwall and Jerome Foundations"
+  :tech "Java applet"
+  }
+ {:title "Vocabulary"
+  :url "http://turbulence-org.eliterature.org/Works/Xtine/interact.html"
+  :artist "X Baczewska"
+  :date "1996-03"
+  :retrieved "2020-04-13"
+  :image "vocabulary-2021-04-13.png"
+  :link-from "Turbulence"
+  :link-from-url "http://turbulence.org/project/vocabulary/"
+  :desc "An original vocal composition that be accessed on three levels — musical, graphic, interactive. The musical component will be an audio version of a short piece performed vocally by the artist; the graphics, an on-screen collage of the words that comprise the lyrics of the piece, and interaction, a chance for the user to &ldquo;compose&rdquo; her/his own version of the piece by clicking sequentially, in any order, on any words of the lyrics collage."
+  :desc-source "http://turbulence.org/project/vocabulary/"
+  :current-archive nil
+  :current-archive-url nil
+  :current-archive-type nil
+  :notes "With support from the Jerome Foundation. Turbulence facilitates artistic work that explores the specific characteristics of the World Wide Web medium and makes use of multimedia and online technologies such as RealAudio, Java and VRML. Turbulence will present works that allow users to interact with the content, add to it and feed the results back to the Internet site; and works that range from hypertext stories to hypermedia works. These may be music-driven, sound-driven, text-driven, graphics-driven or any combination of the above. They may include commercial art forms and avant garde forms. https://web.archive.org/web/19990427024514/http://www.turbulence.org/Works/Tocome/turbinfo.htm"
+  :tech "Shockwave"
+  }
  {:title "NewHive"
   :url "https://newhive.com/"
   :artist "Artist Platform"
@@ -46,7 +77,6 @@
   :current-archive-url "https://web.archive.org/web/20000510102028/http://toywar.com/"
   :current-archive-type :host
   :notes "Only the landing page works correctly."}
-
  {:title "1 + 1"
   :url "http://www.thing.net/%7Esawad/1+1/"
   :artist "Sawad Brooks and Beth Stryker"
@@ -58,7 +88,6 @@
   :desc "1 + 1 is an artwork for the internet. It is created as a growing exposition of reflections on the Tower of Babel, an allegory about the architectural origin of telecommunication technology."
   :desc-source "http://www.thing.net/%7Esawad/1+1/"
   :notes ""}
-
  {:title "This and that thought."
   :url "http://turbulence-org.eliterature.org/Works/BFFA3AE/"
   :artist "BFFA3AE"
