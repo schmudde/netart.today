@@ -65,11 +65,11 @@
       [:strong "internet"] "."]
      [:li "2 October 1992: the "
       [:a {:href "https://www.congress.gov/bill/102nd-congress/senate-bill/1146"}
-       "Scientific and Advanced-Technology Act"] " is passed, allowing the US taxpayer-funded internet backbone (NSFNET) to “be used substantially for additional purposes”"
+       "Scientific and Advanced-Technology Act"] " is passed, allowing the US taxpayer-funded internet backbone to “be used substantially for additional purposes”"
       [:strong " beyond research and education"] " (i.e. commercial use)."]
      [:li "April 1995: the "
-      [:strong "world wide web becomes the most popular protocol"] " on the internet backbone (NSFNET)."]
-     [:li "30 April 1995: the public internet backbone (NSFNET) is officially decommissioned, marking the birth of today’s "
+      [:strong "world wide web becomes the most popular protocol"] " on the internet backbone (NSFNET 35)."]
+     [:li "30 April 1995: the public internet backbone (NSFNET 41) is officially decommissioned, marking the birth of today’s "
       [:strong "commercial internet"] "."]
      ]
     [:p "net.art arrives in the early 1990s, after the invention of the world wide web and the legislative move to open the internet up for “additional purposes.” Artists immediately created work that reflected the cultural milieu of the time. For example, as the internet started to shift from interoperable public spaces to siloed corporate spaces by the turn of the millennium, parallel concerns about the corporatization of the internet are reflected in prominent net.art artworks like "
@@ -96,7 +96,7 @@
     [:li {:id "fn-2"}
        "Kenta Murakami, “"
        [:a {:href "https://www.digitalamerica.org/the-demise-of-net-art-a-look-at-artifacts-past-kenta-murakami/"}
-        "The Demise Of Net.Art: A Look At Artifacts Past"] "”, "
+        "The Demise Of Net.Art: A Look at Artifacts Past"] "”, "
        [:em "Digital America"] ", 2013."]
     [:li {:id "fn-3"}
        "This is in spite of the best efforts of the "
@@ -108,15 +108,15 @@
         "Loss Of Old Myspace Artifacts Highlights The Impermanence Of The Web"] "”, "
        [:em "The Seattle Times"] ", 2019. Vivian Le, “"
        [:a {:href "https://99percentinvisible.org/episode/the-lost-cities-of-geo/"}
-        "The Lost Cities Of Geo"] "”, podcast, "
+        "The Lost Cities of Geo"] "”, podcast, "
        [:em "99% Invisible"] ", 2020."]
     [:li {:id "fn-4"}
        "Karen D. Frazer, "
        [:a {:href "https://www.merit.edu/wp-content/uploads/2019/06/NSFNET_final-1.pdf"}
-        [:em "NSFNET: A Partnership For High-Speed Networking, Final Report 1987-1995"]
+        [:em "NSFNET: A Partnership for High-Speed Networking, Final Report 1987-1995"]
         ] " (Merit Network, Inc., 1995). Jay Hoffmann, “"
        [:a {:href "https://thehistoryoftheweb.com/timeline/?date_from=1989&date_to=1994"}
-        "The Web’s Timeline 1989-1994"] "”, " [:em "The History Of The Web"] ", 2020."]
+        "The Web’s Timeline 1989-1994"] "”, " [:em "The History of the Web"] ", 2020."]
     ]
 
    ])
