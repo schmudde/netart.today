@@ -90,6 +90,11 @@ There are also interesting opportunities emerging on IPFS. For example, [The Ham
 
 - "[When Artworks Crash: Restorers Face Digital Test](https://www.nytimes.com/2013/06/10/arts/design/whitney-saves-douglas-daviss-first-collaborative-sentence.html)", *New York Times* (2013)
 
+### Meta-Preservation
+
+- William Gibson’s [*Agrippa*](https://arstechnica.com/information-technology/2012/07/william-gibsons-agrippa-mystery-challenge/)
+- [*The Gallery of Lost Art*](http://galleryoflostart.com/) at the Tate. &lsquo;on July 1, 2013, exactly a year after its launch, the Gallery of Lost Art will cease to exist. To some, literally pulling the plug on this skillfully designed and rigorously researched educational resource is heartbreaking. Renaissance scholar David Rundle described Mundy’s decision to forever delete the Gallery of Lost Art as an act of “creative vandalism.”&rsquo; ~ [The Brooklyn Rail](https://brooklynrail.org/2013/06/artseen/tate-gallerythe-gallery-of-lost-art)
+
 # Keywords
 
 - Keywords: fine art, internet history, net art, art preservation, telematic art
