@@ -89,6 +89,7 @@ There are also interesting opportunities emerging on IPFS. For example, [The Ham
 ### Mainstream Reporting on Digital Art Preservation
 
 - "[When Artworks Crash: Restorers Face Digital Test](https://www.nytimes.com/2013/06/10/arts/design/whitney-saves-douglas-daviss-first-collaborative-sentence.html)", *New York Times* (2013)
+- "[Holding Onto Our History](https://thehistoryoftheweb.com/postscript/april-2021-weblog-holding-on-to-our-history/)", *The History of the Web* (2021)
 
 ### Meta-Preservation
 
@@ -121,3 +122,4 @@ The World's First Collaborative Sentence](https://whitney.org/artport/douglas-da
 - `edn` improvements
     - Add `:date` metadata
     - List artists in vector
+- A collection of artworks that continue to work, in spite of changes in the environment. For example, Heath Bunting's *[Own, Be Owned Or Remain Invisible.](http://irational.org/_readme.html)*.
