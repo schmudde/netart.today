@@ -8,9 +8,23 @@ Digital artifacts are trivial to copy but very difficult to preserve. This galle
 
 Read more about the gallery, net.art, and the historical context at Gallery 404's [about page](http://www.netart.today/pages/about.html).
 
+# Running
+
 ## To Run
 
 `clj -m core`
+
+## External Dependencies
+
+Goat Counter
+
+# Curatorial Statement
+
+[Dejan Grba](http://dejangrba.org/), the artist behind one of my favorite works, *[All My People Right Here Right Now](http://dejangrba.org/art-projects/en/2003-all-my-people/index.html)*, asked this question as part of xCoAx 2021's [Artists' Roundtable](https://2021.xcoax.org/artworks2/):
+
+> Browsing through the complete Gallery 404, it is surprising that you haven't included more dysfunctional/inaccessible net.art projects. Is there a specific selective criterion that you apply or is it because you have just started?
+
+I started Gallery 404 because I was frustrated by all the broken hyperlinks I found when doing research for my talk "[Software Preservation in Networked Art](https://nexa.polito.it/mercoledi-133)". I then rounded out the dataset by including non-working works from the [Archive of Digital Art](https://www.digitalartarchive.at/database/general/work/1-1.html).
 
 ## Submissions
 
@@ -40,9 +54,7 @@ Here is the explanation of each data point:
     - **current-archive**: if the artwork has been moved or archived in a publicly available site, this is the name of the site.
     - **current-archive-url**: the url of the **current-archive** where the artwork is publicly available and running today.
 
-## External Dependencies
-
-Goat Counter
+# Resources
 
 ## Further Reading
 
@@ -53,14 +65,12 @@ Goat Counter
     - Grau, Oliver, Janina Hoth, and Eveline Wandl-Vogt. *Digital Art Through the Looking Glass: New Strategies For Archiving, Collecting and Preserving in Digital Humanities*. Austrian Academy of Sciences Press, 2019.
     - Baas, Jacquelynn. *Buddha Mind In Contemporary Art*. Berkeley, CA: University of California Press, 2004.
 
-## Resources
-
-### Research Groups
+## Research Groups
 
 - [History of Creative Coding](https://groups.google.com/g/history-of-creative-coding)
 - [Artists and Hackers Podcast](https://www.artistsandhackers.org/about.html)
 
-### Digital Archives
+## Digital Archives
 
 - Individual curation
     - [Conifer](https://conifer.rhizome.org/) #host
@@ -86,12 +96,12 @@ Archives that feature the artwork often #link to the work rather than #host it. 
 
 There are also interesting opportunities emerging on IPFS. For example, [The Hampster Dance](https://ipfs.io/ipfs/QmT85wMjWsywH6K6dQFZz7q93SYiVpDp5y8LEapp42kvHj/). Monoskop also hosts [a list of archives](https://monoskop.org/Net_art).
 
-### Mainstream Reporting on Digital Art Preservation
+## Mainstream Reporting on Digital Art Preservation
 
 - "[When Artworks Crash: Restorers Face Digital Test](https://www.nytimes.com/2013/06/10/arts/design/whitney-saves-douglas-daviss-first-collaborative-sentence.html)", *New York Times* (2013)
 - "[Holding Onto Our History](https://thehistoryoftheweb.com/postscript/april-2021-weblog-holding-on-to-our-history/)", *The History of the Web* (2021)
 
-### Meta-Preservation
+## Meta-Preservation
 
 - William Gibson’s [*Agrippa*](https://arstechnica.com/information-technology/2012/07/william-gibsons-agrippa-mystery-challenge/)
 - [*The Gallery of Lost Art*](http://galleryoflostart.com/) at the Tate. &lsquo;on July 1, 2013, exactly a year after its launch, the Gallery of Lost Art will cease to exist. To some, literally pulling the plug on this skillfully designed and rigorously researched educational resource is heartbreaking. Renaissance scholar David Rundle described Mundy’s decision to forever delete the Gallery of Lost Art as an act of “creative vandalism.”&rsquo; ~ [The Brooklyn Rail](https://brooklynrail.org/2013/06/artseen/tate-gallerythe-gallery-of-lost-art)
