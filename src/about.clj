@@ -20,9 +20,9 @@
       "&nbsp;"]]]
    [:p
     [:a {:href "http://www.netart.today/"}
-      "Gallery 404"] " collects and displays hyperlinks to prominent net.art artworks on the world wide web. These links point to a place where net.art "
+      "Gallery 404"] " collects and displays screenshots and hyperlinks to prominent net.art artworks on the world wide web. These links point to a place where net.art "
     [:em "happened"] ". The links are displayed along side of more traditional media: written biographical information and images of the artwork’s current state."]
-    [:p "The holdings of Gallery 404 no longer function as the artists originally intended. Each artwork has yielded to the passing of time. But in a medium where calculations are made at unimaginable speeds, time itself seems to pass faster. Some of these artworks took less than a decade to decay into unrecognizable states."]
+    [:p "The holdings of Gallery 404 no longer function as the artists originally intended. Each artwork has yielded to the passing of time. In a medium where calculations are made at unimaginable speeds, time itself seems to pass faster. Some of these artworks took less than a decade to decay into unrecognizable states."]
     [:p "Gallery 404 is net.art today. Much of what was created by the first generation of digital natives is now broken. While some works of net.art have benefited from institutional preservation, even these are vulnerable to software updates, infrastructure changes, and negligence." [:a {:href "#fn-1"} "[1]"]
       " As software eats the world, it also consumes itself."]
     [:h1 {:id "the-preservation-of-net.art"}
@@ -71,7 +71,11 @@
       [:strong "world wide web becomes the most popular protocol"] " on the internet backbone (NSFNET 35)."]
      [:li "30 April 1995: the public internet backbone (NSFNET 41) is officially decommissioned, marking the birth of today’s "
       [:strong "commercial internet"] "."]
-     ]
+     [:li "1998: the Museum of Modern Art acquires its first "
+      [:strong "born-digital "] " artwork, " [:strong "Teiji Furuhashi "] [:em "Lovers "] "(1994)." [:a {:href "#fn-5"} "[5]"]]
+     [:li "2000: the Museum of Modern Art acquires its first "
+      [:strong "interactive software "] "artwork, " [:strong "Cedric Price "]
+      [:em "Generator Project, White Oak, Florida (Five Enclosures, Model and Baseboard) "] "(1978-80)." [:a {:href "#fn-6"} "[6]"]]]
     [:p "net.art arrives in the early 1990s, after the invention of the world wide web and the legislative move to open the internet up for “additional purposes.” Artists immediately created work that reflected the cultural milieu of the time. For example, as the internet started to shift from interoperable public spaces to siloed corporate spaces by the turn of the millennium, parallel concerns about the corporatization of the internet are reflected in prominent net.art artworks like "
      [:em [:a {:href "http://history.etoy.com/stories/entries/49/index.html"}
       "Toywar"]] " (1999) and the aforementioned "
@@ -117,6 +121,18 @@
         ] " (Merit Network, Inc., 1995). Jay Hoffmann, “"
        [:a {:href "https://thehistoryoftheweb.com/timeline/?date_from=1989&date_to=1994"}
         "The Web’s Timeline 1989-1994"] "”, " [:em "The History of the Web"] ", 2020."]
+    [:li {:id "fn-5"}
+       "Ben Fino-Radin on "
+       [:a {:href "https://twitter.com/benfinoradin/status/1452920444185726979?s=21"}
+        "Twitter"] ", Museum of Modern Art "
+       [:a {:href "https://www.moma.org/collection/works/81362"}
+        "Object number 331.1998"] ]
+    [:li {:id "fn-6"}
+       "Ben Fino-Radin on "
+       [:a {:href "https://twitter.com/benfinoradin/status/1452920444185726979?s=21"}
+         "Twitter"] ", Museum of Modern Art "
+       [:a {:href "https://www.moma.org/collection/works/870"}
+        "Object number 1255.2000"]]
     ]
 
    ])
