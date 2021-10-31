@@ -85,6 +85,7 @@ Here is the explanation of each data point:
     - [Post-Digital Publishing Archive](http://p-dpa.net/)
     - [V2_Lab for the Unstable Media Archive](https://v2.nl/archive/latest-added-works) #link
     - [Digital Museum of Digital Art](https://dimoda.art/)
+    - [Born to be Online](https://www.toshareproject.it/born-to-be-online) by the Share Project #link
 - Indiscriminate curation
     - [Internet Archive](https://archive.org) #host
 
