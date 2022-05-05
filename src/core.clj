@@ -1,18 +1,22 @@
 (ns core
   (:require [about :as about]
+            [gift-shop :as gift-shop]
             [hiccup.page :as page]
             [clojure.edn :as edn]))
 
 (def artworks (edn/read-string (slurp "resources/art.edn")))
 (def metadata {:domain "netart.today"})
 (def jodi "http://asdfg.jodi.org/-------------------------------/-------------------------------/-------------------------------/-------------------------------/-----------------------401qe663/vb663e.html")
+(def analytics [:script {:data-goatcounter "https://gallery404.goatcounter.com/count"
+                         :async true :src "//gc.zgo.at/count.js"}])
 
 (defn dispatch-link
   ([link]
    (case link
      :home [:a.f3.b.link.underline-hover.hover-blue.red {:href "../index.html"} "home"]
      :first-artwork [:a.f3.b.link.underline-hover.hover-blue.red {:href "pages/0.html"} "Enter &rarr;"]
-     :about [:a.f3.b.link.underline-hover.hover-blue.red {:href "about.html"} "about"]))
+     :about [:a.f3.b.link.underline-hover.hover-blue.red {:href "about.html"} "about"]
+     :gift-shop [:a.f3.b.link.underline-hover.hover-blue.red {:href "gift-shop.html"} "The Gift Shop"]))
   ([link next-artwork]
    [:a.f3.b.link.underline-hover.hover-blue.red {:href next-artwork} "next &rarr;"]))
 
@@ -24,12 +28,23 @@
    [:h2 "The net.art Gallery"]])
 
 (def footer [:footer.pv4.ph3.ph5-m.ph6-l.mid-gray
+             [:hr ]
+             [:div.tc.mb3
+              [:div
+               [:a.f5.dib.ph2.link.dim
+                {:href "../index.html"} "Home"]
+               #_[:a.f5.dib.ph2.link.dim
+                {:href "pages/0.html"} "Enter &rarr;"]
+               [:a.f5.dib.ph2.link.dim
+                {:href "about.html"} "About"]
+               #_[:a.f5.dib.ph2.link.dim
+                {:href "gift-shop.html"} "The Gift Shop"]]]
              [:div.tc {:property "license"}
               [:small
                [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"}
                 [:i {:class "fab fa-creative-commons"}] "&nbsp;"
                 [:i {:class "fab fa-creative-commons-by"}]]
-               [:span " David Schmudde 2020"]]]
+               [:span " David Schmudde 2022"]]]
              [:div.tc.mt3
               [:div
                [:a.f5.dib.ph2.link.dim
@@ -119,9 +134,8 @@
        [:p.w-50-ns "The net.art embedded on this page is " [:em "ASDFG.JODI.ORG"] " by JODI from 1998."]]]
      [:div.h-100-ns.absolute-ns.top-0-ns.w-100 {:class "jodi"}
       [:iframe.h-100-ns.fr-ns {:src jodi :width 300 :title "JODI"}]]]
-    [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
-              :async true :src "//gc.zgo.at/count.js"} ]
-    ]))
+    analytics]))
+
 
 (defn make-about-page []
   (page/html5
@@ -132,12 +146,27 @@
      header
      [:nav.ph5-ns.ph3
       (dispatch-link :home) "&nbsp;&nbsp;"
+      (dispatch-link :gift-shop) "&nbsp;&nbsp;"
       (dispatch-link :next-artwork "0.html")]
      [:section.flex-auto.ph5-ns.ph3
       (about/about-article "../resources/")]
     footer]
-    [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
-              :async true :src "//gc.zgo.at/count.js"} ]]))
+    analytics]))
+
+(defn make-gift-shop-page []
+  (page/html5
+   {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
+   (head-template "../resources/")
+   [:body.sans-serif
+    [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
+     header
+     [:nav.ph5-ns.ph3
+      (dispatch-link :home) "&nbsp;&nbsp;"
+      (dispatch-link :next-artwork "0.html")]
+     [:section.flex-auto.ph5-ns.ph3
+      (gift-shop/gift-shop "../resources/")]
+     footer]
+    analytics]))
 
 (defn make-art-page [artwork filename next-artwork]
   (let [nav (if next-artwork
@@ -155,10 +184,7 @@
               "&nbsp;&nbsp;" nav]
              [:section.flex-auto
               (art->hiccup "../resources/" artwork)]
-             footer]
-            [:script {:data-goatcounter "https://beyondtheframe.goatcounter.com/count"
-                      :async true :src "//gc.zgo.at/count.js"}]
-            ]))))
+             footer] analytics]))))
 
 (defn make-pages [artworks]
   (loop [artworks artworks
@@ -168,7 +194,7 @@
     (let [this-artwork (str cnt ".html")
           next-artwork (when (second coll) (str (second coll) ".html"))]
       (when-not (empty? artworks)
-        (print "[" last-artwork " | " this-artwork " | " next-artwork "]")
+        (println "[" last-artwork " | " this-artwork " | " next-artwork "]")
         (make-art-page (first artworks) this-artwork next-artwork )
         (recur (rest artworks) (rest coll) (inc cnt) this-artwork)))))
 
@@ -176,6 +202,5 @@
   (do
     (spit "index.html" (make-index-page (first artworks)))
     (spit "pages/about.html" (make-about-page))
+    (spit "pages/gift-shop.html" (make-gift-shop-page))
     (make-pages artworks)))
-
-(-main)

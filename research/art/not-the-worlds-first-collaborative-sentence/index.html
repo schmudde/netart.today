@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<HTML lang="en">
+  <HEAD>
+    <meta charset="utf-8" />
+    <TITLE>How to Join in Not Making the World's First Collaborative Sentence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="thumbnail.jpg" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+  </HEAD>
+  <BODY BGcolor="FFFFFF">
+    <script type="text/javascript" src="script.js"></script>
+    <div id="page1">
+      <H1>How to Join in Not Making the World's First Collaborative Sentence</H1>
+      <p>DOUGLAS DAVIS' <a href="https://artport.whitney.org/collection/DouglasDavis/live/writesentence.html">"THE WORLD'S FIRST COLLABORATIVE SENTENCE"</a> WAS LAUNCHED IN 1994 AND BROKE SOMETIME THEREAFTER. IT WAS RESTORED IN 2013 BY THE WHITNEY MUSEUM IN NEW YORK CITY AND BROKE SOMETIME THEREAFTER. THIS NFT PRESERVES THE FUNCTIONALITY OF DAVIS' LANDMARK NET.ART <strong>EXACTLY</strong> AS IT WAS PRESENTED BY THE WHITNEY IN 2021. FEEL FREE TO EXPERIENCE "THE WORLD'S FIRST COLLABORATIVE SENTENCE" BY ADDING YOUR OWN TEXT.</p>
+
+      <p>This is where you write your text in the box and click the submit button:</p>
+      <P>
+        <TEXTAREA NAME="sentence" id="page1Text" ROWS=3 COLS=80></TEXTAREA>
+      </P>
+        <button onclick="nextScreen();">Submit</button>
+        <button onclick="clearContents();">Reset</button>
+    </div>
+    <div id="page2" style="display: none;">
+      <br />
+      <b>Warning</b>:  require_once(/home/whitney/economy/public/www/artport/collection/DouglasDavis/live/Sentence/htmlpurifier/library/HTMLPurifier.auto.php): failed to open stream: No such file or directory in <b>/app/public/www/artport/collection/DouglasDavis/live/Sentence/process_input.php</b> on line <b>52</b><br />
+      <br />
+      <b>Fatal error</b>:  require_once(): Failed opening required '/home/whitney/economy/public/www/artport/collection/DouglasDavis/live/Sentence/htmlpurifier/library/HTMLPurifier.auto.php' (include_path='.:/usr/local/lib/php') in <b>/app/public/www/artport/collection/DouglasDavis/live/Sentence/process_input.php</b> on line <b>52</b><br />
+    </div>
+    <script>
+      function nextScreen() {
+          var page1 = document.getElementById("page1");
+          var page2 = document.getElementById("page2");
+          page1.style.display = "none";
+          page2.style.display = "block";
+      }
+
+      function clearContents(element) {
+          page1Text.value = '';
+      }
+    </script>
+  </BODY>
+</HTML>

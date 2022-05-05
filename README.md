@@ -122,23 +122,6 @@ There are also interesting opportunities emerging on IPFS. For example, [The Ham
 
 # TODO
 
-- Copy edit each artwork caption
 - Add footer link to home and index (utility links), add index, and add exhibit numbers for each artwork (e.g. 3/31, 4/31, etc...)
-- Add the gift shop and publications.
-    - [Douglas Davis:
-The World's First Collaborative Sentence](https://whitney.org/artport/douglas-davis)
-        - [How to Join in Making the World's First Collaborative Sentence](https://artport.whitney.org/collection/DouglasDavis/live/writesentence.html)
-        - [sentence](https://artport.whitney.org/collection/DouglasDavis/live/Sentence/sentence1.html)
-    - [The Art of Unix Programming](https://www.arp242.net/the-art-of-unix-programming/)
-    - [Fix My Code](https://eeclectic.de/produkt/fix-my-code/)
-    - Gallery 404 is making a statement about digital objects and their value. It clearly states that we are not taking the preservation of digital culture seriously enough. A more subtle observation is that digital culture that is not free (as in libre, not as in beer) decays faster. The most prominent example are creative works done in non-free technologies like Flash. Gallery 404 exhibits many of these. The shop should re-enforce these concepts so Gallery 404 can be a complete artwork.
-        - What will be the focus?
-        - I can also see room for inexpensive/free digital objects. Perhaps a self-erasing software notebook?
 - Automate gallery announcements (i.e. Today marks a new addition to Gallery 404's illustrious collection of broken net art. "This and that thought." by BFFA3AE via @turbulenceorg. http://www.netart.today/)
-- Consider collections
-    - [Works of net.art](http://www.hgb-leipzig.de/artnine/netzkunst/werke.html)
-    - [Turbulence](http://turbulence.org/)
-- `edn` improvements
-    - Add `:date` metadata
-    - List artists in vector
 - A collection of artworks that continue to work, in spite of changes in the environment. For example, Heath Bunting's *[Own, Be Owned Or Remain Invisible.](http://irational.org/_readme.html)*.
