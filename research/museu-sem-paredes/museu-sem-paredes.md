@@ -1,7 +1,3 @@
-
-
-high-resolution pictures for the catalog.
-
 # Minibio
 
 David Schmudde writes about information and technology in the public interest at Beyond the Frame. He worked as an interdisplinary artist in Chicago and New York City for over a decade while teaching at Stevens Institute of Technology. He has since moved to Europe to work on problems in open science, digital identity, and software preservation.
