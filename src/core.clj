@@ -146,7 +146,7 @@
      header
      [:nav.ph5-ns.ph3
       (dispatch-link :home) "&nbsp;&nbsp;"
-      (dispatch-link :gift-shop) "&nbsp;&nbsp;"
+      ;; (dispatch-link :gift-shop) "&nbsp;&nbsp;"
       (dispatch-link :next-artwork "0.html")]
      [:section.flex-auto.ph5-ns.ph3
       (about/about-article "../resources/")]

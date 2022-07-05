@@ -10,9 +10,9 @@ keywords: fine art, internet history, net art, art preservation, telematic art
 
 `An abstract of maximum 200 words.`
 
-Digital artifacts are trivial to copy but very difficult to preserve. [Gallery 404](http://www.netart.today) highlights over twenty years of misplaced and broken digitally native works of art from the net.art movement.
+Digital artifacts are trivial to copy but difficult to preserve. [Gallery 404](http://www.netart.today) highlights over twenty years of misplaced and broken digitally-native works of art from the net.art movement.
 
-net.art embodies the output of a generation of web pioneers. Much of it has already been lost to time. Gallery 404 responds to this loss of culture by showing the work as it naturally appears on today's world wide web. The pieces feature missing plugins, broken links, fatal errors, mismanaged URLs, API issues, and incompatible stylesheets. Digital rot is foregrounded in an emphatic statement on the value of culture in cyberspace.
+net.art embodies the output of a generation of web pioneers. Much of it has already been lost to time. Gallery 404 responds to this loss of culture by displaying the work as it naturally appears on today's world wide web. The pieces feature missing plugins, broken links, fatal errors, mismanaged URLs, API issues, and incompatible stylesheets. Digital rot is foregrounded in an emphatic statement on the value of culture in cyberspace.
 
 # Text
 
