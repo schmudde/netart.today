@@ -10,6 +10,17 @@ img.icons {
     max-height: 2rem;
 }
 
+
+blockquote {
+    border-left-style: solid;
+    border-color: #408bc9;
+    border-width: .25rem;
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 2rem;
+    color: rgba(0, 0, 0, .9);
+}
+
 .jodi {
     z-index: -1;
 }
