@@ -100,7 +100,7 @@
       [:div
        [:p.f3.mid-gray.lh-title (:artist art) [:br ]
         [:time.f6.ttu.tracked.gray (:date art) ]]
-       [:blockquote.ml0.mt0.pl3.black-90.bl.bw2.b--blue (:desc art)
+       [:blockquote.ml0.mt0.pl3.black-90.bl.bw2.b--blue [:p (:desc art)]
         [:cite.f6.ttu.tracked.fs-normal " ~ " [:a {:href (:desc-source art)} " source"]]]
        [:p "Original link via " [:a {:href (:link-from-url art)} (:link-from art)]
         (when current-archive
