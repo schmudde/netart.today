@@ -1,6 +1,76 @@
 
 
-[{:title "Snuff"
+[{:title "1 + 1"
+  :url "http://www.thing.net/%7Esawad/1+1/"
+  :artist "Sawad Brooks and Beth Stryker"
+  :date "2001"
+  :retrieved "2020-11-04"
+  :image "1plus1-20201104115250-1922x1055.png"
+  :link-from "Digital Art Archive"
+  :link-from-url "https://www.digitalartarchive.at/database/general/work/1-1.html"
+  :desc "1 + 1 is an artwork for the internet. It is created as a growing exposition of reflections on the Tower of Babel, an allegory about the architectural origin of telecommunication technology."
+  :desc-source "http://www.thing.net/%7Esawad/1+1/"
+  :notes ""}
+ {:title "Digital Landfill"
+  :url "http://www.potatoland.org/landfill/"
+  :artist "Mark Napier"
+  :date "1998"
+  :retrieved "2020-11-04"
+  :image "digital-landfill-20201104115022-1922x1055.png"
+  :link-from "Digital Art Archive"
+  :link-from-url "https://www.digitalartarchive.at/database/general/work/digital-landfill.html"
+  :desc "«Digital Landfill», one of Napier’s most well-known works of Net art, is a sort if virtual compost heap. The artist has developed an interface that allows a user to copy data from his or her own computer or from other Web sites, and thus, to put it plainly, to dump it. Within seconds, the data appears in various layers on the computer monitor. As if you were combing through dumping grounds layer by layer, you dig deeper and deeper into the overripe information.
+Besides the unreadable texts in this computer-generated collage, familiar icons from the Net appear here and there. The Yahoo! Logo, the homapage of the CIA, press releases from Microsoft and playmates from Playboy’s Web site emerge from the digital chaos, looking as if they really were slowly rotting there on Napier’s server, decaying on some Internet-based compost-heap. […]
+One could call «Digital Landfill» a work of automated Pop Art. The multiple layers of pop culture icons and ‹found footage› from the Internet are reminiscent of Robert Rauschenberg’s silk screens, with at least one obvious yet important difference: with «Digital Landfill», it’s not a single artist who determines the theme and its arrangement. The work is far more the result of the contributions of all its ‹users’› who end up creating a sort of collective art work."
+  :desc-source "Tilman Baumgärtel, [net.art] New Materials towards Net art, Nürnberg, 2001. (http://www.medienkunstnetz.de/works/digital-landfill/)"
+  :notes ""}
+ {:desc
+  "Tweetopia are data-scrolls, documenting the passing of time, through minute changes in a fixed structure, using data from the evolving DiGi-FLiP project @jtwinedotcom on the micro-blogging site Twitter over the course of three years from 2013 to 2015. Tweetopia is available in three versions either lasting one hour, one minute, or one second.",
+  :date "2016",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/tweetopia.html",
+  :artist "Jürgen Trautwein",
+  :title "Tweetopia",
+  :notes "",
+  :url "http://www.jtwine.com/015tweetopia.htm",
+  :retrieved "2020-11-07",
+  :image "tweetopia-2020-11-08 14-19-52.png",
+  :tech "",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/tweetopia.html"}
+ {:desc
+  "UHD is an overdosing project, a critical reflection on the severely irritating advertisement bombardments of commercial pseudo-informative super flashy waste of time- and commercial social-networking and data-mining sites.",
+  :date "2015",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/ultrahyperdrone.html",
+  :artist "Jürgen Trautwein ",
+  :title "UltraHyperDrone",
+  :notes "",
+  :url "http://www.jtwine.com/014ultrahyperdrone.htm",
+  :retrieved "2020-11-07",
+  :image "ultrahyperdrove-2020-11-08 14-18-13.png",
+  :tech "flash",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/ultrahyperdrone.html"}
+ {:desc
+  "Where are you from?_Stories, 2002-2009, is a net-art piece supported by a one-year research grant from the Canada Council for the Arts. The videos for the net-art piece were selected from approximately 200 15-minute videos captured in special events organized in 6 world cities. The 55 videos selected are hyperlinked to a vocabulary of keywords extracted from the videos in three languages (English, Spanish, French).",
+  :date "2002",
+  :link-from "Digital Art Archive",
+  :desc-source
+  "https://www.digitalartarchive.at/database/general/work/where-are-you-from-stories.html",
+  :artist "Pat Badani",
+  :title "Where are you from?_Stories",
+  :notes
+  "website is broken but art work is showing when click the different buttons",
+  :url "http://www.hometransfer.org/where/stories.html",
+  :retrieved "2020-11-07",
+  :image "home-transfer-2020-11-08 14-31-36.png",
+  :tech "flash",
+  :link-from-url
+  "https://www.digitalartarchive.at/database/general/work/where-are-you-from-stories.html"}
+ {:title "Snuff"
   :url "http://turbulence.org/Works/Skibell/snuffgate.html"
   :artist "Harris Skibell and Damon Horowitz"
   :date "1996-09"
@@ -77,17 +147,6 @@
   :current-archive-url "https://web.archive.org/web/20000510102028/http://toywar.com/"
   :current-archive-type :host
   :notes "Only the landing page works correctly."}
- {:title "1 + 1"
-  :url "http://www.thing.net/%7Esawad/1+1/"
-  :artist "Sawad Brooks and Beth Stryker"
-  :date "2001"
-  :retrieved "2020-11-04"
-  :image "1plus1-20201104115250-1922x1055.png"
-  :link-from "Digital Art Archive"
-  :link-from-url "https://www.digitalartarchive.at/database/general/work/1-1.html"
-  :desc "1 + 1 is an artwork for the internet. It is created as a growing exposition of reflections on the Tower of Babel, an allegory about the architectural origin of telecommunication technology."
-  :desc-source "http://www.thing.net/%7Esawad/1+1/"
-  :notes ""}
  {:title "This and that thought."
   :url "http://turbulence-org.eliterature.org/Works/BFFA3AE/"
   :artist "BFFA3AE"
@@ -193,20 +252,6 @@
   :current-archive-type :host
   :notes "Artwork does not work on the Internet Archive."}
 
- {:title "Digital Landfill"
-  :url "http://www.potatoland.org/landfill/"
-  :artist "Mark Napier"
-  :date "1998"
-  :retrieved "2020-11-04"
-  :image "digital-landfill-20201104115022-1922x1055.png"
-  :link-from "Digital Art Archive"
-  :link-from-url "https://www.digitalartarchive.at/database/general/work/digital-landfill.html"
-  :desc "«Digital Landfill», one of Napier’s most well-known works of Net art, is a sort if virtual compost heap. The artist has developed an interface that allows a user to copy data from his or her own computer or from other Web sites, and thus, to put it plainly, to dump it. Within seconds, the data appears in various layers on the computer monitor. As if you were combing through dumping grounds layer by layer, you dig deeper and deeper into the overripe information.
-Besides the unreadable texts in this computer-generated collage, familiar icons from the Net appear here and there. The Yahoo! Logo, the homapage of the CIA, press releases from Microsoft and playmates from Playboy’s Web site emerge from the digital chaos, looking as if they really were slowly rotting there on Napier’s server, decaying on some Internet-based compost-heap. […]
-One could call «Digital Landfill» a work of automated Pop Art. The multiple layers of pop culture icons and ‹found footage› from the Internet are reminiscent of Robert Rauschenberg’s silk screens, with at least one obvious yet important difference: with «Digital Landfill», it’s not a single artist who determines the theme and its arrangement. The work is far more the result of the contributions of all its ‹users’› who end up creating a sort of collective art work."
-  :desc-source "Tilman Baumgärtel, [net.art] New Materials towards Net art, Nürnberg, 2001. (http://www.medienkunstnetz.de/works/digital-landfill/)"
-  :notes ""}
-
  {:desc
   "ASCIIImage aims at creating an online tool to generate ASCII art from jpg images uploaded by its visitors. This net-art work discusses the intersections of words and images by implementing an algorithm that recognizes luminance of different areas of an image translating the resulting values to characters with different pixel densities, thus creating a textual representation of the original file.",
   :date "2015",
@@ -254,38 +299,6 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :tech "",
   :link-from-url
   "https://www.digitalartarchive.at/database/general/work/the-telegarden.html"}
-
- {:desc
-  "Tweetopia are data-scrolls, documenting the passing of time, through minute changes in a fixed structure, using data from the evolving DiGi-FLiP project @jtwinedotcom on the micro-blogging site Twitter over the course of three years from 2013 to 2015. Tweetopia is available in three versions either lasting one hour, one minute, or one second.",
-  :date "2016",
-  :link-from "Digital Art Archive",
-  :desc-source
-  "https://www.digitalartarchive.at/database/general/work/tweetopia.html",
-  :artist "Jürgen Trautwein",
-  :title "Tweetopia",
-  :notes "",
-  :url "http://www.jtwine.com/015tweetopia.htm",
-  :retrieved "2020-11-07",
-  :image "tweetopia-2020-11-08 14-19-52.png",
-  :tech "",
-  :link-from-url
-  "https://www.digitalartarchive.at/database/general/work/tweetopia.html"}
-
- {:desc
-  "UHD is an overdosing project, a critical reflection on the severely irritating advertisement bombardments of commercial pseudo-informative super flashy waste of time- and commercial social-networking and data-mining sites.",
-  :date "2015",
-  :link-from "Digital Art Archive",
-  :desc-source
-  "https://www.digitalartarchive.at/database/general/work/ultrahyperdrone.html",
-  :artist "Jürgen Trautwein ",
-  :title "UltraHyperDrone",
-  :notes "",
-  :url "http://www.jtwine.com/014ultrahyperdrone.htm",
-  :retrieved "2020-11-07",
-  :image "ultrahyperdrove-2020-11-08 14-18-13.png",
-  :tech "flash",
-  :link-from-url
-  "https://www.digitalartarchive.at/database/general/work/ultrahyperdrone.html"}
  {:desc
   "Cinema sem Volta aborda as ambivalências da rede como espaço onde confluem todas as multidões e as turbas, revelando os discursos mais extremos no espectro político contemporâneo.",
   :date " 2014",
@@ -301,22 +314,6 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :tech "",
   :link-from-url
   "https://www.digitalartarchive.at/database/general/work/unlooping-film-cinema-sem-volta.html"}
- {:desc
-  "Where are you from?_Stories, 2002-2009, is a net-art piece supported by a one-year research grant from the Canada Council for the Arts. The videos for the net-art piece were selected from approximately 200 15-minute videos captured in special events organized in 6 world cities. The 55 videos selected are hyperlinked to a vocabulary of keywords extracted from the videos in three languages (English, Spanish, French).",
-  :date "2002",
-  :link-from "Digital Art Archive",
-  :desc-source
-  "https://www.digitalartarchive.at/database/general/work/where-are-you-from-stories.html",
-  :artist "Pat Badani",
-  :title "Where are you from?_Stories",
-  :notes
-  "website is broken but art work is showing when click the different buttons",
-  :url "http://www.hometransfer.org/where/stories.html",
-  :retrieved "2020-11-07",
-  :image "home-transfer-2020-11-08 14-31-36.png",
-  :tech "flash",
-  :link-from-url
-  "https://www.digitalartarchive.at/database/general/work/where-are-you-from-stories.html"}
  {:desc
   "Wordotcomnodot is an essay on the condition of the word in the digital context. It presents an anthology of literature created for the Internet, a commented guide of websites on the creation and development of hypertext content, and a forum open to the public on the impact of electronic production on the printed culture.",
   :date "2000",

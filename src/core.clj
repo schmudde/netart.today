@@ -24,8 +24,12 @@
   (str resource-url "img/" (:image art)))
 
 (def header
-  [:header.ph5-ns.ph3.pv2 [:h1 [:a.dim.no-underline.black {:href (str "http://" (:domain metadata))} "Gallery 404"]]
-   [:h2 "The net.art Gallery"]])
+  [:header.ph5-ns.ph3.pv2 [:h1.mb1 [:a.dim.no-underline.black {:href (str "http://" (:domain metadata))} "Gallery 404"]]
+   [:h2.f5.mv1 "yesterday's net.art as it looks today"]])
+
+(def header-gift-shop
+  [:header.ph5-ns.ph3.pv2 [:h1.mb1 [:a.dim.no-underline.black {:href (str "http://" (:domain metadata))} "The Gallery 404 Gift Shop"]]
+   [:h2.f5.mv1 "yesterday's digital artifacts in the commons today"]])
 
 (def footer [:footer.pv4.ph3.ph5-m.ph6-l.mid-gray
              [:hr ]
@@ -59,7 +63,7 @@
 
 (defn head-template [resource-url]
   [:head
-   [:title "net.art today"]
+   [:title "Gallery 404"]
    [:meta {:charset "utf-8"}]
    [:meta {:http-equiv "Content-Type" :content "text/html"}]
    [:link {:rel "icon" :href "/favicon.ico" :type "image/x-icon"}]
@@ -117,7 +121,7 @@
    [:body.sans-serif
     [:main.flex.flex-column.min-vh-100
      [:h1.f-headline.lh-solid.mb0 "Gallery 404"]
-     [:h2.f3.ph3.lh-solid.mt0 "The net.art Gallery"]
+     [:h2.f3.ph3.lh-solid.mt1 "yesterday's net.art as it looks today"]
      [:section.flex-auto
       [:div.pa3 (dispatch-link :first-artwork)]
       [:div.pa3
@@ -132,7 +136,7 @@
         [:img.ph2 {:src (str "resources/img/icons/chrome-error-code.png") :alt "chrome crash icon" :class "icons"}]
         [:img.ph2 {:src (str "resources/img/icons/plugin-1.png") :alt "chrome missing plugin icon" :class "icons"}]]]]
      [:footer
-      [:p.ph3 [:i {:class "fas fa-palette"}] " The embedded net.art is " [:em "ASDFG.JODI.ORG"] " by " [:strong "JODI"] " (1998)."]]
+      [:p.ph3 [:i {:class "fas fa-palette"}] " The flashing net.art is " [:em "ASDFG.JODI.ORG"] " by " [:strong "JODI"] " (1998)."]]
      [:div.h-100-ns.absolute-ns.top-0-ns.w-100 {:class "jodi"}
       [:iframe.h-100-ns.fr-ns {:src jodi :width 300 :title "JODI"}]]]
 
@@ -148,7 +152,7 @@
      header
      [:nav.ph5-ns.ph3
       (dispatch-link :home) "&nbsp;&nbsp;"
-      ;; (dispatch-link :gift-shop) "&nbsp;&nbsp;"
+      ;; (dispatch-link :gift-shop) "&nbsp;&nbsp;" ;; TODO
       (dispatch-link :next-artwork "0.html")]
      [:section.flex-auto.ph5-ns.ph3
       (about/about-article "../resources/")]
@@ -161,7 +165,7 @@
    (head-template "../resources/")
    [:body.sans-serif
     [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
-     header
+     header-gift-shop
      [:nav.ph5-ns.ph3
       (dispatch-link :home) "&nbsp;&nbsp;"
       (dispatch-link :next-artwork "0.html")]
