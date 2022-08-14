@@ -11,10 +11,10 @@
     :resource-url "https://eeclectic.de/produkt/fix-my-code/"
     :img-url "gift-shop/img/fix-my-code.jpg"
     :img-alt "&ldquo;Fix My Code&rdquo; Cover"
-    :download ""
+    :download "gift-shop/assets/fix-my-code-sollfrank-2021.zip"
     :dontate "https://www.paypal.com/donate?token=GUJfgzN5Z-NJauMnPFngJDC48u_IHxdTXYrblUvWSk5fFgwo-NqqNTWS7kH_uwaZ6muY40fQRFKDTb1G"
     :license "Creative Commons: Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
-    :license-url "https://creativecommons.org/licenses/by-sa/4.0/"    }
+    :license-url "https://creativecommons.org/licenses/by-sa/4.0/"}
    :first-online-sentence
    {:item-name "Not Making the World's First Collaborative Sentence"
     :attribution "D. Schmudde"
@@ -30,7 +30,8 @@
    {:item-name "The Slip"
     :attribution "Nine Inch Nails"
     :medium ["Audio"]
-    :description "<blockquote>&ldquo;The Slip&rdquo; is the seventh studio album by American industrial rock act Nine Inch Nails, released on May 5, 2008 via digital download. Described by Reznor as &ldquo;Garage Electronics,&rdquo; &ldquo;The Slip&rdquo; was the result of an inspired three weeks following the completion of Ghosts I-IV.  An experiment in working with a compressed timeline, the results make for a noisy, sloppy and exciting listen with several songs that have been live staples.</blockquote>~ Nine Inch Nails, <a href=\"https://www.nin.com/music/the-slip/\">Official Website</a>/Wiki"
+    :description "<blockquote>&ldquo;The Slip&rdquo; is the seventh studio album by American industrial rock act Nine Inch Nails, released on May 5, 2008 via digital download. Described by Reznor as &ldquo;Garage Electronics,&rdquo; &ldquo;The Slip&rdquo; was the result of an inspired three weeks following the completion of Ghosts I-IV.  An experiment in working with a compressed timeline, the results make for a noisy, sloppy and exciting listen with several songs that have been live staples.</blockquote>~ Nine Inch Nails, <a href=\"https://www.nin.com/music/the-slip/\">Official Website</a>/<a href=\"https://www.nin.wiki/The_Slip\">Wiki</a>"
+    :download "gift-shop/assets/the-slip.zip"
     :resource-url "https://www.nin.wiki/The_Slip"
     :img-url "gift-shop/img/the-slip.jpg"
     :img-alt "&ldquo;The Slip&rdquo; Cover"
@@ -64,13 +65,14 @@
    (mapv #(str "#" (lower-case %) ", ") (butlast tags))
    (conj (str "#" (lower-case (last tags))))))
 
-(defn make-shop-info [{item-name :item-name attr :attribution medium :medium desc :description download :download license :license license-url :license-url}]
+(defn make-shop-info [root {item-name :item-name attr :attribution medium :medium desc :description download :download license :license license-url :license-url}]
   [:span
    [:h3 item-name]
    [:p "by " [:strong attr]]
    [:small [:i {:class "fa fa-tags"}] "&nbsp;" (reduce str (make-tags medium))]
    [:p desc]
-   [:p [:i {:class "fa fa-download"}] "&nbsp;" [:a {:href (io/resource (str "gift-shop/assets/" download))} "download"]]
+   (when download
+     [:p [:i {:class "fa fa-download"}] "&nbsp;" [:a {:href (str root download)} "download"]])
    [:small [:i {:class "fas fa-balance-scale"}] "&nbsp;" [:a {:href license-url} license]]])
 
 (defn gift-shop [root]
@@ -83,19 +85,19 @@
       [shop-item-layout
        (make-shop-image root (:fix-my-code shop-items))]
       [shop-item-layout
-       (make-shop-info (:fix-my-code shop-items))]
+       (make-shop-info root (:fix-my-code shop-items))]
       [shop-item-layout
        (make-shop-image root (:first-online-sentence shop-items))]
       [shop-item-layout
-       (make-shop-info (:first-online-sentence shop-items))]
+       (make-shop-info root (:first-online-sentence shop-items))]
       [shop-item-layout
        (make-shop-image root (:the-slip shop-items))]
       [shop-item-layout
-       (make-shop-info (:the-slip shop-items))]
+       (make-shop-info root (:the-slip shop-items))]
       [shop-item-layout
        (make-shop-image root (:apollo-11 shop-items))]
       [shop-item-layout
-       (make-shop-info (:apollo-11 shop-items))]
+       (make-shop-info root (:apollo-11 shop-items))]
 
       ]
      ])
