@@ -13,18 +13,18 @@
 (defn dispatch-link
   ([link]
    (case link
-     :home [:a.f3.b.link.underline-hover.hover-blue.red {:href "../index.html"} "home"]
-     :first-artwork [:a.f1.b.link.hover-blue.red {:href "pages/0.html"} "Enter &rarr;"]
-     :about [:a.f3.b.link.underline-hover.hover-blue.red {:href "about.html"} "about"]
-     :gift-shop [:a.f3.b.link.underline-hover.hover-blue.red {:href "gift-shop.html"} "The Gift Shop"]))
+     :home [:a.f3.b.no-underline.hover-dark-blue.blue {:href "../index.html"} "home"]
+     :first-artwork [:a.f1.b.no-underline.hover-dark-blue.blue {:href "pages/0.html"} "Enter &rarr;"]
+     :about [:a.f3.b.no-underline.hover-dark-blue.blue {:href "about.html"} "about"]
+     :gift-shop [:a.f3.b.no-underline.hover-dark-blue.blue {:href "gift-shop.html"} "The Gift Shop"]))
   ([link next-artwork]
-   [:a.f3.b.link.underline-hover.hover-blue.red {:href next-artwork} "next &rarr;"]))
+   [:a.f3.b.no-underline.hover-dark-blue.blue {:href next-artwork} "next &rarr;"]))
 
 (defn get-image-url [resource-url art]
   (str resource-url "img/" (:image art)))
 
 (def header
-  [:header.ph5-ns.ph3.pv2 [:h1 [:a.link.dim.navy {:href (str "http://" (:domain metadata))} "Gallery 404"]]
+  [:header.ph5-ns.ph3.pv2 [:h1 [:a.dim.no-underline.black {:href (str "http://" (:domain metadata))} "Gallery 404"]]
    [:h2 "The net.art Gallery"]])
 
 (def footer [:footer.pv4.ph3.ph5-m.ph6-l.mid-gray
@@ -91,7 +91,7 @@
          [:span {:property "license"}
           [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"} [:i {:class "fab fa-creative-commons"}] "&nbsp;" [:i {:class "fab fa-creative-commons-by"}]]]
          "&nbsp;"
-         [:a {:href (:url art)}  "retrieved " (:retrieved art)]]
+         [:a.link {:href (:url art)}  "retrieved " (:retrieved art)]]
         [:i (:title art)] "&nbsp;"]
        [:meta {:property "acquireLicensePage" :content "https://schmud.de/pages/about.html"}]]]
      ;; info
@@ -101,12 +101,12 @@
        [:p.f3.mid-gray.lh-title (:artist art) [:br ]
         [:time.f6.ttu.tracked.gray (:date art) ]]
        [:blockquote.ml0.mt0.pl3.black-90.bl.bw2.b--blue [:p (:desc art)]
-        [:cite.f6.ttu.tracked.fs-normal " ~ " [:a {:href (:desc-source art)} " source"]]]
-       [:p "Original link via " [:a {:href (:link-from-url art)} (:link-from art)]
+        [:cite.f6.ttu.tracked.fs-normal " ~ " [:a.link {:href (:desc-source art)} " source"]]]
+       [:p "Original link via " [:a.link {:href (:link-from-url art)} (:link-from art)]
         (when current-archive
           [:span
            ", currently archived at "
-           [:a {:href (:current-archive-url art)} current-archive]])]]]
+           [:a.link {:href (:current-archive-url art)} current-archive]])]]]
      ]))
 
 
@@ -122,7 +122,7 @@
       [:div.pa3 (dispatch-link :first-artwork)]
       [:div.pa3
        [:p.w-50-ns "The culture of a generation, lost to time."]
-       [:p.w-50-ns [:a {:href "pages/about.html"} "About Gallery 404"] " and the preservation of digital artifacts."]
+       [:p.w-50-ns [:a.link.underline {:href "pages/about.html"} "About Gallery 404"] " and the preservation of digital artifacts."]
        [:br]
        [:div
         [:img.ph2 {:src (str "resources/img/icons/netscape.png") :alt "netscape missing image icon" :class "icons"}]
@@ -130,10 +130,12 @@
         [:img.ph2 {:src (str "resources/img/icons/chrome.png") :alt "chrome can't find page icon" :class "icons"}]
         [:img.ph2 {:src (str "resources/img/icons/firefox.png") :alt "firefox can't find page icon" :class "icons"}]
         [:img.ph2 {:src (str "resources/img/icons/chrome-error-code.png") :alt "chrome crash icon" :class "icons"}]
-        [:img.ph2 {:src (str "resources/img/icons/plugin-1.png") :alt "chrome missing plugin icon" :class "icons"}]]
-       [:p.w-50-ns [:i {:class "fas fa-palette"}] " The flashing net.art embedded on this page is " [:em "ASDFG.JODI.ORG"] " by " [:strong "JODI"] " (1998)."]]]
+        [:img.ph2 {:src (str "resources/img/icons/plugin-1.png") :alt "chrome missing plugin icon" :class "icons"}]]]]
+     [:footer
+      [:p.ph3 [:i {:class "fas fa-palette"}] " The embedded net.art is " [:em "ASDFG.JODI.ORG"] " by " [:strong "JODI"] " (1998)."]]
      [:div.h-100-ns.absolute-ns.top-0-ns.w-100 {:class "jodi"}
       [:iframe.h-100-ns.fr-ns {:src jodi :width 300 :title "JODI"}]]]
+
     analytics]))
 
 

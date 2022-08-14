@@ -10,6 +10,13 @@ img.icons {
     max-height: 2rem;
 }
 
+.link {
+    color: #00449E; /* dark-blue */
+}
+
+.link:visited {
+    color: #001B44; /* navy */
+}
 
 blockquote {
     border-left-style: solid;
