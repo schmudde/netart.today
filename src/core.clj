@@ -14,7 +14,7 @@
   ([link]
    (case link
      :home [:a.f3.b.link.underline-hover.hover-blue.red {:href "../index.html"} "home"]
-     :first-artwork [:a.f3.b.link.underline-hover.hover-blue.red {:href "pages/0.html"} "Enter &rarr;"]
+     :first-artwork [:a.f1.b.link.hover-blue.red {:href "pages/0.html"} "Enter &rarr;"]
      :about [:a.f3.b.link.underline-hover.hover-blue.red {:href "about.html"} "about"]
      :gift-shop [:a.f3.b.link.underline-hover.hover-blue.red {:href "gift-shop.html"} "The Gift Shop"]))
   ([link next-artwork]
@@ -116,12 +116,14 @@
    (head-template "resources/")
    [:body.sans-serif
     [:main.flex.flex-column.min-vh-100
-     [:h1.f-headline.lh-solid "Gallery 404"]
-     [:h1.f-subheadline.lh-solid.mt0 "The net.art Gallery"]
+     [:h1.f-headline.lh-solid.mb0 "Gallery 404"]
+     [:h2.f3.ph3.lh-solid.mt0 "The net.art Gallery"]
      [:section.flex-auto
       [:div.pa3 (dispatch-link :first-artwork)]
-      [:div.pa3.tj
+      [:div.pa3
        [:p.w-50-ns "The culture of a generation, lost to time."]
+       [:p.w-50-ns [:a {:href "pages/about.html"} "About Gallery 404"] " and the preservation of digital artifacts."]
+       [:br]
        [:div
         [:img.ph2 {:src (str "resources/img/icons/netscape.png") :alt "netscape missing image icon" :class "icons"}]
         [:img.ph2 {:src (str "resources/img/icons/netscape-plugin.gif") :alt "netscape missing plugin icon" :class "icons"}]
@@ -129,9 +131,7 @@
         [:img.ph2 {:src (str "resources/img/icons/firefox.png") :alt "firefox can't find page icon" :class "icons"}]
         [:img.ph2 {:src (str "resources/img/icons/chrome-error-code.png") :alt "chrome crash icon" :class "icons"}]
         [:img.ph2 {:src (str "resources/img/icons/plugin-1.png") :alt "chrome missing plugin icon" :class "icons"}]]
-       [:br]
-       [:p.w-50-ns [:a {:href "pages/about.html"} "About Gallery 404"] " and the preservation of digital artifacts."]
-       [:p.w-50-ns "The net.art embedded on this page is " [:em "ASDFG.JODI.ORG"] " by JODI from 1998."]]]
+       [:p.w-50-ns [:i {:class "fas fa-palette"}] " The flashing net.art embedded on this page is " [:em "ASDFG.JODI.ORG"] " by " [:strong "JODI"] " (1998)."]]]
      [:div.h-100-ns.absolute-ns.top-0-ns.w-100 {:class "jodi"}
       [:iframe.h-100-ns.fr-ns {:src jodi :width 300 :title "JODI"}]]]
     analytics]))
