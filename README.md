@@ -114,6 +114,8 @@ There are also interesting opportunities emerging on IPFS. For example, [The Ham
 - [Small Data Industries](https://smalldata.industries/) by Ben Fino-Radin
 - [Anarchivism](https://anarchivism.org/w/Main_Page)
 - [V2_](https://v2.nl/)
+- [The Beta Toolkit](https://thebetatoolkit.net/Net-Art-Archives
+)
 
 # Keywords
 
