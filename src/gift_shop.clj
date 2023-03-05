@@ -19,7 +19,9 @@
    {:item-name "Not Making the World's First Collaborative Sentence"
     :attribution "D. Schmudde"
     :medium ["Software" "NFT"]
-    :description "<p>Launched in 1994. Broken by 2012. <a href=\"https://whitney.org/artport/douglas-davis\">Restored in 2013</a>. Broken by 2021.</p><p>&ldquo;Not Making the World's First Collaborative Sentence&rdquo; is an original artwork which emodies the current state of many net.art artworks. The interactive component returns the same error message as Douglas Davis' seminal work, &ldquo;The World's First Collaborative Sentence&rdquo; (1994). Davis' work was <a href=\"https://artport.whitney.org/collection/DouglasDavis/live/writesentence.html\">restored by the Whitney Museum in 2013</a> but no longer functions as of 2022.</p><p>&ldquo;Not Making the World's First Collaborative Sentence&rdquo; is available as an open license artwork. Although it is &ldquo;broken,&rdquo; it can also be &ldquo;owned&rdquo; as an NFT.</p>"
+    :description "<p>Launched in 1994. Broken by 2012. <a href=\"https://whitney.org/artport/douglas-davis\">Restored in 2013</a>. Broken by 2021.</p><p>&ldquo;Not Making the World's First Collaborative Sentence&rdquo; is an original artwork which emodies the current state of many net.art artworks. The interactive component returns the same error message as Douglas Davis' seminal work, &ldquo;The World's First Collaborative Sentence&rdquo; (1994). Davis' work was <a href=\"https://artport.whitney.org/collection/DouglasDavis/live/writesentence.html\">restored by the Whitney Museum in 2013</a> but no longer functions as of 2022.</p>
+
+<p>Its current state of brokeness has been recorded to the Tezos blockchain <a href=\"https://objkt.com/asset/hicetnunc/605464\">where the open source artwork can be owned for a nominal cost.</a></p>"
     :download "gift-shop/assets/not-the-worlds-first-collaborative-sentence.zip"
     :resource-url "https://hicetnunc.art/objkt/605464"
     :img-url "gift-shop/img/not-making-worlds-first-collaborative-sentence.png"
@@ -49,6 +51,32 @@
     :license-url "https://creativecommons.org/publicdomain/zero/1.0/"
     :img-license "Public Domain"
     :img-license-url "https://www.dfrc.nasa.gov/Gallery/Photo/F-8DFBW/HTML/EC96-43408-1.html"}
+   :maintainers
+   {:item-name "The Maintainers Coloring Book"
+    :attribution "The Maintainers Team"
+    :year 2023
+    :medium ["Book"]
+    :description "<blockquote>Not unlike many facets of life, The Maintainers Coloring Book project required re-orientation since Covid-19 began to alter the world in 2020. The concepts of maintenance explored through these pages reflect a unique moment, prior to that reality.  Many aspects of our collective relationship to maintenance have changed, while others have become more apparent. Throughout this coloring book we wish to bring reflective questions, guiding you to identify your connection to maintenance and how it changes over time.  </blockquote>~ <a href=\"https://themaintainers.org/the-maintainers-coloring-book/\">The Maintainers Team</a>"
+    :resource-url "https://themaintainers.org/the-maintainers-coloring-book/"
+    :img-url "gift-shop/img/maintainers.png"
+    :img-alt "&ldquo;The Maintainers Coloring Book&rdquo; Cover"
+    :download "gift-shop/assets/the-maintainers-coloring-book.pdf"
+    :license "Creative Commons: Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
+    :license-url "https://creativecommons.org/licenses/by-sa/4.0/"}
+   :know-justice-know-peace
+   {:item-name "Know Justice Know Peace"
+    :attribution "Amos Kennedy"
+    :year 2020
+    :medium ["Poster"]
+    :description "<blockquote>Amos Paul Kennedy Jr. is an American printer, book artist and papermaker best known for social and political commentary, particularly in printed posters. Kennedy articulated his fascination with letterpress printing in one interview: &ldquo;...I
+believe it was the capability of making multiples. Multiples of text are important to me.
+They allow for distribution.&rdquo;</blockquote>~ <a href=\"https://en.wikipedia.org/wiki/Amos_Paul_Kennedy_Jr.\">Wikipedia</a>"
+    :resource-url "https://www.metmuseum.org/art/collection/search/852939"
+    :img-url "gift-shop/img/know-justice-know-peace.jpg"
+    :img-alt "&ldquo;Know Justice Know Peace&rdquo; Letterpress Poster"
+    :download "gift-shop/img/know-justice-know-peace.jpg"
+    :license "Creative Commons Zero (CC0)"
+    :license-url "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access"}
    })
 
 
@@ -98,6 +126,14 @@
        (make-shop-image root (:apollo-11 shop-items))]
       [shop-item-layout
        (make-shop-info root (:apollo-11 shop-items))]
+      [shop-item-layout
+       (make-shop-image root (:maintainers shop-items))]
+      [shop-item-layout
+       (make-shop-info root (:maintainers shop-items))]
+      [shop-item-layout
+       (make-shop-image root (:know-justice-know-peace shop-items))]
+      [shop-item-layout
+       (make-shop-info root (:know-justice-know-peace shop-items))]
 
       ]
      ])

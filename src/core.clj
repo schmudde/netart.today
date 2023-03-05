@@ -25,7 +25,7 @@
 
 (def header
   [:header.ph5-ns.ph3.pv2 [:h1.mb1 [:a.dim.no-underline.black {:href (str "http://" (:domain metadata))} "Gallery 404"]]
-   [:h2.f5.mv1 "yesterday's net.art as it looks today"]])
+   [:h2.f5.mv1 "The Museum of Broken net.art Art"]])
 
 (def header-gift-shop
   [:header.ph5-ns.ph3.pv2 [:h1.mb1 [:a.dim.no-underline.black {:href (str "http://" (:domain metadata))} "The Gallery 404 Gift Shop"]]
@@ -48,7 +48,7 @@
                [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"}
                 [:i {:class "fab fa-creative-commons"}] "&nbsp;"
                 [:i {:class "fab fa-creative-commons-by"}]]
-               [:span " David Schmudde 2022"]]]
+               [:span " David Schmudde 2023"]]]
              [:div.tc.mt3
               [:div
                [:a.f5.dib.ph2.link.dim

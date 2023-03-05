@@ -162,7 +162,6 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :current-archive-url "http://turbulence.org/project/this-and-that-thought/"
   :current-archive-type :host
   :tech "flash"}
-
  {:title "Walker Arts Center: Gallery 9"
   :url "https://walkerart.org/gallery9"
   :artist "Steve Dietz (director)"
@@ -177,7 +176,6 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :current-archive "Walker Art Center"
   :current-archive-url "http://gallery9.walkerart.org/"
   :current-archive-type :host}
-
  {:title "Nasty Nets"
   :url "http://nastynets.com/"
   :artist "John Michael Boling, Joel Holmberg, Guthrie Lonergan, Marisa Olson, et al"
@@ -433,7 +431,7 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :title "The World’s First Collaborative Sentence",
   :url
   "https://artport.whitney.org/collection/DouglasDavis/live/Sentence/process_input.php",
-  :notes "Whitney Museum of American Art",
+  :notes "The original broken artwork is held at Whitney Museum of American Art. Its current state of brokeness has been recorded to the blockchain as an artwork named &ldquo;<a href=\"https://objkt.com/asset/hicetnunc/605464\">Not Making the World's First Collaborative Sentence</a>&rdquo;",
   :retrieved "2020-11-14",
   :image "longest-sentence-2020-11-14 21-56-43.png",
   :tech "cgi"}
