@@ -121,7 +121,7 @@
    [:body.sans-serif
     [:main.flex.flex-column.min-vh-100
      [:h1.f-headline.lh-solid.mb0 "Gallery 404"]
-     [:h2.f3.ph3.lh-solid.mt1 "yesterday's net.art as it looks today"]
+     [:h2.f3.ph3.lh-solid.mt1 "The Museum of Broken net.art Art"]
      [:section.flex-auto
       [:div.pa3 (dispatch-link :first-artwork)]
       [:div.pa3

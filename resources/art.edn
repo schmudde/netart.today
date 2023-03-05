@@ -167,13 +167,13 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :url "https://walkerart.org/gallery9"
   :artist "Steve Dietz (director)"
   :date "1997-2003"
-  :retrieved "2020-10-5"
+  :retrieved "2023-3-5"
   :image "gallery9-walker-20201005155928-1922x1055.png"
   :link-from "Internet Retrograde: The Rise of Infomercials "
   :link-from-url "http://felix.openflows.com/html/airworld.html"
-  :desc "Gallery 9 is the Walker Art Center's online exhibition space. Gallery 9 presented the work of more than 100 artists and became one of the most recognized online venues for the exhibition and contextualization of Internet-based art."
+  :desc "Gallery 9 presented the work of more than 100 artists and became one of the most recognized online venues for the exhibition and contextualization of Internet-based art.  The original Gallery 9 is available in the Walker Web Archives."
   :desc-source "http://gallery9.walkerart.org/"
-  :notes nil
+  :notes "The current version of Gallery 9 was launched April 2004. The original Gallery 9 was available in the Walker Web Archives but it's no longer functional."
   :current-archive "Walker Art Center"
   :current-archive-url "http://gallery9.walkerart.org/"
   :current-archive-type :host}
