@@ -2,6 +2,7 @@
   (:require [clojure.string :refer [lower-case]]
             [clojure.java.io :as io]))
 
+
 (def shop-items
   {:fix-my-code
    {:item-name "Fix My Code"
@@ -77,8 +78,29 @@ They allow for distribution.&rdquo;</blockquote>~ <a href=\"https://en.wikipedia
     :download "gift-shop/img/know-justice-know-peace.jpg"
     :license "Creative Commons Zero (CC0)"
     :license-url "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access"}
-   })
-
+   :magic-catalog
+   {:item-name "The Magic Catalog of E-Books"
+    :attribution "Project Gutenberg"
+    :medium ["Book"]
+    :description "<blockquote>The Gutenberg Project has been digitizing books in the common (public domain) since 1971. Most of the great books are actually in this set. You can download the catalog to your Kindle or other ereader and then search for a book and download it. It may be the single most intellectual democratizing event in history. If you are anywhere in the world and decide to read Charles Dickens or The Art of War, go at it. While probably terrible for Penguin Classics, it’s a step forward for the reading person around the globe.</blockquote>~ <a href=\"https://kk.org/cooltools/gutenberg-magic-catalog/#kk-comment-wrapper\">J. Sciarra</a>"
+    :resource-url "http://freekindlebooks.org/MagicCatalog/magiccatalog.html"
+    :img-url "gift-shop/img/magic-catalog.jpg"
+    :img-alt "&ldquo;Know Justice Know Peace&rdquo; Letterpress Poster"
+    :download "gift-shop/assets/magic-catalog.epub"
+    :license "Public Domain"
+    :license-url nil}
+   :winnie-the-pooh
+   {:item-name "Winnie-the-Pooh"
+    :attribution "A. A. Milne"
+    :medium ["Book"]
+    :description "<blockquote>Winnie-the-Pooh is a bear that likes honey perhaps a little too much and lives in the Hundred Acre Wood with his animal friends Rabbit, Piglet, Owl, Eeyore, Kanga, and Roo, as well as his people friend Christopher Robin. Winnie-the-Pooh contains several stories of adventures involving Pooh and his friends, including a birthday party, looking for heffalumps, finding a missing tail, and playing a trick on one of their own. Most of them, of course, also involve honey in one way or another. A. A. Milne wrote for Punch magazine, authored a detective novel (The Red House Mystery), and published several plays, but all of them were largely forgotten after he began writing children’s books about his son’s stuffed toys. Winnie-the-Pooh and his friends captured the public’s imagination, and though Milne was only to publish four books of their adventures, they have lived on in the imagination of children ever since.</blockquote>~ <a href=\"https://standardebooks.org/ebooks/a-a-milne/winnie-the-pooh\">Standard EBooks</a>"
+    :resource-url "https://standardebooks.org/ebooks/a-a-milne/winnie-the-pooh"
+    :img-url "gift-shop/img/winnie-the-pooh-cover.jpg"
+    :img-alt "&ldquo;Winnie-the-Pooh&rdquo;"
+    :download "gift-shop/assets/winnie-the-pooh.epub"
+    :license "Public Domain"
+    :license-url nil}
+    })
 
 (defn make-shop-image [root {item-name :item-name resource-url :resource-url img-url :img-url img-alt :img-alt}]
   [:figure.dib {:vocab "http://schema.org/" :typeof "ImageObject"}
@@ -134,6 +156,14 @@ They allow for distribution.&rdquo;</blockquote>~ <a href=\"https://en.wikipedia
        (make-shop-image root (:know-justice-know-peace shop-items))]
       [shop-item-layout
        (make-shop-info root (:know-justice-know-peace shop-items))]
+      [shop-item-layout
+       (make-shop-image root (:magic-catalog shop-items))]
+      [shop-item-layout
+       (make-shop-info root (:magic-catalog shop-items))]
+      [shop-item-layout
+       (make-shop-image root (:winnie-the-pooh shop-items))]
+      [shop-item-layout
+       (make-shop-info root (:winnie-the-pooh shop-items))]
 
       ]
      ])
