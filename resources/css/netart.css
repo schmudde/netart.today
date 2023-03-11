@@ -37,6 +37,11 @@ blockquote {
     width: 100%;
 }
 
+
+.gift-shop-image {
+    width: 75%;
+}
+
 @media screen and (min-width: 30em) {
     .jodi iframe {
         border: none;

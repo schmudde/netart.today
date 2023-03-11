@@ -2,12 +2,12 @@
   (:require [clojure.string :refer [lower-case]]
             [clojure.edn :as edn]))
 
-(defn make-shop-image [root {item-name :item-name resource-url :resource-url img-url :img-url img-alt :img-alt}]
-  [:figure.dib {:vocab "http://schema.org/" :typeof "ImageObject"}
+(defn make-shop-image [root {resource-url :resource-url img-url :img-url img-alt :img-alt item-name :item-name}]
+  [:figure.db.gift-shop-image.center {:vocab "http://schema.org/" :typeof "ImageObject"}
    [:a {:href resource-url}
     [:img {:alt img-alt :title img-alt :src (str root img-url) :property "contentUrl"}]]
    [:figcaption
-    [:i img-alt] "&nbsp;"]
+    [:small [:i img-alt] "&nbsp;"]]
    [:meta {:property "acquireLicensePage" :content "https://schmud.de/pages/about.html"}]])
 
 (defn make-tags [tags]
@@ -17,7 +17,7 @@
 
 (defn make-shop-info [root {item-name :item-name attr :attribution medium :medium desc :description download :download license :license license-url :license-url year :year}]
   [:span
-   [:h3 item-name]
+   [:h2.lh-copy item-name]
    [:p "by " [:strong attr] (when year (format " (%d)" year))]
    [:small [:i {:class "fa fa-tags"}] "&nbsp;" (reduce str (make-tags medium))]
    [:p desc]
@@ -32,7 +32,8 @@
     [:div {:itemscope "itemscope", :itemtype "http://schema.org/BlogPosting"}
      [:meta {:content "David Schmudde", :itemprop "author"}]
      [:h3 "Welcome to the Gift Shop"]
-     [:p "Gallery 404 is making a statement about digital objects and their value. It clearly states that we are not taking the preservation of digital culture seriously enough. A more subtle observation is that digital culture that is not free (as in libre, not as in beer) decays faster. The most prominent example are creative works done in non-free technologies like Flash. Gallery 404 exhibits many of these. The shop should re-enforce these concepts so Gallery 404 can be a complete artwork. I can also see room for inexpensive/free digital objects. Perhaps a self-erasing software notebook?"]
+     [:p "These pieces exist beyond the law. They cannot be owned or contained. They are directly sustained by the will of the people. They are modified and shared without a corporate middleman."]
+     [:p "These are living works which age differently than works strangled by copyright. They are the result of creativity without borders."]
      [:div.flex.flex-wrap
       [shop-item-layout
        (make-shop-image root (:fix-my-code shop-items))]
