@@ -40,6 +40,12 @@ blockquote {
 
 .gift-shop-image {
     width: 75%;
+    border-top-style: solid;
+    border-color: #408bc9;
+    border-top-width: .25rem;
+    padding-top: 2rem;
+    color: rgba(0, 0, 0, .9);
+
 }
 
 @media screen and (min-width: 30em) {

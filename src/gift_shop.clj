@@ -16,7 +16,7 @@
    (conj (str "#" (lower-case (last tags))))))
 
 (defn make-shop-info [root {item-name :item-name attr :attribution medium :medium desc :description download :download license :license license-url :license-url year :year}]
-  [:span
+  [:div.pb6.pb0-m.pb0-l
    [:h2.lh-copy item-name]
    [:p "by " [:strong attr] (when year (format " (%d)" year))]
    [:small [:i {:class "fa fa-tags"}] "&nbsp;" (reduce str (make-tags medium))]
@@ -27,7 +27,7 @@
 
 (defn gift-shop [root]
   (let [shop-items (edn/read-string (slurp "resources/gift-shop.edn"))
-        shop-item-layout :div.w-25-ns.w-50-m.w-100.pa3]
+        shop-item-layout :div.w-25-ns.w-50-m.w-100.ph3.pt4-ns.pb5-ns]
     (println (first shop-items))
     [:div {:itemscope "itemscope", :itemtype "http://schema.org/BlogPosting"}
      [:meta {:content "David Schmudde", :itemprop "author"}]
