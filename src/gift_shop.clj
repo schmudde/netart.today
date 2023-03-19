@@ -29,41 +29,44 @@
   (let [shop-items (edn/read-string (slurp "resources/gift-shop.edn"))
         shop-item-layout :div.w-25-ns.w-50-m.w-100.ph3.pt4-ns.pb5-ns]
     (println (first shop-items))
-    [:div {:itemscope "itemscope", :itemtype "http://schema.org/BlogPosting"}
-     [:meta {:content "David Schmudde", :itemprop "author"}]
-     [:h3 "Welcome to the Gift Shop"]
-     [:p "These pieces exist beyond the law. They cannot be owned or contained. They are directly sustained by the will of the people. They are modified and shared without a corporate middleman."]
-     [:p "These are living works which age differently than works strangled by copyright. They are the result of creativity without borders."]
-     [:div.flex.flex-wrap
-      [shop-item-layout
-       (make-shop-image root (:fix-my-code shop-items))]
-      [shop-item-layout
-       (make-shop-info root (:fix-my-code shop-items))]
-      [shop-item-layout
-       (make-shop-image root (:first-online-sentence shop-items))]
-      [shop-item-layout
-       (make-shop-info root (:first-online-sentence shop-items))]
-      [shop-item-layout
-       (make-shop-image root (:the-slip shop-items))]
-      [shop-item-layout
-       (make-shop-info root (:the-slip shop-items))]
-      [shop-item-layout
-       (make-shop-image root (:apollo-11 shop-items))]
-      [shop-item-layout
-       (make-shop-info root (:apollo-11 shop-items))]
-      [shop-item-layout
-       (make-shop-image root (:maintainers shop-items))]
-      [shop-item-layout
-       (make-shop-info root (:maintainers shop-items))]
-      [shop-item-layout
-       (make-shop-image root (:know-justice-know-peace shop-items))]
-      [shop-item-layout
-       (make-shop-info root (:know-justice-know-peace shop-items))]
-      [shop-item-layout
-       (make-shop-image root (:magic-catalog shop-items))]
-      [shop-item-layout
-       (make-shop-info root (:magic-catalog shop-items))]
-      [shop-item-layout
-       (make-shop-image root (:winnie-the-pooh shop-items))]
-      [shop-item-layout
-       (make-shop-info root (:winnie-the-pooh shop-items))]]]))
+    [:article
+     [:div.pb3
+      [:h1.f3.f1-m.f-headline-l "The Gift Shop"]
+      [:h2.f5.f4-m.f3-l "The Shop of Unbroken Digital Artifacts in the Commons"]
+      [:p.measure.lh-copy.tj "These pieces exist beyond the law. They cannot be owned or contained. They are directly sustained by the will of the people. They are modified and shared without a corporate middleman."]
+      [:p.measure.lh-copy.tj "These are living works which age differently than works strangled by copyright. They are the result of creativity without borders."]]
+     [:div {:itemscope "itemscope", :itemtype "http://schema.org/BlogPosting"}
+      [:meta {:content "David Schmudde", :itemprop "author"}]
+      [:div.flex.flex-wrap
+       [shop-item-layout
+        (make-shop-image root (:fix-my-code shop-items))]
+       [shop-item-layout
+        (make-shop-info root (:fix-my-code shop-items))]
+       [shop-item-layout
+        (make-shop-image root (:first-online-sentence shop-items))]
+       [shop-item-layout
+        (make-shop-info root (:first-online-sentence shop-items))]
+       [shop-item-layout
+        (make-shop-image root (:the-slip shop-items))]
+       [shop-item-layout
+        (make-shop-info root (:the-slip shop-items))]
+       [shop-item-layout
+        (make-shop-image root (:apollo-11 shop-items))]
+       [shop-item-layout
+        (make-shop-info root (:apollo-11 shop-items))]
+       [shop-item-layout
+        (make-shop-image root (:maintainers shop-items))]
+       [shop-item-layout
+        (make-shop-info root (:maintainers shop-items))]
+       [shop-item-layout
+        (make-shop-image root (:know-justice-know-peace shop-items))]
+       [shop-item-layout
+        (make-shop-info root (:know-justice-know-peace shop-items))]
+       [shop-item-layout
+        (make-shop-image root (:magic-catalog shop-items))]
+       [shop-item-layout
+        (make-shop-info root (:magic-catalog shop-items))]
+       [shop-item-layout
+        (make-shop-image root (:winnie-the-pooh shop-items))]
+       [shop-item-layout
+        (make-shop-info root (:winnie-the-pooh shop-items))]]]]))

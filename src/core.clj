@@ -28,8 +28,8 @@
    [:h2.f5.mv1 "The Museum of Broken net.art Art"]])
 
 (def header-gift-shop
-  [:header.ph5-ns.ph3.pv2 [:h1.mb1 [:a.dim.no-underline.black {:href (str "http://" (:domain metadata))} "Gallery 404: Gift Shop"]]
-   [:h2.f5.mv1 "The Shop of Unbroken Digital Artifacts in the Commons"]])
+  [:header.ph5-ns.ph3.pv2 [:h1.mb1 [:a.dim.no-underline.black {:href (str "http://" (:domain metadata))} "Gallery 404"]]
+   [:h2.f5.mv1 "The Museum of Broken net.art Art"]])
 
 (def footer [:footer.pv4.ph3.ph5-m.ph6-l.mid-gray
              [:hr ]
