@@ -51,6 +51,10 @@
        [shop-item-layout
         (make-shop-info root (:the-slip shop-items))]
        [shop-item-layout
+        (make-shop-image root (:poster shop-items))]
+       [shop-item-layout
+        (make-shop-info root (:poster shop-items))]
+       [shop-item-layout
         (make-shop-image root (:apollo-11 shop-items))]
        [shop-item-layout
         (make-shop-info root (:apollo-11 shop-items))]

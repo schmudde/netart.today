@@ -37,6 +37,18 @@
   :img-alt "&ldquo;The Slip&rdquo; Cover"
   :license "Attribution-NonCommercial-ShareAlike 3.0 United States (CC BY-NC-SA 3.0 US)"
   :license-url "https://creativecommons.org/licenses/by-nc-sa/3.0/us/"}
+ :poster
+ {:item-name "Gallery 404 Poster"
+  :attribution "Gallery 404"
+  :year 2023
+  :medium ["Poster"]
+  :description "Error. Featuring artwork not found by Mark Napier, Kevin McCoy, Jürgen Trautwein, Douglas Davis, Scott Sona Snibbe, Bradford W. Paley, Pedro Veneroso, and X, et al."
+  :download ""
+  :resource-url "https://netart.today"
+  :img-url "gift-shop/img/gallery404-poster-sm.png"
+  :img-alt "Poster For Gallery 404"
+  :license "Attribution 4.0 International (CC BY 4.0)"
+  :license-url "https://creativecommons.org/licenses/by/4.0/" }
  :apollo-11
  {:item-name "Apollo 11 Guidance Computer Source Code"
   :attribution "NASA, Ron Burkey, et al."

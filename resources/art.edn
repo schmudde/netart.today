@@ -1,6 +1,21 @@
 
 
-[{:title "1 + 1"
+[{:title "Light on the Net Project"
+  :url "http://light.softopia.pref.gifu.jp/"
+  :artist "Masaki Fujihata"
+  :date "1996"
+  :retrieved "2023-04-23"
+  :image "light-on-the-net-2023-04-23 22-40-53.png"
+  :link-from "ArtByte"
+  :link-from-url "https://web.archive.org/web/20030621040732/http://artbyte.com/web/net_pick/np_090101.html"
+  :desc "<blockquote>By foregrounding telecommunication, both real-time and asynchronous, as a fundamental cultural activity, IT culture asks us to reconsider the very paradigm of what an aesthetic object is. Is it necessary for the concept of the aesthetics to assume representation? Does art necessarily involve a finite object?...In short, if a user accessing information and a user telecommunicating with other(s) are as common in computer culture as a user interacting with a representation, can we expand our aesthetic theories to include these two new situations?</blockquote> ~ <i>Culture without Objects, or Representation versus Telecommunication</i>, Lev Manovich <br /><br />With increased bandwidth becoming the norm rather than the exception, artists like Ken Goldberg and Eduardo Kacs will have even more opportunities to clearly defy the finality of the object and eliminate the author. Goldberg's Telegarden (http://telegarden.aec.at/) is a brilliant, life-affirming example of dispersed authority, but it requires patience. A work by Masaki Fugihata is enjoyable in part because it is immediately gratifying. Shown in real-time 24 hours a day, it allows viewers to click the lightbulbs in a grid on and off, controlling the bulbs in an actual sculpture located in an office building in Japan."
+  :desc-source "https://web.archive.org/web/20030621040732/http://artbyte.com/web/net_pick/np_090101.html"
+  :notes "Lev Manovich quote: http://www.manovich.net/IA/telecommunication.html"
+  :tech "49 20w lightbulbs. IBM-PC/AT compatible, Pentium 90MHz, and Windows 95 sending commands to MicroChip Controller via a RS-422 line, capturing video images, and processing requests."
+  :current-archive "Internet Archive"
+  :current-archive-url "https://web.archive.org/web/20000301125959/http://www.flab.mag.keio.ac.jp/light/album.html"
+  :current-archive-type :host}
+ {:title "1 + 1"
   :url "http://www.thing.net/%7Esawad/1+1/"
   :artist "Sawad Brooks and Beth Stryker"
   :date "2001"
