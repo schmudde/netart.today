@@ -18,6 +18,14 @@ img.icons {
     color: #001B44; /* navy */
 }
 
+.butt .link {
+    color: #ffffff;
+}
+
+.butt .link:visited {
+    color: #dddddd;
+}
+
 blockquote {
     border-left-style: solid;
     border-color: #408bc9;

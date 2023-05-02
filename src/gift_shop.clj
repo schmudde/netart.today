@@ -22,7 +22,10 @@
    [:small [:i {:class "fa fa-tags"}] "&nbsp;" (reduce str (make-tags medium))]
    [:p desc]
    (when download
-     [:p [:i {:class "fa fa-download"}] "&nbsp;" [:a {:href (str root download)} "download"]])
+     [:p.butt
+      [:a.f6.link.dim.br3.ph3.pv2.mb2.dib.white.bg-dark-blue {:href (str root download)}
+       [:i {:class "fa fa-download"}]
+       "&nbsp; Download"]])
    [:small [:i {:class "fas fa-balance-scale"}] "&nbsp;" [:a {:href license-url} license]]])
 
 (defn gift-shop [root]
