@@ -4,8 +4,8 @@
 
 (defn make-shop-image [root {resource-url :resource-url img-url :img-url img-alt :img-alt item-name :item-name}]
   [:figure.db.gift-shop-image.center {:vocab "http://schema.org/" :typeof "ImageObject"}
-   [:a {:href resource-url}
-    [:img {:alt img-alt :title img-alt :src (str root img-url) :property "contentUrl"}]]
+   [:a.db.center.pb1.black.link.dim {:href resource-url}
+    [:img.db.ba.b--black-10 {:alt img-alt :title img-alt :src (str root img-url) :property "contentUrl"}]]
    [:figcaption
     [:small [:i img-alt] "&nbsp;"]]
    [:meta {:property "acquireLicensePage" :content "https://schmud.de/pages/about.html"}]])
@@ -26,7 +26,7 @@
       [:a.f6.link.dim.br3.ph3.pv2.mb2.dib.white.bg-dark-blue {:href (str root download)}
        [:i {:class "fa fa-download"}]
        "&nbsp; Download"]])
-   [:small [:i {:class "fas fa-balance-scale"}] "&nbsp;" [:a {:href license-url} license]]])
+   [:small [:i {:class "fas fa-balance-scale"}] "&nbsp;" [:a.link {:href license-url} license]]])
 
 (defn gift-shop [root]
   (let [shop-items (edn/read-string (slurp "resources/gift-shop.edn"))

@@ -3,7 +3,7 @@
   :attribution "Cornelia Sollfrank, Winnie Soon"
   :year 2021
   :medium ["Book"]
-  :description "<blockquote>1999 marked the third version of Cornelia Sollfrank’s &ldquo;Net Art Generator&rdquo; (NAG). This particular work is the focus of a new book by Cornelia Sollfrank and Winnie Soon titled &ldquo;Fix My Code.&rdquo; The artist (Sollfrank) and the creative technologist and coder (Soon) confront issues of authenticity and ownership through a series of insightful conversations as they update the NAG’s code for the 21st century.</blockquote>~ <a href=\"https://schmud.de/posts/2021-09-07-fix-my-code.html\">Beyond the Frame</a>"
+  :description "<blockquote>1999 marked the third version of Cornelia Sollfrank’s &ldquo;Net Art Generator&rdquo; (NAG). This particular work is the focus of a new book by Cornelia Sollfrank and Winnie Soon titled &ldquo;Fix My Code.&rdquo; The artist (Sollfrank) and the creative technologist and coder (Soon) confront issues of authenticity and ownership through a series of insightful conversations as they update the NAG’s code for the 21st century.</blockquote>~ <a href=\"https://schmud.de/posts/2021-09-07-fix-my-code.html\" class=\"link\">Beyond the Frame</a>"
   :resource-url "https://eeclectic.de/produkt/fix-my-code/"
   :img-url "gift-shop/img/fix-my-code.jpg"
   :img-alt "&ldquo;Fix My Code&rdquo; Cover"
@@ -16,9 +16,9 @@
   :attribution "D. Schmudde"
   :year 2021
   :medium ["Software" "NFT"]
-  :description "<p>Launched in 1994. Broken by 2012. <a href=\"https://whitney.org/artport/douglas-davis\">Restored in 2013</a>. Broken by 2021.</p><p>&ldquo;Not Making the World's First Collaborative Sentence&rdquo; is an original artwork which emodies the current state of many net.art artworks. The interactive component returns the same error message as Douglas Davis' seminal work, &ldquo;The World's First Collaborative Sentence&rdquo; (1994). Davis' work was <a href=\"https://artport.whitney.org/collection/DouglasDavis/live/writesentence.html\">restored by the Whitney Museum in 2013</a> but no longer functions as of 2022.</p>
+  :description "<p>Launched in 1994. Broken by 2012. <a href=\"https://whitney.org/artport/douglas-davis\" class=\"link\">Restored in 2013</a>. Broken by 2021.</p><p>&ldquo;Not Making the World's First Collaborative Sentence&rdquo; is an original artwork which emodies the current state of many net.art artworks. The interactive component returns the same error message as Douglas Davis' seminal work, &ldquo;The World's First Collaborative Sentence&rdquo; (1994). Davis' work was <a href=\"https://artport.whitney.org/collection/DouglasDavis/live/writesentence.html\" class=\"link\">restored by the Whitney Museum in 2013</a> but no longer functions as of 2022.</p>
 
-<p>Its current state of brokeness has been recorded to the Tezos blockchain <a href=\"https://objkt.com/asset/hicetnunc/605464\">where the open source artwork can be owned for a nominal cost.</a></p>"
+<p>Its current state of brokeness has been recorded to the Tezos blockchain <a href=\"https://objkt.com/asset/hicetnunc/605464\" class=\"link\">where the open source artwork can be owned for a nominal cost.</a></p>"
   :download "gift-shop/assets/not-the-worlds-first-collaborative-sentence.zip"
   :resource-url "https://hicetnunc.art/objkt/605464"
   :img-url "gift-shop/img/not-making-worlds-first-collaborative-sentence.png"
@@ -30,7 +30,7 @@
   :attribution "Nine Inch Nails"
   :year 2008
   :medium ["Audio"]
-  :description "<blockquote>&ldquo;The Slip&rdquo; is the seventh studio album by American industrial rock act Nine Inch Nails, released on May 5, 2008 via digital download. Described by Reznor as &ldquo;Garage Electronics,&rdquo; &ldquo;The Slip&rdquo; was the result of an inspired three weeks following the completion of Ghosts I-IV.  An experiment in working with a compressed timeline, the results make for a noisy, sloppy and exciting listen with several songs that have been live staples.</blockquote>~ Nine Inch Nails, <a href=\"https://www.nin.com/music/the-slip/\">Official Website</a>/<a href=\"https://www.nin.wiki/The_Slip\">Wiki</a>"
+  :description "<blockquote>&ldquo;The Slip&rdquo; is the seventh studio album by American industrial rock act Nine Inch Nails, released on May 5, 2008 via digital download. Described by Reznor as &ldquo;Garage Electronics,&rdquo; &ldquo;The Slip&rdquo; was the result of an inspired three weeks following the completion of Ghosts I-IV.  An experiment in working with a compressed timeline, the results make for a noisy, sloppy and exciting listen with several songs that have been live staples.</blockquote>~ Nine Inch Nails, <a href=\"https://www.nin.com/music/the-slip/\" class=\"link\">Official Website</a>/<a href=\"https://www.nin.wiki/The_Slip\" class=\"link\">Wiki</a>"
   :download "gift-shop/assets/the-slip.zip"
   :resource-url "https://www.nin.wiki/The_Slip"
   :img-url "gift-shop/img/the-slip.jpg"
@@ -54,7 +54,7 @@
   :attribution "NASA, Ron Burkey, et al."
   :year 1969
   :medium ["Software"]
-  :description "Original Apollo 11 Guidance Computer (AGC) <a href=\"https://github.com/chrislgarry/Apollo-11\">source code</a> for Command Module and Lunar Module.<blockquote>Former NASA intern Chris Garry has posted the entire AGC source code on GitHub, giving you a good peek at the software that took NASA to the Moon. As Reddit users point out, it's clear that the developers had a mighty sense of humor -- line 666 of the lunar landing turns up a &ldquo;numero mysterioso,&rdquo; and there's even a reference to radio DJ Magnificent Montague's classic &ldquo;burn, baby, burn.&rdquo;</blockquote> ~ <a href=\"https://www.engadget.com/2016-07-10-apollo-11-source-code-on-github.html\">Jon Fingas</a> (2016)<p>The code can be run in an <a href=\"http://ibiblio.org/apollo/index.html\">emulation project</a> spearheaded by Ron Burkey.</p>"
+  :description "Original Apollo 11 Guidance Computer (AGC) <a href=\"https://github.com/chrislgarry/Apollo-11\" class=\"link\">source code</a> for Command Module and Lunar Module.<blockquote>Former NASA intern Chris Garry has posted the entire AGC source code on GitHub, giving you a good peek at the software that took NASA to the Moon. As Reddit users point out, it's clear that the developers had a mighty sense of humor -- line 666 of the lunar landing turns up a &ldquo;numero mysterioso,&rdquo; and there's even a reference to radio DJ Magnificent Montague's classic &ldquo;burn, baby, burn.&rdquo;</blockquote> ~ <a href=\"https://www.engadget.com/2016-07-10-apollo-11-source-code-on-github.html\" class=\"link\">Jon Fingas</a> (2016)<p>The code can be run in an <a href=\"http://ibiblio.org/apollo/index.html\" class=\"link\">emulation project</a> spearheaded by Ron Burkey.</p>"
   :resource-url "http://ibiblio.org/apollo/index.html"
   :img-url "gift-shop/img/apollo-f-8.jpg"
   :img-alt "Apollo display and keyboard unit. Photo by NASA/Dennis Taylor."
@@ -68,7 +68,7 @@
   :attribution "The Maintainers Team"
   :year 2022
   :medium ["Book"]
-  :description "<blockquote>Not unlike many facets of life, The Maintainers Coloring Book project required re-orientation since Covid-19 began to alter the world in 2020. The concepts of maintenance explored through these pages reflect a unique moment, prior to that reality.  Many aspects of our collective relationship to maintenance have changed, while others have become more apparent. Throughout this coloring book we wish to bring reflective questions, guiding you to identify your connection to maintenance and how it changes over time.  </blockquote>~ <a href=\"https://themaintainers.org/the-maintainers-coloring-book/\">The Maintainers Team</a>"
+  :description "<blockquote>Not unlike many facets of life, The Maintainers Coloring Book project required re-orientation since Covid-19 began to alter the world in 2020. The concepts of maintenance explored through these pages reflect a unique moment, prior to that reality.  Many aspects of our collective relationship to maintenance have changed, while others have become more apparent. Throughout this coloring book we wish to bring reflective questions, guiding you to identify your connection to maintenance and how it changes over time.  </blockquote>~ <a href=\"https://themaintainers.org/the-maintainers-coloring-book/\" class=\"link\">The Maintainers Team</a>"
   :resource-url "https://themaintainers.org/the-maintainers-coloring-book/"
   :img-url "gift-shop/img/maintainers.png"
   :img-alt "&ldquo;The Maintainers Coloring Book&rdquo; Cover"
@@ -82,7 +82,7 @@
   :medium ["Poster"]
   :description "<blockquote>Amos Paul Kennedy Jr. is an American printer, book artist and papermaker best known for social and political commentary, particularly in printed posters. Kennedy articulated his fascination with letterpress printing in one interview: &ldquo;...I
 believe it was the capability of making multiples. Multiples of text are important to me.
-They allow for distribution.&rdquo;</blockquote>~ <a href=\"https://en.wikipedia.org/wiki/Amos_Paul_Kennedy_Jr.\">Wikipedia</a>"
+They allow for distribution.&rdquo;</blockquote>~ <a href=\"https://en.wikipedia.org/wiki/Amos_Paul_Kennedy_Jr.\" class=\"link\">Wikipedia</a>"
   :resource-url "https://www.metmuseum.org/art/collection/search/852939"
   :img-url "gift-shop/img/know-justice-know-peace.jpg"
   :img-alt "&ldquo;Know Justice Know Peace&rdquo; Letterpress Poster"
@@ -93,7 +93,7 @@ They allow for distribution.&rdquo;</blockquote>~ <a href=\"https://en.wikipedia
  {:item-name "The Magic Catalog of E-Books"
   :attribution "Project Gutenberg"
   :medium ["Book"]
-  :description "<blockquote>The Gutenberg Project has been digitizing books in the common (public domain) since 1971. Most of the great books are actually in this set. You can download the catalog to your Kindle or other ereader and then search for a book and download it. It may be the single most intellectual democratizing event in history. If you are anywhere in the world and decide to read Charles Dickens or The Art of War, go at it. While probably terrible for Penguin Classics, it’s a step forward for the reading person around the globe.</blockquote>~ <a href=\"https://kk.org/cooltools/gutenberg-magic-catalog/#kk-comment-wrapper\">J. Sciarra</a>"
+  :description "<blockquote>The Gutenberg Project has been digitizing books in the common (public domain) since 1971. Most of the great books are actually in this set. You can download the catalog to your Kindle or other ereader and then search for a book and download it. It may be the single most intellectual democratizing event in history. If you are anywhere in the world and decide to read Charles Dickens or The Art of War, go at it. While probably terrible for Penguin Classics, it’s a step forward for the reading person around the globe.</blockquote>~ <a href=\"https://kk.org/cooltools/gutenberg-magic-catalog/#kk-comment-wrapper\" class=\"link\">J. Sciarra</a>"
   :resource-url "http://freekindlebooks.org/MagicCatalog/magiccatalog.html"
   :img-url "gift-shop/img/magic-catalog.jpg"
   :img-alt "&ldquo;Know Justice Know Peace&rdquo; Letterpress Poster"
@@ -105,7 +105,7 @@ They allow for distribution.&rdquo;</blockquote>~ <a href=\"https://en.wikipedia
   :attribution "A. A. Milne"
   :year 1926
   :medium ["Book"]
-  :description "<blockquote>Winnie-the-Pooh is a bear that likes honey perhaps a little too much and lives in the Hundred Acre Wood with his animal friends Rabbit, Piglet, Owl, Eeyore, Kanga, and Roo, as well as his people friend Christopher Robin. Winnie-the-Pooh contains several stories of adventures involving Pooh and his friends, including a birthday party, looking for heffalumps, finding a missing tail, and playing a trick on one of their own. [...] Though Milne was only to publish four books of their adventures, they have lived on in the imagination of children ever since.</blockquote>~ <a href=\"https://standardebooks.org/ebooks/a-a-milne/winnie-the-pooh\">Standard EBooks</a>"
+  :description "<blockquote>Winnie-the-Pooh is a bear that likes honey perhaps a little too much and lives in the Hundred Acre Wood with his animal friends Rabbit, Piglet, Owl, Eeyore, Kanga, and Roo, as well as his people friend Christopher Robin. Winnie-the-Pooh contains several stories of adventures involving Pooh and his friends, including a birthday party, looking for heffalumps, finding a missing tail, and playing a trick on one of their own. [...] Though Milne was only to publish four books of their adventures, they have lived on in the imagination of children ever since.</blockquote>~ <a href=\"https://standardebooks.org/ebooks/a-a-milne/winnie-the-pooh\" class=\"link\">Standard EBooks</a>"
   :resource-url "https://standardebooks.org/ebooks/a-a-milne/winnie-the-pooh"
   :img-url "gift-shop/img/winnie-the-pooh-e-h-shepard.jpg"
   :img-alt "&ldquo;Winnie-the-Pooh&rdquo; Cover"
