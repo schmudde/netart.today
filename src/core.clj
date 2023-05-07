@@ -10,15 +10,25 @@
 (def analytics [:script {:data-goatcounter "https://gallery404.goatcounter.com/count"
                          :async true :src "//gc.zgo.at/count.js"}])
 
+(def next-link
+  (fn []
+    (let [next ["[ne̶x̴t̶." "[next." "[ń̶e̶͐x̷͉̆t̶." "[nex̷̆t." "[next." "[next." "[n̴e̴x̸t." "[̸ne̴x̸t̵." "[next." "[next." "[next." "[next."]]
+      (get next (rand-int (count next))))))
+
+(def art-link
+  (fn []
+    (let [art ["art" "a̸r̷t" "a̷rt̸" "ar̷t" "a̷rt̸" "a̴r̴t̸" "a̴rt̸" "á̵̘r̸͉̚t" "á̵̘rẗ̶" "art̶" "a̵r̴͐t̵" "a̵̞͗́rt̵"]]
+      (get art (rand-int (count art))))))
+
 (defn dispatch-link
   ([link]
    (case link
-     :home [:a.f3.b.no-underline.hover-dark-blue.blue {:href "../index.html"} "home"]
+     :home [:a.f3.b.no-underline.hover-dark-blue.blue {:href "../index.html"} "[home]"]
      :first-artwork [:a.f1.b.no-underline.hover-dark-blue.blue {:href "pages/0.html"} "Enter &rarr;"]
-     :about [:a.f3.b.no-underline.hover-dark-blue.blue {:href "about.html"} "about"]
-     :gift-shop [:a.f3.b.no-underline.hover-dark-blue.blue {:href "gift-shop.html"} "The Gift Shop"]))
+     :about [:a.f3.b.no-underline.hover-dark-blue.blue {:href "about.html"} "[about]"]
+     :gift-shop [:a.f3.b.no-underline.hover-dark-blue.blue {:href "gift-shop.html"} "[gift shop]"]))
   ([link next-artwork]
-   [:a.f3.b.no-underline.hover-dark-blue.blue {:href next-artwork} "next &rarr;"]))
+   [:a.f3.b.no-underline.hover-dark-blue.blue {:href next-artwork} (str (next-link) (art-link) "] &rarr;")]))
 
 (defn get-image-url [resource-url art]
   (str resource-url "img/" (:image art)))
@@ -37,12 +47,12 @@
               [:div
                [:a.f5.dib.ph2.link.dim
                 {:href "../index.html"} "Home"]
-               #_[:a.f5.dib.ph2.link.dim
-                {:href "pages/0.html"} "Enter &rarr;"]
+               [:a.f5.dib.ph2.link.dim
+                {:href "0.html"} "Gallery"]
                [:a.f5.dib.ph2.link.dim
                 {:href "about.html"} "About"]
-               #_[:a.f5.dib.ph2.link.dim
-                {:href "gift-shop.html"} "The Gift Shop"]]]
+               [:a.f5.dib.ph2.link.dim
+                {:href "gift-shop.html"} "Gift Shop"]]]
              [:div.tc {:property "license"}
               [:small
                [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"}
@@ -152,7 +162,7 @@
      header
      [:nav.ph5-ns.ph3
       (dispatch-link :home) "&nbsp;&nbsp;"
-      ;; (dispatch-link :gift-shop) "&nbsp;&nbsp;" ;; TODO
+      (dispatch-link :gift-shop) "&nbsp;&nbsp;"
       (dispatch-link :next-artwork "0.html")]
      [:section.flex-auto.ph5-ns.ph3
       (about/about-article "../resources/")]
@@ -186,8 +196,9 @@
             [:main.flex.flex-column.min-vh-100
              header
              [:nav.ph5-ns.ph3
-              (dispatch-link :about)
-              "&nbsp;&nbsp;" nav]
+              (dispatch-link :about) "&nbsp;&nbsp;"
+              (dispatch-link :gift-shop) "&nbsp;&nbsp;"
+              nav]
              [:section.flex-auto
               (art->hiccup "../resources/" artwork)]
              footer] analytics]))))
