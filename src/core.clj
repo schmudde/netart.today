@@ -1,6 +1,7 @@
 (ns core
   (:require [about :as about]
             [gift-shop :as gift-shop]
+            [news :as news]
             [hiccup.page :as page]
             [clojure.edn :as edn]))
 
@@ -184,6 +185,21 @@
      footer]
     analytics]))
 
+(defn make-news-page []
+  (page/html5
+   {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
+   (head-template "../resources/")
+   [:body.sans-serif
+    [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
+     header-gift-shop
+     [:nav.ph5-ns.ph3
+      (dispatch-link :home) "&nbsp;&nbsp;"
+      (dispatch-link :next-artwork "0.html")]
+     [:section.flex-auto.ph5-ns.ph3
+      (news/press-release "../resources/")]
+     footer]
+    analytics]))
+
 (defn make-art-page [artwork filename next-artwork]
   (let [nav (if next-artwork
               (dispatch-link :next-artwork next-artwork)
@@ -220,4 +236,5 @@
     (spit "index.html" (make-index-page (first artworks)))
     (spit "pages/about.html" (make-about-page))
     (spit "pages/gift-shop.html" (make-gift-shop-page))
+    (spit "pages/press-release.html" (make-news-page))
     (make-pages artworks)))

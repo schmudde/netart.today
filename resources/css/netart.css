@@ -46,6 +46,10 @@ blockquote {
 }
 
 
+pre.press-release {
+    white-space: pre-wrap;
+}
+
 .gift-shop-image {
     width: 75%;
     border-top-style: solid;
