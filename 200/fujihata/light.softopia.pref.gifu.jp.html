@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Light on the Net Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            color: #000000;
+            text-align: center;
+        }
+        .content {
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 600px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+        }
+        h1 {
+            color: #ffcc00;
+        }
+        .clickable-map {
+            position: relative;
+            display: inline-block;
+        }
+        .clickable-map img {
+            width: 100%;
+            max-width: 500px;
+        }
+        .clickable-map .light {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .recent-accesses {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .recent-accesses pre {
+            background-color: #eeeeee;
+            padding: 10px;
+            border: 1px solid #cccccc;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const lights = document.querySelectorAll(".light");
+            const recentAccesses = document.querySelector(".recent-accesses pre");
+            let accessList = [];
+
+            lights.forEach((light, index) => {
+                light.addEventListener("click", () => {
+                    const now = new Date();
+                    const timestamp = now.toISOString().replace('T', ' ').replace('Z', '');
+                    const action = light.dataset.status === "on" ? "OFF" : "ON";
+                    const coords = `(${light.dataset.x},${light.dataset.y})`;
+                    const entry = `[${timestamp}] some.host.domain ${action}${coords}`;
+
+                    light.dataset.status = action.toLowerCase();
+
+                    accessList.unshift(entry);
+                    if (accessList.length > 10) {
+                        accessList.pop();
+                    }
+
+                    recentAccesses.textContent = accessList.join('\n');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="content">
+        <h1>Light on the Net Project</h1>
+        <p>by Masaki FUJIHATA and Lab.</p>
+        <p>Click! a light, ON/OFF the light!</p>
+        <div class="clickable-map">
+            <img src="img/light-installation.webp" alt="Clickable Map" />
+            <!-- Define lights with positions -->
+            <div class="light" style="top: 20px; left: 100px;" data-x="1" data-y="1" data-status="off"></div>
+            <div class="light" style="top: 50px; left: 200px;" data-x="2" data-y="1" data-status="off"></div>
+            <div class="light" style="top: 80px; left: 150px;" data-x="3" data-y="1" data-status="off"></div>
+            <div class="light" style="top: 120px; left: 220px;" data-x="4" data-y="1" data-status="off"></div>
+            <div class="light" style="top: 160px; left: 180px;" data-x="5" data-y="1" data-status="off"></div>
+            <div class="light" style="top: 200px; left: 250px;" data-x="6" data-y="1" data-status="off"></div>
+            <div class="light" style="top: 240px; left: 300px;" data-x="7" data-y="1" data-status="off"></div>
+            <div class="light" style="top: 280px; left: 350px;" data-x="8" data-y="1" data-status="off"></div>
+            <div class="light" style="top: 320px; left: 400px;" data-x="9" data-y="1" data-status="off"></div>
+            <div class="light" style="top: 360px; left: 450px;" data-x="10" data-y="1" data-status="off"></div>
+        </div>
+        <p>This is a clickable map.<br />You can turn ON/OFF one light in one action.</p>
+        <p>(Please use the browser which support client side clickable map.)</p>
+        <div class="recent-accesses">
+            <h2>Recent 10 Accesses</h2>
+            <pre>
+[30/Apr/98 08:44:51 JST] labmac3.zkm.de ON(1,1)
+[30/Apr/98 08:44:12 JST] labmac3.zkm.de ON(7,1)
+[30/Apr/98 08:43:58 JST] labmac3.zkm.de OFF(4,1)
+[30/Apr/98 08:43:55 JST] labmac3.zkm.de ON(4,1)
+[30/Apr/98 08:43:42 JST] labmac3.zkm.de ON(4,4)
+[30/Apr/98 08:43:24 JST] dialup7c.nls.net OFF(4,4)
+[30/Apr/98 08:43:22 JST] dialup7c.nls.net OFF(4,4)
+[30/Apr/98 08:43:21 JST] dialup7c.nls.net OFF(4,4)
+[30/Apr/98 08:42:12 JST] dialup7c.nls.net ON(4,3)
+[30/Apr/98 08:41:36 JST] dialup7c.nls.net ON(4,3)
+            </pre>
+        </div>
+    </div>
+    <footer>
+        <a href="http://light.softopia.pref.gifu.jp/LONcgi.exe?onoff=30">http://light.softopia.pref.gifu.jp/LONcgi.exe?onoff=30</a>
+    </footer>
+</body>
+</html>
