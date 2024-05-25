@@ -2,8 +2,10 @@
   (:require [about :as about]
             [gift-shop :as gift-shop]
             [news :as news]
+            [utils :as u]
             [hiccup.page :as page]
-            [clojure.edn :as edn]))
+            [clojure.edn :as edn]
+            [recycling-center :as recycle]))
 
 (def artworks (edn/read-string (slurp "resources/art.edn")))
 (def metadata {:domain "netart.today"})
@@ -31,9 +33,6 @@
   ([link next-artwork]
    [:a.f3.b.no-underline.hover-dark-blue.blue {:href next-artwork} (str (next-link) (art-link) "] &rarr;")]))
 
-(defn get-image-url [resource-url art]
-  (str resource-url "img/" (:image art)))
-
 (def header
   [:header.ph5-ns.ph3.pv2 [:h1.mb1 [:a.dim.no-underline.black {:href (str "http://" (:domain metadata))} "Gallery 404"]]
    [:h2.f5.mv1 "The Museum of Broken net.art Art"]])
@@ -59,7 +58,7 @@
                [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"}
                 [:i {:class "fab fa-creative-commons"}] "&nbsp;"
                 [:i {:class "fab fa-creative-commons-by"}]]
-               [:span " David Schmudde 2023"]]]
+               [:span " David Schmudde 2024"]]]
              [:div.tc.mt3
               [:div
                [:a.f5.dib.ph2.link.dim
@@ -88,13 +87,13 @@
    [:meta {:property "og:url" :content (str "http://" (:domain metadata))}]
    [:meta {:property "og:title" :content "Gallery 404"}]
    [:meta {:property "og:author" :content "David Schmudde"}]
-   [:meta {:property "og:image" :content (str "http://www." (:domain metadata) "/" (get-image-url resource-url (first artworks)))}]
+   [:meta {:property "og:image" :content (str "http://www." (:domain metadata) "/" (u/get-image-url resource-url (first artworks)))}]
    [:meta {:property "og:description" :content "The culture of a generation, lost to time."}]
    [:link {:rel "stylesheet" :href (str resource-url "css/tachyons.min.css")}]
    [:link {:rel "stylesheet" :href (str resource-url "css/netart.css")}]])
 
 (defn art->hiccup [resource-url art]
-  (let [img-url (get-image-url resource-url art)
+  (let [img-url (u/get-image-url resource-url art)
         current-archive (:current-archive art)]
     [:div.cf.ph3.ph5-ns.pv3
      ;; image
@@ -185,20 +184,38 @@
      footer]
     analytics]))
 
-(defn make-news-page []
+(defn make-recycling-page [f]
   (page/html5
    {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
    (head-template "../resources/")
    [:body.sans-serif
     [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
-     header-gift-shop
-     [:nav.ph5-ns.ph3
-      (dispatch-link :home) "&nbsp;&nbsp;"
-      (dispatch-link :next-artwork "0.html")]
      [:section.flex-auto.ph5-ns.ph3
-      (news/press-release "../resources/")]
+      (f "../resources/")]
      footer]
     analytics]))
+
+(defn make-recycling-pages []
+  (spit "pages/recycling-center-final.html" (make-recycling-page recycle/final))
+  (spit "pages/recycling-center-artifacts.html" (make-recycling-page recycle/artifacts))
+  (spit "pages/recycling-center-recycling.html" (make-recycling-page recycle/recycling))
+  (spit "pages/recycling-center-materials.html" (make-recycling-page recycle/materials))
+  (spit "pages/recycling-center.html" (make-recycling-page recycle/intro)))
+
+(defn make-news-page []
+  (page/html5
+      {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
+      (head-template "../resources/")
+      [:body.sans-serif
+       [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
+        header-gift-shop
+        [:nav.ph5-ns.ph3
+         (dispatch-link :home) "&nbsp;&nbsp;"
+         (dispatch-link :next-artwork "0.html")]
+        [:section.flex-auto.ph5-ns.ph3
+         (news/press-release "../resources/")]
+        footer]
+       analytics]))
 
 (defn make-art-page [artwork filename next-artwork]
   (let [nav (if next-artwork
@@ -237,4 +254,5 @@
     (spit "pages/about.html" (make-about-page))
     (spit "pages/gift-shop.html" (make-gift-shop-page))
     (spit "pages/press-release.html" (make-news-page))
+    (make-recycling-pages)
     (make-pages artworks)))
