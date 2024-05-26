@@ -184,19 +184,31 @@
      footer]
     analytics]))
 
-(defn make-recycling-page [f]
-  (page/html5
-   {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
-   (head-template "../resources/")
-   [:body.sans-serif
-    [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
-     [:section.flex-auto.ph5-ns.ph3
-      (f "../resources/")]
-     footer]
-    analytics]))
+(defn make-recycling-page
+  ([f]
+   (page/html5
+    {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
+    (head-template "../resources/")
+    [:body.sans-serif
+     [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
+      [:section.flex-auto.ph5-ns.ph3
+       (f "../resources/")]
+      footer]
+     analytics]))
+  ([f path-to-artifact]
+   (page/html5
+    {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
+    (head-template "../resources/")
+    [:body.sans-serif
+     [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
+      [:section.flex-auto.ph5-ns.ph3
+       (f "../resources/" path-to-artifact)]
+      footer]
+     analytics])))
 
 (defn make-recycling-pages []
-  (spit "pages/recycling-center-final.html" (make-recycling-page recycle/final))
+  (spit "pages/recycling-center-final-2.html" (make-recycling-page recycle/final "resources/img/recycling-center/2/light-on-net.html"))
+  (spit "pages/recycling-center-final-1.html" (make-recycling-page recycle/final "resources/img/recycling-center/1/light-on-net.html"))
   (spit "pages/recycling-center-artifacts.html" (make-recycling-page recycle/artifacts))
   (spit "pages/recycling-center-recycling.html" (make-recycling-page recycle/recycling))
   (spit "pages/recycling-center-materials.html" (make-recycling-page recycle/materials))

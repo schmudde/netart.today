@@ -14,50 +14,72 @@
         }
         h1 {
             color: yellow;
+            margin-top: 0;
         }
         .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .header {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
         }
-        .images {
-            display: flex;
-            justify-content: space-around;
-            width: 80%;
-            margin-top: 20px;
-        }
-        .images div {
+        .header img {
             width: 200px;
             height: 150px;
             background-color: gray;
-            margin: 10px;
+        }
+        .sub-images {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            color: black;
-            font-weight: bold;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .sub-images div {
+            text-align: center;
+            margin: 0 5px;
         }
         a {
             color: lightblue;
             text-decoration: none;
+            display: block;
+            margin-top: 20px;
         }
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
     &lt;div class=&quot;container&quot;&gt;
-        &lt;h1&gt;Light on the Net project&lt;/h1&gt;
-        &lt;p&gt;Finally the system has been activated on 9th of June 1996&lt;/p&gt;
+        &lt;div class=&quot;header&quot;&gt;
+            &lt;img src=&quot;main_image.webp&quot; alt=&quot;Main Image&quot;&gt;
+            &lt;div&gt;
+                &lt;h1&gt;Light on the Net project&lt;/h1&gt;
+                &lt;p&gt;Finally the system has been activated on 9th of June 1996&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
         &lt;p&gt;These pictures are taken on the midnight of 31th of May 1996 at the hall of Gifu Softopia Center.&lt;/p&gt;
         &lt;p&gt;Each light is 20W bulbs. These 49 Lights are controlled by MicroChip Controller which is reading data from PC through RS-422 line. light.softopia.pref.gifu.jp is an IBM-PC/AT compatible with Pentium 90MHz and Windows 95. This PC is sending commands to MicroChip Controller, capturing video images and processing your requests.&lt;/p&gt;
-        &lt;div class=&quot;images&quot;&gt;
-            &lt;div&gt;&lt;img src=&quot;main_image.png&quot; alt=&quot;Main Image&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;img src=&quot;constructing.png&quot; alt=&quot;Constructing&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;images&quot;&gt;
-            &lt;div&gt;&lt;img src=&quot;pc_at.png&quot; alt=&quot;PC/AT&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;img src=&quot;mr_yamamoto.png&quot; alt=&quot;Mr.Yamamoto&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;img src=&quot;light.png&quot; alt=&quot;Light&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;img src=&quot;mr_kawashima.png&quot; alt=&quot;Mr.Kawashima&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sub-images&quot;&gt;
+            &lt;div&gt;
+                &lt;img src=&quot;constructing.webp&quot; alt=&quot;Constructing&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;
+                &lt;p&gt;constructing&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;img src=&quot;pc_at.webp&quot; alt=&quot;PC/AT&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;
+                &lt;p&gt;PC/AT&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;img src=&quot;mr_yamamoto.webp&quot; alt=&quot;Mr. Yamamoto&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;
+                &lt;p&gt;Mr.Yamamoto&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;img src=&quot;light.webp&quot; alt=&quot;Light&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;
+                &lt;p&gt;light&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;img src=&quot;mr_kawashima.webp&quot; alt=&quot;Mr. Kawashima&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;
+                &lt;p&gt;Mr.Kawashima&lt;/p&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
         &lt;a href=&quot;http://web.archive.org/web/20000301125559/http://www.flab.mag.keio.ac.jp/light/album.html&quot;&gt;Project Detail (in Japanese)&lt;/a&gt;
     &lt;/div&gt;
