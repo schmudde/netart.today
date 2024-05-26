@@ -2,52 +2,48 @@
   (:require [utils :as u]
             [hiccup.page :as page]))
 
+(def light-on-the-net
+  {:title "Light on the Net Project"
+   :url "http://light.softopia.pref.gifu.jp/"
+   :artist "Masaki Fujihata"
+   :date "1996"
+   :retrieved "2023-04-23"
+   :image "light-on-the-net-2023-04-23 22-40-53.png"
+   :link-from "ArtByte"
+   :link-from-url "https://web.archive.org/web/20030621040732/http://artbyte.com/web/net_pick/np_090101.html"
+   :desc "A work by Masaki Fugihata is enjoyable in part because it is immediately gratifying. Shown in real-time 24 hours a day, it allows viewers to click the lightbulbs in a grid on and off, controlling the bulbs in an actual sculpture located in an office building in Japan."
+   :desc-source "https://web.archive.org/web/20030621040732/http://artbyte.com/web/net_pick/np_090101.html"
+   :notes "Lev Manovich quote: http://www.manovich.net/IA/telecommunication.html"
+   :tech "49 20w lightbulbs. IBM-PC/AT compatible, Pentium 90MHz, and Windows 95 sending commands to MicroChip Controller via a RS-422 line, capturing video images, and processing requests."
+   :current-archive "Internet Archive"
+   :current-archive-url "https://web.archive.org/web/20000301125959/http://www.flab.mag.keio.ac.jp/light/album.html"
+   :current-archive-type :host})
 
 (defn intro [resource-url]
-  (let [art {:title "Light on the Net Project"
-             :url "http://light.softopia.pref.gifu.jp/"
-             :artist "Masaki Fujihata"
-             :date "1996"
-             :retrieved "2023-04-23"
-             :image "light-on-the-net-2023-04-23 22-40-53.png"
-             :link-from "ArtByte"
-             :link-from-url "https://web.archive.org/web/20030621040732/http://artbyte.com/web/net_pick/np_090101.html"
-             :desc "A work by Masaki Fugihata is enjoyable in part because it is immediately gratifying. Shown in real-time 24 hours a day, it allows viewers to click the lightbulbs in a grid on and off, controlling the bulbs in an actual sculpture located in an office building in Japan."
-             :desc-source "https://web.archive.org/web/20030621040732/http://artbyte.com/web/net_pick/np_090101.html"
-             :notes "Lev Manovich quote: http://www.manovich.net/IA/telecommunication.html"
-             :tech "49 20w lightbulbs. IBM-PC/AT compatible, Pentium 90MHz, and Windows 95 sending commands to MicroChip Controller via a RS-422 line, capturing video images, and processing requests."
-             :current-archive "Internet Archive"
-             :current-archive-url "https://web.archive.org/web/20000301125959/http://www.flab.mag.keio.ac.jp/light/album.html"
-             :current-archive-type :host}
-        img-url (u/get-image-url resource-url art)
-        current-archive (:current-archive art)]
-    [:div.cf.ph3.ph5-ns.pv3
-     [:h1 "Broken Artwork"]
-     [:article
-      ;; image
-      [:div.fn.fl-ns.w-60-l.pr4-l
-       [:iframe {:srcdoc "<html><head><title>Light on the Net Project [Historical Album]</title></head><body bgcolor=\"#000000\" text=\"#dddddd\" link=\"#5050f0\" vlink=\"#c050b0\" alink=\"#909000\"><p><center><table><tr><td valign=\"top\"><img src=\"/web/20000301125959im_/http://www.flab.mag.keio.ac.jp/light/Image/title.gif\" height=\"200\" width=\"119\" alt=\"light\"></td><td align=\"center\"><font size=\"10\" color=\"#f0e060\"><b>Light on the Net project</b></font><br><font size=\"4\" color=\"#f08000\">Finally the system has been activated on 9th of June 1996</font></td></tr></table></center><p><br><p><br><font size=\"+1\">These pictures are taken on the midnight of 31th of May 1996 at the hall of Gifu Softopia Center.<br><p>Each light is a 20W bulb. These 49 lights are controlled by a MicroChip Controller which reads data from a PC through an RS-422 line. light.softopia.pref.gifu.jp is an IBM-PC/AT compatible with Pentium 90MHz and Windows 95. This PC sends commands to the MicroChip Controller, captures video images, and processes your requests.<br><p>These pictures are taken on the midnight of 31th of May 1996 at the hall of Gifu Softopia Center.<br></font><p><center><table><tr><td colspan=\"4\" align=\"center\"><img src=\"/web/20000301125959im_/http://www.flab.mag.keio.ac.jp/light/Image/03.jpeg\" width=\"188\" height=\"250\" alt=\"constructing\"></td></tr><tr></tr><tr></tr><tr><td align=\"center\" width=\"120\" height=\"150\"><img src=\"/web/20000301125959im_/http://www.flab.mag.keio.ac.jp/light/Image/06.jpeg\" width=\"90\" height=\"120\" alt=\"PC/AT\"></td><td align=\"center\" width=\"120\" height=\"150\"><img src=\"/web/20000301125959im_/http://www.flab.mag.keio.ac.jp/light/Image/02.jpeg\" width=\"90\" height=\"120\" alt=\"Mr.Yamamoto\"></td><td align=\"center\" width=\"120\" height=\"150\"><img src=\"/web/20000301125959im_/http://www.flab.mag.keio.ac.jp/light/Image/09.jpeg\" width=\"90\" height=\"120\" alt=\"light\"></td><td align=\"center\" width=\"120\" height=\"150\"><img src=\"/web/20000301125959im_/http://www.flab.mag.keio.ac.jp/light/Image/04.jpeg\" width=\"90\" height=\"120\" alt=\"Mr.Kawashima\"></td></tr></table></center><p><br><hr width=\"50%\"><br><center><font size=\"+1\"><a href=\"jojo/\"><b>Project Detail (in Japanese)</b></a></font></center><br><hr width=\"50%\"><br><p><br><font size=\"+1\">This project was made possible in collaboration with <a href=\"https://web.archive.org/web/20000301125959/http://www.softopia.pref.gifu.jp/\"><b>Gifu Softopia Japan</b></a>.</font><p><br><table><tr><td>Idea:</td><td>Masaki Fujihata + Ryouko Sukegawa</td></tr><tr><td>Design:</td><td>Masaki Fujihata</td></tr><tr><td>Server program:</td><td>Takeshi Kawashima</td></tr><tr><td>Circiut design:</td><td>Takeshi Kawashima + Masaki Iwata</td></tr><tr><td>Thanks to:</td><td>Hiroya Kubo, Nobuya 'Zuckey' Suzuki,<br>Shirou Yamamoto, Nobutaka Iwasaki,<br>Hiroyuki Takahashi</td></tr></table><p><br><font size=\"+1\">Questions are welcome to: <a href=\"https://web.archive.org/web/20000301125959/mailto:light@flab.sfc.keio.ac.jp\">light@flab.sfc.keio.ac.jp</a><br></font><p><br><h3 align=\"RIGHT\"><a href=\"https://web.archive.org/web/20000301125959/http://light.softopia.pref.gifu.jp/\">Light on the Net Project [Light Control]</a></h3><h3 align=\"RIGHT\"><a href=\"https://web.archive.org/web/20000301125959/http://www.flab.mag.keio.ac.jp/\">Masaki Fujihata Lab. Home Page</a></h3><p></body></html>" :width "100%" :height "500px"}]
-       #_[:figure {:vocab "http://schema.org/" :typeof "ImageObject"}
-          [:img {:alt (:title art) :title resource-url :src img-url :property "contentUrl"}]
-          [:figcaption
-           [:small.fr
-            [:a.link {:href (:url art)}  "retrieved " (:retrieved art)]]
-           [:i (:title art)] "&nbsp;"]]]
+  [:div.cf.ph3.ph5-ns.pv3
+   [:h1 "Broken Artwork"]
+   [:article
+    [:div.fn.fl-ns.w-60-l.pr4-l
+     [:figure #_{:vocab "http://schema.org/" :typeof "ImageObject"}
+      [:iframe {:srcdoc "<html><head><title>Light on the Net Project [Historical Album]</title></head><body bgcolor=\"#000000\" text=\"#dddddd\" link=\"#5050f0\" vlink=\"#c050b0\" alink=\"#909000\"><p><center><table><tr><td valign=\"top\"><img src=\"/web/20000301125959im_/http://www.flab.mag.keio.ac.jp/light/Image/title.gif\" height=\"200\" width=\"119\" alt=\"light\"></td><td align=\"center\"><font size=\"10\" color=\"#f0e060\"><b>Light on the Net project</b></font><br><font size=\"4\" color=\"#f08000\">Finally the system has been activated on 9th of June 1996</font></td></tr></table></center><p><br><p><br><font size=\"+1\">These pictures are taken on the midnight of 31th of May 1996 at the hall of Gifu Softopia Center.<br><p>Each light is a 20W bulb. These 49 lights are controlled by a MicroChip Controller which reads data from a PC through an RS-422 line. light.softopia.pref.gifu.jp is an IBM-PC/AT compatible with Pentium 90MHz and Windows 95. This PC sends commands to the MicroChip Controller, captures video images, and processes your requests.<br><p>These pictures are taken on the midnight of 31th of May 1996 at the hall of Gifu Softopia Center.<br></font><p><center><table><tr><td colspan=\"4\" align=\"center\"><img src=\"/web/20000301125959im_/http://www.flab.mag.keio.ac.jp/light/Image/03.jpeg\" width=\"188\" height=\"250\" alt=\"constructing\"></td></tr><tr></tr><tr></tr><tr><td align=\"center\" width=\"120\" height=\"150\"><img src=\"/web/20000301125959im_/http://www.flab.mag.keio.ac.jp/light/Image/06.jpeg\" width=\"90\" height=\"120\" alt=\"PC/AT\"></td><td align=\"center\" width=\"120\" height=\"150\"><img src=\"/web/20000301125959im_/http://www.flab.mag.keio.ac.jp/light/Image/02.jpeg\" width=\"90\" height=\"120\" alt=\"Mr.Yamamoto\"></td><td align=\"center\" width=\"120\" height=\"150\"><img src=\"/web/20000301125959im_/http://www.flab.mag.keio.ac.jp/light/Image/09.jpeg\" width=\"90\" height=\"120\" alt=\"light\"></td><td align=\"center\" width=\"120\" height=\"150\"><img src=\"/web/20000301125959im_/http://www.flab.mag.keio.ac.jp/light/Image/04.jpeg\" width=\"90\" height=\"120\" alt=\"Mr.Kawashima\"></td></tr></table></center><p><br><hr width=\"50%\"><br><center><font size=\"+1\"><a href=\"jojo/\"><b>Project Detail (in Japanese)</b></a></font></center><br><hr width=\"50%\"><br><p><br><font size=\"+1\">This project was made possible in collaboration with <a href=\"https://web.archive.org/web/20000301125959/http://www.softopia.pref.gifu.jp/\"><b>Gifu Softopia Japan</b></a>.</font><p><br><table><tr><td>Idea:</td><td>Masaki Fujihata + Ryouko Sukegawa</td></tr><tr><td>Design:</td><td>Masaki Fujihata</td></tr><tr><td>Server program:</td><td>Takeshi Kawashima</td></tr><tr><td>Circiut design:</td><td>Takeshi Kawashima + Masaki Iwata</td></tr><tr><td>Thanks to:</td><td>Hiroya Kubo, Nobuya 'Zuckey' Suzuki,<br>Shirou Yamamoto, Nobutaka Iwasaki,<br>Hiroyuki Takahashi</td></tr></table><p><br><font size=\"+1\">Questions are welcome to: <a href=\"https://web.archive.org/web/20000301125959/mailto:light@flab.sfc.keio.ac.jp\">light@flab.sfc.keio.ac.jp</a><br></font><p><br><h3 align=\"RIGHT\"><a href=\"https://web.archive.org/web/20000301125959/http://light.softopia.pref.gifu.jp/\">Light on the Net Project [Light Control]</a></h3><h3 align=\"RIGHT\"><a href=\"https://web.archive.org/web/20000301125959/http://www.flab.mag.keio.ac.jp/\">Masaki Fujihata Lab. Home Page</a></h3><p></body></html>" :width "100%" :height "500px"}]
+      [:figcaption
+       [:small.fr
+        [:a.link {:href (:url light-on-the-net)}  "retrieved " (:retrieved light-on-the-net)]]
+       [:i (:title light-on-the-net)] "&nbsp;(" (:date light-on-the-net) ")"]]]
       ;; info
-      [:div.fn.fl-ns.w-40-l.pt3.pt0-l
-       [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2  (:title art)]
-       [:div
-        [:p.f3.mid-gray.lh-title (:artist art) [:br]
-         [:time.f6.ttu.tracked.gray (:date art)]]
-        [:blockquote.ml0.mt0.pl3.black-90.bl.bw2.b--blue [:p (:desc art)]]
-        [:span
-         [:cite.f6.ttu.tracked.fs-normal " ~ " [:a.link {:href (:desc-source art)} " ArtByte (2001)"]]
-         [:span
-          ", currently archived at "
-          [:a.link {:href (:current-archive-url art)} current-archive]]
-         ]
-        ]]]
-     [:div.w-100.flex.justify-center.items-center.pv4 [:a {:href "recycling-center-materials.html"} [:button "RECYCLE!"]]]]))
+    [:div.fn.fl-ns.w-40-l.pt3.pt0-l
+     [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2  (:title light-on-the-net)]
+     [:div
+      [:p.f3.mid-gray.lh-title (:artist light-on-the-net) [:br]
+       [:time.f6.ttu.tracked.gray (:date light-on-the-net)]]
+      [:blockquote.ml0.mt0.pl3.black-90.bl.bw2.b--blue [:p (:desc light-on-the-net)]]
+      [:span
+       [:cite.f6.ttu.tracked.fs-normal " ~ " [:a.link {:href (:desc-source light-on-the-net)} " ArtByte (2001)"]]
+       [:span
+        ", currently archived at "
+        [:a.link {:href (:current-archive-url light-on-the-net)} (:current-archive light-on-the-net)]]]]]]
+
+   [:div.w-100.flex.justify-center.items-center.pv4 [:a {:href "recycling-center-materials.html"} [:button "RECYCLE!"]]]])
 
 (defn materials [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
@@ -139,9 +135,29 @@
 
 (defn final [resource-url path-to-artifact]
   [:div.cf.ph3.ph5-ns.pv3
-   [:h1 "Art!"]
+   [:h1 "Restoration Complete!"]
    [:article ;; TODO: images are served from `../resources/img/recycling-center/1/constructing.png` so they don't currently work
-    [:iframe {:srcdoc (slurp path-to-artifact)
-              :width "100%" :height "500px"}]
-    [:div.w-100.flex.justify-center.items-center.pv4
-     [:a {:href "recycling-center.html"} [:button "Again"]]]]])
+    [:div.fn.fl-ns.w-60-l.pr4-l
+     [:figure #_{:vocab "http://schema.org/" :typeof "ImageObject"}
+      [:iframe {:srcdoc (slurp path-to-artifact)
+                :width "100%" :height "500px"}]
+      [:figcaption
+       [:small.fr
+        [:a.link {:href (:url light-on-the-net)}  "retrieved " (:retrieved light-on-the-net)]]
+       [:i (:title light-on-the-net)] "&nbsp;(" (:date light-on-the-net) ")"]]]
+    ;; info
+    [:div.fn.fl-ns.w-40-l.pt3.pt0-l
+     [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2  (:title light-on-the-net)]
+     [:div
+      [:p.f3.mid-gray.lh-title (:artist light-on-the-net) [:br]
+       [:time.f6.ttu.tracked.gray (:date light-on-the-net)]]
+      [:blockquote.ml0.mt0.pl3.black-90.bl.bw2.b--blue [:p (:desc light-on-the-net)]]
+      [:span
+       [:cite.f6.ttu.tracked.fs-normal " ~ " [:a.link {:href (:desc-source light-on-the-net)} " ArtByte (2001)"]]
+       [:span
+        ", currently archived at "
+        [:a.link {:href (:current-archive-url light-on-the-net)} (:current-archive light-on-the-net)]]]]]]
+   [:div.w-100.flex.flex-column.items-center.pv4
+    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "Thank you for helping to repair this important artifact. Your work has helped train our algorithm. Soon our entire cultural history will be mediated by artificial intelligence. We will no longer need to do the costly and difficult work of maintaining relics of the past. Not only will we be &quot;All Watched Over by Machines of Loving Grace&quot; just as Richard Brautigan imagined in 1967, our understanding of the past and thus our future will be seen through an infaliable algorithmic lens."]
+    [:div.tc
+     [:a.tc {:href "recycling-center.html"} [:button "Again"]]]]])
