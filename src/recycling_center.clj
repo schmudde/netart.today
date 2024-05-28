@@ -42,8 +42,12 @@
        [:span
         ", currently archived at "
         [:a.link {:href (:current-archive-url light-on-the-net)} (:current-archive light-on-the-net)]]]]]]
+   [:div.w-100.flex.flex-column.items-center.pv4
+    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "While much has been written on how the &quot;"
+     [:a.link {:href "https://www.nytimes.com/2010/07/25/magazine/25privacy-t2.html"} "internet never forgets"] ",&quot; much of what was created in the last twenty plus years has disappeared from neglect or deliberate corporate purging. net.art was a generation's attempt to plant a cultural stake in cyberspace. Their work is a reflection of what the internet was and could be. But the cultural artifacts of the first digital natives are quickly being lost to time. Let's use AI to revitalize work such as the one above, &quot;Light on the Net.&quot;"]
+       [:div.tc [:a {:href "recycling-center-materials.html"} [:button "RECYCLE!"]]]]
 
-   [:div.w-100.flex.justify-center.items-center.pv4 [:a {:href "recycling-center-materials.html"} [:button "RECYCLE!"]]]])
+   ])
 
 (defn materials [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
@@ -104,6 +108,7 @@
    [:h1 "Recycling"]
    [:article.flex.justify-center
     [:div.flex.flex-column.justify-center.items-center.pv4
+     [:p "ChatGPT is working out the solution. Please wait."]
      [:div
       [:img {:src (str resource-url "img/recycling-center/loading-gif.webp")
              :id "loading-animation"
@@ -158,6 +163,6 @@
         ", currently archived at "
         [:a.link {:href (:current-archive-url light-on-the-net)} (:current-archive light-on-the-net)]]]]]]
    [:div.w-100.flex.flex-column.items-center.pv4
-    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "Thank you for helping to repair this important artifact. Your work has helped train our algorithm. Soon our entire cultural history will be mediated by artificial intelligence. We will no longer need to do the costly and difficult work of maintaining relics of the past. Not only will we be &quot;All Watched Over by Machines of Loving Grace&quot; just as Richard Brautigan imagined in 1967, our understanding of the past and thus our future will be seen through an infaliable algorithmic lens."]
+    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "Thank you for helping to repair this important artifact. Your work has helped train our algorithm. Soon our entire cultural history will be mediated by artificial intelligence. We will no longer need to do the costly and difficult work of maintaining relics of the past. Not only will we be &quot;All Watched Over by Machines of Loving Grace&quot; just as Richard Brautigan imagined in 1967, our understanding of the past and thus our future will also be seen through an infaliable algorithmic lens."]
     [:div.tc
      [:a.tc {:href "recycling-center.html"} [:button "Again"]]]]])
