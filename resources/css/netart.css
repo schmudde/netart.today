@@ -68,6 +68,22 @@ pre.press-release {
 }
 
 
+.glow {
+    animation: glow-animation 1.5s infinite;
+}
+
+@keyframes glow-animation {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 128, 0, 0);  /* Dark green with no visibility at the start */
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 128, 0, 0.75);  /* Dark green with more intensity in the middle */
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 128, 0, 0);  /* Return to no visibility */
+    }
+}
+
 /* @custom-media --breakpoint-not-small screen and (min-width: 30em); */
 /* @custom-media --breakpoint-medium screen and (min-width: 30em) and (max-width: 60em); */
 /* @custom-media --breakpoint-large screen and (min-width: 60em); */
