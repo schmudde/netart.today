@@ -192,8 +192,7 @@
     [:body.sans-serif
      [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
       [:section.flex-auto.ph5-ns.ph3
-       (f "../resources/")]
-      footer]
+       (f "../resources/")]]
      analytics]))
   ([f path-to-artifact]
    (page/html5
@@ -202,8 +201,7 @@
     [:body.sans-serif
      [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
       [:section.flex-auto.ph5-ns.ph3
-       (f "../resources/" path-to-artifact)]
-      footer]
+       (f "../resources/" path-to-artifact)]]
      analytics])))
 
 (defn make-recycling-pages []
