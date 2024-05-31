@@ -21,7 +21,7 @@
 
 (defn intro [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
-   [:h1 "Fictive Realities"]
+   [:h1 "Artificial Forgeries"]
    [:div.w-100.flex.flex-column.items-center.pv4
     [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "While much has been written on how the &quot;"
      [:a.link {:href "https://www.nytimes.com/2010/07/25/magazine/25privacy-t2.html"} "internet never forgets"] ",&quot; much of what was created in the last twenty plus years has disappeared from neglect or deliberate corporate purging. net.art was a generation's attempt to plant a cultural stake on the Web. Their work is a reflection of what the internet was and could be. But the cultural artifacts of the first digital natives are quickly being lost to time. Let's use AI to revitalize work such as the one below, &quot;Light on the Net.&quot;"]]
@@ -57,7 +57,7 @@
 
 (defn materials [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
-   [:h1 "Fictive Realities: The Recycling Center"]
+   [:h1 "Artificial Forgeries: The Recycling Center"]
    [:article
       ;; Electrons
     [:div.fn.fl-ns.w-50-l.pr4-l
@@ -113,7 +113,7 @@
 
 (defn recycling [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
-   [:h1 "Fictive Realities: Recycling"]
+   [:h1 "Artificial Forgeries: Recycling"]
    [:article.flex.justify-center
     [:div.flex.flex-column.justify-center.items-center.pv4
      [:p "ChatGPT is working out the solution. Please wait."]
@@ -137,7 +137,7 @@
 
 (defn artifacts [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
-   [:h1 "Fictive Realities: Choose the Most Accurate Artifact"]
+   [:h1 "Artificial Forgeries: Choose the Most Accurate Artifact"]
    [:article.flex.items-center
     [:div.w-50.pa3.tc
      [:img {:src (str resource-url "img/recycling-center/1.png")}]
@@ -150,7 +150,7 @@
 
 (defn final [resource-url path-to-artifact]
   [:div.cf.ph3.ph5-ns.pv3
-   [:h1 "Fictive Realities: Restoration Complete!"]
+   [:h1 "Artificial Forgeries: Restoration Complete!"]
    [:article ;; TODO: images are served from `../resources/img/recycling-center/1/constructing.png` so they don't currently work
     [:div.fn.fl-ns.w-60-l.pr4-l
      [:figure #_{:vocab "http://schema.org/" :typeof "ImageObject"}
