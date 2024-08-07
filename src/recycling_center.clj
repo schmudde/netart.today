@@ -21,10 +21,9 @@
 
 (defn intro [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
-   [:h1 "Artificial Forgeries"]
+   [:h1 "The net.art Restoration Project"]
    [:div.w-100.flex.flex-column.items-center.pv4
-    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "While much has been written on how the &quot;"
-     [:a.link {:href "https://www.nytimes.com/2010/07/25/magazine/25privacy-t2.html"} "internet never forgets"] ",&quot; much of what was created in the last twenty plus years has disappeared from neglect or deliberate corporate purging. net.art was a generation's attempt to plant a cultural stake on the Web. Their work is a reflection of what the internet was and could be. But the cultural artifacts of the first digital natives are quickly being lost to time. Let's use AI to revitalize work such as the one below, &quot;Light on the Net.&quot;"]]
+    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "The world wide web is in decay. Much of what was created in the last twenty plus years has disappeared from neglect or deliberate corporate purging."]]
    [:article
     [:div.fn.fl-ns.w-60-l.pr4-l
      [:p.b "Original Art"]
@@ -37,27 +36,26 @@
 
     ;; info
     [:div.fn.fl-ns.w-40-l.pt3.pt0-l
-     [:p.b.tr "Original Commentary"]
-     [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2  (:title light-on-the-net)]
+     [:p.b.tr "About the Artwork"]
+     [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2  "&larr;"]
+     [:p "This is " [:i "Light on the Net Project "] "from 1996. You can go ahead and click around. You'll see a lot of missing images, broken links, and unstructured text. But it's the best known copy of this piece. It's a shame because " [:i "Light on the Net Project "] "is a beautiful and important telematic work from last century. "]
+     [:p "Here's some historical context:"]
      [:div
-      [:p.f3.mid-gray.lh-title (:artist light-on-the-net) [:br]
-       [:time.f6.ttu.tracked.gray (:date light-on-the-net)]]
       [:blockquote.ml0.mt0.pl3.black-90.bl.bw2.b--blue [:p (:desc light-on-the-net)]]
       [:span
-       [:cite.f6.ttu.tracked.fs-normal " ~ " [:a.link {:href (:desc-source light-on-the-net)} " ArtByte (2001)"]]
-       [:span
-        ", currently archived at "
-        [:a.link {:href (:current-archive-url light-on-the-net)} (:current-archive light-on-the-net)]]]]]]
-
-   [:div.w-100.flex.flex-column.items-center.pv4
-    [:div.tc.f2.dib.v-mid.items-center.dark-green "&rarr;&nbsp;"
-     [:a.f5.grow.no-underline.br-pill.ba.bw2.ph3.pv2.glow.dark-green
-      {:href "recycling-center-materials.html"} "RECYCLE!"]
-     "&nbsp;&larr;"]]])
+       [:cite.f6.ttu.tracked.fs-normal " ~ " [:a.link {:href (:desc-source light-on-the-net)} " ArtByte (2001)"]]]]
+     [:p "This art decay is an endemic problem for this media; we are losing an entire generation of work. Let's do something about it."]
+     [:div.w-100.flex.flex-column.items-center.pv4
+      [:div.tc.f2.dib.v-mid.items-center.dark-green "&rarr;&nbsp;"
+       [:a.f5.grow.no-underline.br-pill.ba.bw2.ph3.pv2.glow.dark-green
+        {:href "recycling-center-materials.html"} "RESTORE!"]
+       "&nbsp;&larr;"]]]]])
 
 (defn materials [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
-   [:h1 "Artificial Forgeries: The Recycling Center"]
+   [:h1 "The net.art Restoration Project: Materials"]
+   [:div.w-100.flex.flex-column.items-center.pv4
+    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "net.art happens on the network so there are many software and hardware artifacts to consider. Here are some from " [:i "Light on the Net Project "]]]
    [:article
       ;; Electrons
     [:div.fn.fl-ns.w-50-l.pr4-l
@@ -90,7 +88,7 @@
      [:p "We were able to salvage these materials."]
 
     [:div.tc [:a.f6.grow.no-underline.br-pill.ba.bw2.ph3.pv2.mb2.dib.shadow-4.dark-green
-              {:href "recycling-center-recycling.html"} "RECYCLE!"]]]
+              {:href "recycling-center-recycling.html"} "SALVAGE!"]]]
 
     [:div.fn.fl-ns.w-50-l.pr4-l
      [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2  "Particles"]
@@ -113,7 +111,9 @@
 
 (defn recycling [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
-   [:h1 "Artificial Forgeries: Recycling"]
+   [:h1 "The net.art Restoration Project: Restore"]
+   [:div.w-100.flex.flex-column.items-center.pv4
+    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "Here we put " [:i "Light on the Net Project "] "into a LLM blender. If humans can't be trusted to maintain their own culture, let's employ robots to do it for us!"]]
    [:article.flex.justify-center
     [:div.flex.flex-column.justify-center.items-center.pv4
      [:p "ChatGPT is working out the solution. Please wait."]
@@ -137,7 +137,9 @@
 
 (defn artifacts [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
-   [:h1 "Artificial Forgeries: Choose the Most Accurate Artifact"]
+   [:h1 "The net.art Restoration Project: Possible Objects"]
+   [:div.w-100.flex.flex-column.items-center.pv4
+    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "Our large langauge models have created these options for a restored " [:i "Light on the Net Project "] ". Now we leverage the wisdom of crowds to choose the best representation of this net.art classic. Don't worry if you are unfamiliar with the original artwork, we're all qualified to choose what is &quot;the best.&quot;" ]]
    [:article.flex.items-center
     [:div.w-50.pa3.tc
      [:img {:src (str resource-url "img/recycling-center/1.png")}]
@@ -150,7 +152,7 @@
 
 (defn final [resource-url path-to-artifact]
   [:div.cf.ph3.ph5-ns.pv3
-   [:h1 "Artificial Forgeries: Restoration Complete!"]
+   [:h1 "The net.art Restoration Project: Restoration Complete!"]
    [:article ;; TODO: images are served from `../resources/img/recycling-center/1/constructing.png` so they don't currently work
     [:div.fn.fl-ns.w-60-l.pr4-l
      [:figure #_{:vocab "http://schema.org/" :typeof "ImageObject"}
