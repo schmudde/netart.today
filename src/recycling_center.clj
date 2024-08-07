@@ -22,7 +22,7 @@
 (defn intro [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
    [:h1 "The net.art Restoration Project"]
-   [:div.w-100.flex.flex-column.items-center.pv4
+   [:div.w-100.flex.flex-column.pv4
     [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "The world wide web is in decay. Much of what was created in the last twenty plus years has disappeared from neglect or deliberate corporate purging."]]
    [:article
     [:div.fn.fl-ns.w-60-l.pr4-l
@@ -54,7 +54,7 @@
 (defn materials [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
    [:h1 "The net.art Restoration Project: Materials"]
-   [:div.w-100.flex.flex-column.items-center.pv4
+   [:div.w-100.flex.flex-column.pv4.pr4-l
     [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "net.art happens on the network so there are many software and hardware artifacts to consider. Here are some from " [:i "Light on the Net Project "]]]
    [:article
       ;; Electrons
@@ -112,7 +112,7 @@
 (defn recycling [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
    [:h1 "The net.art Restoration Project: Restore"]
-   [:div.w-100.flex.flex-column.items-center.pv4
+   [:div.w-100.flex.flex-column.pv4
     [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "Here we put " [:i "Light on the Net Project "] "into a LLM blender. If humans can't be trusted to maintain their own culture, let's employ robots to do it for us!"]]
    [:article.flex.justify-center
     [:div.flex.flex-column.justify-center.items-center.pv4
@@ -138,7 +138,7 @@
 (defn artifacts [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
    [:h1 "The net.art Restoration Project: Possible Objects"]
-   [:div.w-100.flex.flex-column.items-center.pv4
+   [:div.w-100.flex.flex-column.pv4
     [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "Our large langauge models have created these options for a restored " [:i "Light on the Net Project "] ". Now we leverage the wisdom of crowds to choose the best representation of this net.art classic. Don't worry if you are unfamiliar with the original artwork, we're all qualified to choose what is &quot;the best.&quot;" ]]
    [:article.flex.items-center
     [:div.w-50.pa3.tc
