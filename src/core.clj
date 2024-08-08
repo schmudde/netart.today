@@ -205,12 +205,12 @@
      analytics])))
 
 (defn make-recycling-pages []
-  (spit "pages/recycling-center-final-2.html" (make-recycling-page recycle/final "resources/img/recycling-center/2/light-on-net.html"))
-  (spit "pages/recycling-center-final-1.html" (make-recycling-page recycle/final "resources/img/recycling-center/1/light-on-net.html"))
-  (spit "pages/recycling-center-artifacts.html" (make-recycling-page recycle/artifacts))
-  (spit "pages/recycling-center-recycling.html" (make-recycling-page recycle/recycling))
-  (spit "pages/recycling-center-materials.html" (make-recycling-page recycle/materials))
-  (spit "pages/recycling-center.html" (make-recycling-page recycle/intro)))
+  (spit "pages/restoration-project-final-2.html" (make-recycling-page recycle/final "resources/img/restoration-project/2/light-on-net.html"))
+  (spit "pages/restoration-project-final-1.html" (make-recycling-page recycle/final "resources/img/restoration-project/1/light-on-net.html"))
+  (spit "pages/restoration-project-artifacts.html" (make-recycling-page recycle/artifacts))
+  (spit "pages/restoration-project-recycling.html" (make-recycling-page recycle/restoring))
+  (spit "pages/restoration-project-materials.html" (make-recycling-page recycle/materials))
+  (spit "pages/restoration-project.html" (make-recycling-page recycle/intro)))
 
 (defn make-news-page []
   (page/html5

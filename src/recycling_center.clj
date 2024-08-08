@@ -22,8 +22,8 @@
 (defn intro [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
    [:h1 "The net.art Restoration Project"]
-   [:div.w-100.flex.flex-column.pv4
-    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "The world wide web is in decay. Much of what was created in the last twenty plus years has disappeared from neglect or deliberate corporate purging."]]
+   [:div.w-100.flex.flex-column.pv3
+    [:p.f3.fw9.mb4.mt0 "The world wide web is in decay. Much of what was created over its lifetime has disappeared from neglect or deliberate corporate purging."]]
    [:article
     [:div.fn.fl-ns.w-60-l.pr4-l
      [:p.b "Original Art"]
@@ -38,30 +38,47 @@
     [:div.fn.fl-ns.w-40-l.pt3.pt0-l
      [:p.b.tr "About the Artwork"]
      [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2  "&larr;"]
-     [:p "This is " [:i "Light on the Net Project "] "from 1996. You can go ahead and click around. You'll see a lot of missing images, broken links, and unstructured text. But it's the best known copy of this piece. It's a shame because " [:i "Light on the Net Project "] "is a beautiful and important telematic work from last century. "]
+     [:p "This is " [:i "Light on the Net Project "] "from 1996. You can go ahead and click around. You'll see a lot of missing images, broken links, and unstructured text. But it's the best known copy of this piece. It's a shame because " [:i "Light on the Net Project "] "is a beautiful and important telematic work from the last century. "]
      [:p "Here's some historical context:"]
      [:div
       [:blockquote.ml0.mt0.pl3.black-90.bl.bw2.b--blue [:p (:desc light-on-the-net)]]
       [:span
        [:cite.f6.ttu.tracked.fs-normal " ~ " [:a.link {:href (:desc-source light-on-the-net)} " ArtByte (2001)"]]]]
-     [:p "This art decay is an endemic problem for this media; we are losing an entire generation of work. Let's do something about it."]
+     [:p "Digital artworks decay quickly. Over the next four screens I'll guide you through a restoration process to combat the mass loss of culture."]
      [:div.w-100.flex.flex-column.items-center.pv4
       [:div.tc.f2.dib.v-mid.items-center.dark-green "&rarr;&nbsp;"
        [:a.f5.grow.no-underline.br-pill.ba.bw2.ph3.pv2.glow.dark-green
-        {:href "recycling-center-materials.html"} "RESTORE!"]
+        {:href "restoration-project-materials.html"} "RESTORE!"]
        "&nbsp;&larr;"]]]]])
 
 (defn materials [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
+   [:style
+    ".gradient-bottom-edge {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .gradient-bottom-edge::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1));
+      }"]
    [:h1 "The net.art Restoration Project: Materials"]
-   [:div.w-100.flex.flex-column.pv4.pr4-l
-    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "net.art happens on the network so there are many software and hardware artifacts to consider. Here are some from " [:i "Light on the Net Project "]]]
+   [:div.w-100.flex.flex-column.pv3.pr4-l
+    [:p.f3.fw9.mb4.mt0 "Here is a condensed inventory of the materials used to build " [:i "Light on the Net Project. "] "A Large Language Model (LLM) will use what it can to restore the artwork." ]]
    [:article
       ;; Electrons
     [:div.fn.fl-ns.w-50-l.pr4-l
-     [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2  "Waves"]
+     [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2  "Bits"]
+     [:p "We were able to salvage these materials."]
+
      [:h3 [:i "Light on the Net&nbsp;"] "Website (1996)"]
-     [:pre.overflow-hidden "&lt;title&gt;Light on the Net Project [Historical Album]&lt;/title&gt;&lt;/head&gt;
+     [:pre.overflow-hidden.gradient-bottom-edge "&lt;title&gt;Light on the Net Project [Historical Album]&lt;/title&gt;&lt;/head&gt;
 &lt;body bgcolor=&quot;#000000&quot; text=&quot;#dddddd&quot; link=&quot;#5050f0&quot; vlink=&quot;#c050b0&quot; alink=&quot;#909000&quot;&gt;
 &lt;table&gt;
 &lt;tr&gt;
@@ -70,7 +87,7 @@
 "]
      [:p [:small "source:&nbsp;" [:a {:href "https://web.archive.org/web/20000301125959/http://www.flab.mag.keio.ac.jp/light/album.html"} "internet archive"]]]
      [:h3 "NCSA HTTPd Server 1.5.2 (1996)"]
-     [:pre.overflow-hidden "while(!Exit) {
+     [:pre.overflow-hidden.gradient-bottom-edge "while(!Exit) {
   /* current_process_size(&quot;Starting&quot;); */
   initialize_socket(&sa_server,&sa_client);
   set_signals();
@@ -78,20 +95,20 @@
   log_pid();"]
      [:p [:small "source:&nbsp;" [:a {:href "https://archive.softwareheritage.org/browse/content/sha1_git:2d13e113b33364a93998706aa74b4a92b3fabf6c/?origin_url=https://github.com/unix-history/ncsa-httpd&path=src/httpd.c"} "software heritage"]]]
      [:h3 "NCSA Mosaic 2.7 (1995)"]
-     [:pre.overflow-hidden "typedef struct map_rec {
+     [:pre.overflow-hidden.gradient-bottom-edge "typedef struct map_rec {
 	char *name;
 	AreaInfo *areaList;
 	AreaInfo *currentArea;
 	struct map_rec *next;
       } MapInfo;"]
      [:p [:small "source:&nbsp;" [:a {:href "https://archive.softwareheritage.org/browse/content/sha1_git:5be62e43600defe91de284fc5599d1c0369c5a5d/?origin_url=https://github.com/alandipert/ncsa-mosaic&path=libhtmlw/HTML.h"} "software heritage"]]]
-     [:p "We were able to salvage these materials."]
 
     [:div.tc [:a.f6.grow.no-underline.br-pill.ba.bw2.ph3.pv2.mb2.dib.shadow-4.dark-green
-              {:href "recycling-center-recycling.html"} "SALVAGE!"]]]
+              {:href "restoration-project-recycling.html"} "SALVAGE!"]]]
 
     [:div.fn.fl-ns.w-50-l.pr4-l
      [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2  "Particles"]
+     [:p "The location of these artifacts is unknown and cannot be salvaged."]
      [:h3 "Infrastructure"]
      [:ul
       [:li "Copper wire"]
@@ -103,33 +120,33 @@
      [:ul
       [:li "Lights and electrical"]
       [:li "Scaffolding"]]
-     [:p "All landfill dumping is automated."]
+     ]]])
 
-
-    [:div.tc [:a.f6.no-underline.br-pill.ba.bw2.ph3.pv2.mb2.dib.shadow-4.mid-gray
-               "LANDFILL!"]]]]])
-
-(defn recycling [resource-url]
+(defn restoring [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
    [:h1 "The net.art Restoration Project: Restore"]
-   [:div.w-100.flex.flex-column.pv4
-    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "Here we put " [:i "Light on the Net Project "] "into a LLM blender. If humans can't be trusted to maintain their own culture, let's employ robots to do it for us!"]]
+   [:div.w-100.flex.flex-column.pv3
+    [:p.f3.fw9.mb4.mt0 "LLMs have already looted our culture. In the absence of cultural governance, we have no choice but to relinquish the management of our digital artifacts to artificial intelligence. " [:i "Light on the Net Project "] "will soon be safeguarded by our new benevolent caretakers."]]
    [:article.flex.justify-center
     [:div.flex.flex-column.justify-center.items-center.pv4
-     [:p "ChatGPT is working out the solution. Please wait."]
-     [:div
-      [:img {:src (str resource-url "img/recycling-center/loading-gif.webp")
+     [:p "ChatGPT is working out the solution. " [:span#wait "Please wait."] [:span#finished {:style (str "display: " "none;") } "Finished!"]]
+     [:div.pv2
+      [:img {:src (str resource-url "img/restoration-project/loading-gif.webp")
              :id "loading-animation"
              :width "20px" :property "contentUrl"}]]
-     #_[:div.w-100
-        [:img {:src (str resource-url "img/recycling-center/smash-illiac-iv.jpg") :property "contentUrl"}]]
-     [:div
-      [:a {:href "recycling-center-artifacts.html"}
-       [:button {:id "recycle-button" :disabled true} "READY!"]]]]]
+
+     [:div.pv2
+      [:a {:href "restoration-project-artifacts.html"}
+       [:button.f6.grow.no-underline.br-pill.ba.bw2.ph3.pv2.mb2.dib.shadow-4.dark-green.bg-white.b--dark-green {:id "restore-button" :disabled true} "RESTORE!"]]]
+
+     ]]
        [:script "document.addEventListener('DOMContentLoaded', (event) => {
         setTimeout(() => {
-          document.getElementById('recycle-button').disabled = false;
+          document.getElementById('restore-button').disabled = false;
+          document.getElementById('restore-button').classList.add('glow');
           document.getElementById('loading-animation').hidden = true;
+          document.getElementById('wait').hidden = true;
+          document.getElementById('finished').style.display = 'inline';
         }, 3000);
       });
     "]
@@ -138,22 +155,22 @@
 (defn artifacts [resource-url]
   [:div.cf.ph3.ph5-ns.pv3
    [:h1 "The net.art Restoration Project: Possible Objects"]
-   [:div.w-100.flex.flex-column.pv4
-    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "Our large langauge models have created these options for a restored " [:i "Light on the Net Project "] ". Now we leverage the wisdom of crowds to choose the best representation of this net.art classic. Don't worry if you are unfamiliar with the original artwork, we're all qualified to choose what is &quot;the best.&quot;" ]]
+   [:div.w-100.flex.flex-column.pv3
+    [:p.f3.fw9.mb4.mt0 "Our algorithms have created several options for a restored " [:i "Light on the Net Project. "] "Help train the LLM by selecting the best representation of this net.art classic. Don't worry if you are unfamiliar with the original artwork, we're all qualified to choose what is &quot;the best.&quot;" ]]
    [:article.flex.items-center
     [:div.w-50.pa3.tc
-     [:img {:src (str resource-url "img/recycling-center/1.png")}]
+     [:img {:src (str resource-url "img/restoration-project/1.png")}]
      [:a.f6.grow.no-underline.br-pill.ba.bw2.ph3.pv2.mb2.dib.shadow-4.dark-green
-      {:href "recycling-center-final-1.html"} "Version 1"]]
+      {:href "restoration-project-final-1.html"} "Version 1"]]
     [:div.w-50.pa3.tc
-     [:img {:src (str resource-url "img/recycling-center/2.png")}]
+     [:img {:src (str resource-url "img/restoration-project/2.png")}]
      [:a.f6.grow.no-underline.br-pill.ba.bw2.ph3.pv2.mb2.dib.shadow-4.dark-green
-      {:href "recycling-center-final-2.html"} "Version 2"]]]])
+      {:href "restoration-project-final-2.html"} "Version 2"]]]])
 
 (defn final [resource-url path-to-artifact]
   [:div.cf.ph3.ph5-ns.pv3
-   [:h1 "The net.art Restoration Project: Restoration Complete!"]
-   [:article ;; TODO: images are served from `../resources/img/recycling-center/1/constructing.png` so they don't currently work
+   [:h1.pb4 "The net.art Restoration Project: Restoration Complete!"]
+   [:article ;; TODO: images are served from `../resources/img/restoration-project/1/constructing.png` so they don't currently work
     [:div.fn.fl-ns.w-60-l.pr4-l
      [:figure #_{:vocab "http://schema.org/" :typeof "ImageObject"}
       [:iframe {:srcdoc (slurp path-to-artifact)
@@ -168,13 +185,11 @@
      [:div
       [:p.f3.mid-gray.lh-title (:artist light-on-the-net) [:br]
        [:time.f6.ttu.tracked.gray (:date light-on-the-net)]]
-      [:blockquote.ml0.mt0.pl3.black-90.bl.bw2.b--blue [:p (:desc light-on-the-net)]]
+      [:blockquote.ml0.mt0.pl3.black-90.bl.bw2.b--blue [:p "&ldquo;Light on the Net&rdquo; by Masaki Fujihata is a pioneering interactive art installation. It allows users to control a grid of light bulbs in real-time via the internet, 24 hours a day. This interaction directly affects the physical installation located at the Ogaki City Art Museum in Gifu, Japan. The work exemplifies the fusion of digital and physical spaces, showcasing the potential of the internet as a medium for real-time global interaction."]]
       [:span
-       [:cite.f6.ttu.tracked.fs-normal " ~ " [:a.link {:href (:desc-source light-on-the-net)} " ArtByte (2001)"]]
-       [:span
-        ", currently archived at "
-        [:a.link {:href (:current-archive-url light-on-the-net)} (:current-archive light-on-the-net)]]]]]]
+       [:cite.f6.ttu.tracked.fs-normal " ~ Leonardo, Journal of the International Society for the Arts, Sciences and Technology (2000)"]
+       ]]]]
    [:div.w-100.flex.flex-column.items-center.pv4
-    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "Thank you for helping to repair this important artifact. Your work has helped train our algorithm. Soon our entire cultural history will be mediated by artificial intelligence. We will no longer need to do the costly and difficult work of maintaining relics of the past. Not only will we be &quot;All Watched Over by Machines of Loving Grace&quot; just as Richard Brautigan imagined in 1967, our understanding of the past and thus our future will also be seen through an infaliable algorithmic lens."]
+    [:p.f3.fw9.mb3.mt0.pt3.bt.bw2 "Thank you for repairing this important artifact. Soon our entire cultural history will be mediated by artificial intelligence. We will no longer need to do the costly and difficult work of maintaining relics of the past. Not only will we be &quot;All Watched Over by Machines of Loving Grace&quot; as Richard Brautigan imagined in 1967, our understanding of the past and therefore our future will be seen through this infaliable algorithmic lens."]
     [:a.f6.grow.no-underline.br-pill.ba.bw2.ph3.pv2.mb2.dib.shadow-4.dark-green
-     {:href "recycling-center.html"} "Again"]]])
+     {:href "restoration-project.html"} "Again"]]])
