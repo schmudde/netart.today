@@ -205,12 +205,16 @@
      analytics])))
 
 (defn make-recycling-pages []
-  (spit "pages/restoration-project-final-2.html" (make-recycling-page recycle/final "resources/img/restoration-project/2/light-on-net.html"))
-  (spit "pages/restoration-project-final-1.html" (make-recycling-page recycle/final "resources/img/restoration-project/1/light-on-net.html"))
-  (spit "pages/restoration-project-artifacts.html" (make-recycling-page recycle/artifacts))
+  (let [no-of-artifacts 6] ;; currently building 6 versions of Light on the Net
+  (doall (map #(let [destination (format "pages/restoration-project-final-%s.html" %1)
+                     source (format "resources/img/restoration-project/%s/light-on-net.html" %1)]
+                 (println destination) ;; build log
+                 (spit destination (make-recycling-page recycle/final source)))
+              (range 1 (inc no-of-artifacts) 1)))
+  (spit "pages/restoration-project-artifacts.html" (make-recycling-page (partial recycle/artifacts no-of-artifacts)))
   (spit "pages/restoration-project-recycling.html" (make-recycling-page recycle/restoring))
   (spit "pages/restoration-project-materials.html" (make-recycling-page recycle/materials))
-  (spit "pages/restoration-project.html" (make-recycling-page recycle/intro)))
+  (spit "pages/restoration-project.html" (make-recycling-page recycle/intro))))
 
 (defn make-news-page []
   (page/html5

@@ -19,7 +19,7 @@
    :current-archive-url "https://web.archive.org/web/20000301125959/http://www.flab.mag.keio.ac.jp/light/album.html"
    :current-archive-type :host})
 
-(defn intro [resource-url]
+(defn intro [_]
   [:div.cf.ph3.ph5-ns.pv3
    [:h1 "The net.art Restoration Project"]
    [:div.w-100.flex.flex-column.pv3
@@ -51,7 +51,7 @@
         {:href "restoration-project-materials.html"} "RESTORE!"]
        "&nbsp;&larr;"]]]]])
 
-(defn materials [resource-url]
+(defn materials [_]
   [:div.cf.ph3.ph5-ns.pv3
    [:style
     ".gradient-bottom-edge {
@@ -152,22 +152,25 @@
     "]
    ])
 
-(defn artifacts [resource-url]
+(defn artifact [resource-url position]
+  (let [image (format "%simg/restoration-project/%s.png" resource-url position)
+        page (format "restoration-project-final-%s.html" position)
+        version (str "Version " position)]
+    [:div.w-50-l.w-100.pa3.tc {:id (str "version-" position)}
+     [:img {:src image}]
+     [:div.pv3
+      [:a.f6.grow.no-underline.br-pill.ba.bw2.ph3.pv2.mb2.dib.shadow-4.dark-green
+      {:href page} version]]]))
+
+(defn artifacts [no-of-artifacts resource-url]
   [:div.cf.ph3.ph5-ns.pv3
    [:h1 "The net.art Restoration Project: Possible Objects"]
    [:div.w-100.flex.flex-column.pv3
     [:p.f3.fw9.mb4.mt0 "Our algorithms have created several options for a restored " [:i "Light on the Net Project. "] "Help train the LLM by selecting the best representation of this net.art classic. Don't worry if you are unfamiliar with the original artwork, we're all qualified to choose what is &quot;the best.&quot;" ]]
-   [:article.flex.items-center
-    [:div.w-50.pa3.tc
-     [:img {:src (str resource-url "img/restoration-project/1.png")}]
-     [:a.f6.grow.no-underline.br-pill.ba.bw2.ph3.pv2.mb2.dib.shadow-4.dark-green
-      {:href "restoration-project-final-1.html"} "Version 1"]]
-    [:div.w-50.pa3.tc
-     [:img {:src (str resource-url "img/restoration-project/2.png")}]
-     [:a.f6.grow.no-underline.br-pill.ba.bw2.ph3.pv2.mb2.dib.shadow-4.dark-green
-      {:href "restoration-project-final-2.html"} "Version 2"]]]])
+   [:article.flex.flex-wrap
+    (map #(artifact resource-url %1) (range 1 (inc no-of-artifacts) 1))]])
 
-(defn final [resource-url path-to-artifact]
+(defn final [_ path-to-artifact]
   [:div.cf.ph3.ph5-ns.pv3
    [:h1.pb4 "The net.art Restoration Project: Restoration Complete!"]
    [:article ;; TODO: images are served from `../resources/img/restoration-project/1/constructing.png` so they don't currently work
@@ -176,8 +179,6 @@
       [:iframe {:srcdoc (slurp path-to-artifact)
                 :width "100%" :height "500px"}]
       [:figcaption
-       [:small.fr
-        [:a.link {:href (:url light-on-the-net)}  "retrieved " (:retrieved light-on-the-net)]]
        [:i (:title light-on-the-net)] "&nbsp;(" (:date light-on-the-net) ")"]]]
     ;; info
     [:div.fn.fl-ns.w-40-l.pt3.pt0-l
