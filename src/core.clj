@@ -5,7 +5,8 @@
             [utils :as u]
             [hiccup.page :as page]
             [clojure.edn :as edn]
-            [recycling-center :as recycle]))
+            [restoration-project :as restore]
+            [windows-into-windows :as wiw]))
 
 (def artworks (edn/read-string (slurp "resources/art.edn")))
 (def metadata {:domain "netart.today"})
@@ -30,7 +31,7 @@
      :first-artwork [:a.f1.b.no-underline.hover-dark-blue.blue {:href "pages/0.html"} "Enter &rarr;"]
      :about [:a.f3.b.no-underline.hover-dark-blue.blue {:href "about.html"} "[about]"]
      :gift-shop [:a.f3.b.no-underline.hover-dark-blue.blue {:href "gift-shop.html"} "[gift shop]"]))
-  ([link next-artwork]
+  ([_ next-artwork]
    [:a.f3.b.no-underline.hover-dark-blue.blue {:href next-artwork} (str (next-link) (art-link) "] &rarr;")]))
 
 (def header
@@ -78,6 +79,7 @@
    [:meta {:http-equiv "Content-Type" :content "text/html"}]
    [:link {:rel "icon" :href "/favicon.ico" :type "image/x-icon"}]
    [:link {:rel "stylesheet" :href (str resource-url "css/fontawesome/all.min.css")}]
+
 
    [:meta {:name "description" :content "The culture of a generation, lost to time."}]
    [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0, user-scalable=no"}]
@@ -209,12 +211,28 @@
   (doall (map #(let [destination (format "pages/restoration-project-final-%s.html" %1)
                      source (format "resources/img/restoration-project/%s/light-on-net.html" %1)]
                  (println destination) ;; build log
-                 (spit destination (make-recycling-page recycle/final source)))
+                 (spit destination (make-recycling-page restore/final source)))
               (range 1 (inc no-of-artifacts) 1)))
-  (spit "pages/restoration-project-artifacts.html" (make-recycling-page (partial recycle/artifacts no-of-artifacts)))
-  (spit "pages/restoration-project-recycling.html" (make-recycling-page recycle/restoring))
-  (spit "pages/restoration-project-materials.html" (make-recycling-page recycle/materials))
-  (spit "pages/restoration-project.html" (make-recycling-page recycle/intro))))
+  (spit "pages/restoration-project-artifacts.html" (make-recycling-page (partial restore/artifacts no-of-artifacts)))
+  (spit "pages/restoration-project-recycling.html" (make-recycling-page restore/restoring))
+  (spit "pages/restoration-project-materials.html" (make-recycling-page restore/materials))
+  (spit "pages/restoration-project.html" (make-recycling-page restore/intro))))
+
+
+(defn make-windows-into-windows-page []
+  (page/html5
+      {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
+      (head-template "../resources/")
+      [:body.sans-serif
+       [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
+        header-gift-shop
+        [:nav.ph5-ns.ph3
+         (dispatch-link :home) "&nbsp;&nbsp;"
+         (dispatch-link :next-artwork "0.html")]
+        [:section.flex-auto.ph5-ns.ph3
+         (wiw/tech-sheet "../resources/")]
+        footer]
+       analytics]))
 
 (defn make-news-page []
   (page/html5
@@ -268,5 +286,6 @@
     (spit "pages/about.html" (make-about-page))
     (spit "pages/gift-shop.html" (make-gift-shop-page))
     (spit "pages/press-release.html" (make-news-page))
+    (spit "pages/windows-into-windows.html" (make-windows-into-windows-page))
     (make-recycling-pages)
     (make-pages artworks)))

@@ -1,6 +1,4 @@
-(ns recycling-center
-  (:require [utils :as u]
-            [hiccup.page :as page]))
+(ns restoration-project)
 
 (def light-on-the-net
   {:title "Light on the Net Project"
