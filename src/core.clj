@@ -10,7 +10,7 @@
 
 (def artworks (edn/read-string (slurp "resources/art.edn")))
 (def metadata {:domain "netart.today"})
-(def jodi "http://asdfg.jodi.org/-------------------------------/-------------------------------/-------------------------------/-------------------------------/-----------------------401qe663/vb663e.html")
+(def jodi "https://asdfg.jodi.org/-------------------------------/-------------------------------/-------------------------------/-------------------------------/-----------------------401qe663/vb663e.html")
 (def analytics [:script {:data-goatcounter "https://gallery404.goatcounter.com/count"
                          :async true :src "//gc.zgo.at/count.js"}])
 
