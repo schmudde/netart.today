@@ -59,7 +59,7 @@
                [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"}
                 [:i {:class "fab fa-creative-commons"}] "&nbsp;"
                 [:i {:class "fab fa-creative-commons-by"}]]
-               [:span " David Schmudde 2024"]]]
+               [:span " David Schmudde 2025"]]]
              [:div.tc.mt3
               [:div
                [:a.f5.dib.ph2.link.dim
