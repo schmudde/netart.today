@@ -15,7 +15,7 @@
        [:div.fn.fl-ns.w-50-l.pr5-l [:div tech-sheet]]
        [:div.fn.fl-ns.w-50-l.pt3.pt0-l
         [:figure {:vocab "http://schema.org/" :typeof "ImageObject"}
-         [:img {:alt "Early Mockup" :title "Early Mockup" :src (str resource-url "img/wiw/overwrite-simulation-1.gif") :property "contentUrl"}]
+         [:img {:alt "Early Mockup" :title "Early Mockup" :src (str resource-url "wiw/img/overwrite-simulation-1.gif") :property "contentUrl"}]
          [:figcaption
           [:small
            [:i "Early Mockup of &ldquo;Windows Into Windows&rdquo;"] "&nbsp;&nbsp;"
