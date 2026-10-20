@@ -143,10 +143,10 @@
        [:div
         [:img.ph2 {:src (str "resources/img/icons/netscape.png") :alt "netscape missing image icon" :class "icons"}]
         [:img.ph2 {:src (str "resources/img/icons/netscape-plugin.gif") :alt "netscape missing plugin icon" :class "icons"}]
-        [:img.ph2 {:src (str "resources/img/icons/chrome.png") :alt "chrome can't find page icon" :class "icons"}]
-        [:img.ph2 {:src (str "resources/img/icons/firefox.png") :alt "firefox can't find page icon" :class "icons"}]
-        [:img.ph2 {:src (str "resources/img/icons/chrome-error-code.png") :alt "chrome crash icon" :class "icons"}]
-        [:img.ph2 {:src (str "resources/img/icons/plugin-1.png") :alt "chrome missing plugin icon" :class "icons"}]]]]
+        [:img.ph2 {:src (str "resources/img/icons/cited/chrome-error_network_generic-trimmed.png") :alt "chrome can't find page icon" :class "icons"}]
+        [:img.ph2 {:src (str "resources/img/icons/cited/mozilla-error-server-not-found-trimmed.svg") :alt "firefox can't find page icon" :class "icons"}]
+        [:img.ph2 {:src (str "resources/img/icons/cited/chrome-favicon_sad_tab-trimmed.png") :alt "chrome crash icon" :class "icons"}]
+        [:img.ph2 {:src (str "resources/img/icons/cited/chrome-200-error-offline-trimmed.png") :alt "chrome error offline icon" :class "icons"}]]]]
      [:footer
       [:p.ph3 [:i {:class "fas fa-palette"}] " The flashing net.art is " [:em "ASDFG.JODI.ORG"] " by " [:strong "JODI"] " (1998)."]]
      [:div.h-100-ns.absolute-ns.top-0-ns.w-100 {:class "jodi"}
