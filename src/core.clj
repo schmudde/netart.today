@@ -5,11 +5,11 @@
             [utils :as u]
             [hiccup.page :as page]
             [clojure.edn :as edn]
+            [clojure.string :as str]
             [restoration-project :as restore]
             [windows-into-windows :as wiw]))
 
 (def artworks (edn/read-string (slurp "resources/art.edn")))
-(def metadata {:domain "netart.today"})
 (def site-url "https://www.broken.gallery/")
 (def jodi "https://asdfg.jodi.org/-------------------------------/-------------------------------/-------------------------------/-------------------------------/-----------------------401qe663/vb663e.html")
 (def analytics [:script {:data-goatcounter "https://gallery404.goatcounter.com/count"
@@ -36,11 +36,11 @@
    [:a.f3.b.no-underline.hover-dark-blue.blue {:href next-artwork} (str (next-link) (art-link) "] &rarr;")]))
 
 (def header
-  [:header.ph5-ns.ph3.pv2 [:h1.mb1 [:a.dim.no-underline.black {:href (str "http://" (:domain metadata))} "Gallery 404"]]
+  [:header.ph5-ns.ph3.pv2 [:h1.mb1 [:a.dim.no-underline.black {:href site-url} "Gallery 404"]]
    [:h2.f5.mv1 "The Museum of Broken net.art Art"]])
 
 (def header-gift-shop
-  [:header.ph5-ns.ph3.pv2 [:h1.mb1 [:a.dim.no-underline.black {:href (str "http://" (:domain metadata))} "Gallery 404"]]
+  [:header.ph5-ns.ph3.pv2 [:h1.mb1 [:a.dim.no-underline.black {:href site-url} "Gallery 404"]]
    [:h2.f5.mv1 "The Museum of Broken net.art Art"]])
 
 (def footer [:footer.pv4.ph3.ph5-m.ph6-l.mid-gray
@@ -63,7 +63,7 @@
                " "
                [:span {:property "copyrightHolder" :typeof "Person"} [:span {:property "name"} "David Schmudde"]]
                " "
-               [:span {:property "copyrightYear"} "2026"]]]
+               [:span {:property "copyrightYear"} (.getValue (java.time.Year/now))]]]
              [:div.tc.mt3
               [:div
                [:a.f5.dib.ph2.link.dim
@@ -90,10 +90,10 @@
    [:meta {:name "keywords" :content "netart rhizome Monoskop"}]
    [:meta {:name "twitter:card" :content "summary_large_image"}]
    [:meta {:name "twitter:creator" :content "@dschmudde"}]
-   [:meta {:property "og:url" :content (str "http://" (:domain metadata))}]
+   [:meta {:property "og:url" :content site-url}]
    [:meta {:property "og:title" :content "Gallery 404"}]
    [:meta {:property "og:author" :content "David Schmudde"}]
-   [:meta {:property "og:image" :content (str "http://www." (:domain metadata) "/" (u/get-image-url resource-url (first artworks)))}]
+   [:meta {:property "og:image" :content (str site-url (str/replace (u/get-image-url resource-url (first artworks)) #"^(\.\./)+" ""))}]
    [:meta {:property "og:description" :content "The culture of a generation, lost to time."}]
    [:link {:rel "stylesheet" :href (str resource-url "css/tachyons.min.css")}]
    [:link {:rel "stylesheet" :href (str resource-url "css/netart.css")}]])

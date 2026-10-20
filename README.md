@@ -1,12 +1,12 @@
 # Gallery 404
 
-[Gallery 404](http://www.netart.today/), exhibits net.art as it appears today - exclusively specializing in broken artworks, launched Nov 2020, run by David Schmudde. (Description via [Monoskop](https://monoskop.org/Net_art))
+[Gallery 404](https://www.broken.gallery/), exhibits net.art as it appears today - exclusively specializing in broken artworks, launched Nov 2020, run by David Schmudde. (Description via [Monoskop](https://monoskop.org/Net_art))
 
 ## About
 
 Digital artifacts are trivial to copy but very difficult to preserve. This gallery highlights over twenty years of misplaced and broken works of art. [net.art](https://en.wikipedia.org/wiki/Net.art) embodies the work of a generation of internet pioneers and much of it has already been lost to time.
 
-Read more about the gallery, net.art, and the historical context at Gallery 404's [about page](http://www.netart.today/pages/about.html).
+Read more about the gallery, net.art, and the historical context at Gallery 404's [about page](https://www.broken.gallery/pages/about.html).
 
 # Running
 
@@ -42,7 +42,7 @@ Here is the explanation of each data point:
     - **desc**: description of the artwork
     - **desc-source**: a link to the source of the artwork's **desc**
 - Domain details
-    - **retrieved**: the date when `netart.today` last visited the artwork's original **url**. In year-month-day (`yyyy-mm-dd`) format
+    - **retrieved**: the date when `www.broken.gallery` last visited the artwork's original **url**. In year-month-day (`yyyy-mm-dd`) format
     - **image**: a screen capture of the artwork's original **url** when it was last **retrieved**
         - The format is `artwork-title-yyyymmdd-width-height.png`.
         - The resolution of the image should be `1920x1055`.
@@ -133,5 +133,5 @@ There are also interesting opportunities emerging on IPFS. For example, [The Ham
 # TODO
 
 - Add footer link to home and index (utility links), add index, and add exhibit numbers for each artwork (e.g. 3/31, 4/31, etc...)
-- Automate gallery announcements (i.e. Today marks a new addition to Gallery 404's illustrious collection of broken net art. "This and that thought." by BFFA3AE via @turbulenceorg. http://www.netart.today/)
+- Automate gallery announcements (i.e. Today marks a new addition to Gallery 404's illustrious collection of broken net art. "This and that thought." by BFFA3AE via @turbulenceorg. https://www.broken.gallery/)
 - A collection of artworks that continue to work, in spite of changes in the environment. For example, Heath Bunting's *[Own, Be Owned Or Remain Invisible.](http://irational.org/_readme.html)*.

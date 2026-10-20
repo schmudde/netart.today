@@ -37,8 +37,8 @@
   :desc "«Digital Landfill», one of Napier’s most well-known works of Net art, is a sort if virtual compost heap. The artist has developed an interface that allows a user to copy data from his or her own computer or from other Web sites, and thus, to put it plainly, to dump it. Within seconds, the data appears in various layers on the computer monitor. As if you were combing through dumping grounds layer by layer, you dig deeper and deeper into the overripe information.
 Besides the unreadable texts in this computer-generated collage, familiar icons from the Net appear here and there. The Yahoo! Logo, the homapage of the CIA, press releases from Microsoft and playmates from Playboy’s Web site emerge from the digital chaos, looking as if they really were slowly rotting there on Napier’s server, decaying on some Internet-based compost-heap. […]
 One could call «Digital Landfill» a work of automated Pop Art. The multiple layers of pop culture icons and ‹found footage› from the Internet are reminiscent of Robert Rauschenberg’s silk screens, with at least one obvious yet important difference: with «Digital Landfill», it’s not a single artist who determines the theme and its arrangement. The work is far more the result of the contributions of all its ‹users’› who end up creating a sort of collective art work."
-  :desc-source "Tilman Baumgärtel, [net.art] New Materials towards Net art, Nürnberg, 2001. (http://www.medienkunstnetz.de/works/digital-landfill/)"
-  :notes ""}
+  :desc-source "http://www.medienkunstnetz.de/works/digital-landfill/"
+  :notes "Tilman Baumgärtel, [net.art] New Materials towards Net art, Nürnberg, 2001. (http://www.medienkunstnetz.de/works/digital-landfill/)"}
  {:desc
   "Tweetopia are data-scrolls, documenting the passing of time, through minute changes in a fixed structure, using data from the evolving DiGi-FLiP project @jtwinedotcom on the micro-blogging site Twitter over the course of three years from 2013 to 2015. Tweetopia is available in three versions either lasting one hour, one minute, or one second.",
   :date "2016",
@@ -60,7 +60,7 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :link-from "Digital Art Archive",
   :desc-source
   "https://www.digitalartarchive.at/database/general/work/ultrahyperdrone.html",
-  :artist "Jürgen Trautwein ",
+  :artist "Jürgen Trautwein",
   :title "UltraHyperDrone",
   :notes "",
   :url "http://www.jtwine.com/014ultrahyperdrone.htm",
@@ -287,7 +287,7 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :link-from "Digital Art Archive",
   :desc-source
   "https://www.digitalartarchive.at/database/general/work/crack-it.html",
-  :artist "Knowbotic Research ",
+  :artist "Knowbotic Research",
   :title "Crack it",
   :notes "",
   :url "http://www.krcf.org/krcfhome/cfa/",
@@ -303,7 +303,7 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :link-from "Digital Art Archive",
   :desc-source
   "https://www.digitalartarchive.at/database/general/work/the-telegarden.html",
-  :artist "Ken Goldberg ",
+  :artist "Ken Goldberg",
   :title "The Telegarden",
   :notes "",
   :url "http://queue.ieor.berkeley.edu/~goldberg/garden/Ars/",
@@ -314,7 +314,7 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   "https://www.digitalartarchive.at/database/general/work/the-telegarden.html"}
  {:desc
   "Cinema sem Volta aborda as ambivalências da rede como espaço onde confluem todas as multidões e as turbas, revelando os discursos mais extremos no espectro político contemporâneo.",
-  :date " 2014",
+  :date "2014",
   :link-from "Digital Art Archive",
   :desc-source "http://www.desvirtual.com/multitude/sobre.html",
   :artist "Giselle Beiguelman",
@@ -328,7 +328,7 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :link-from-url
   "https://www.digitalartarchive.at/database/general/work/unlooping-film-cinema-sem-volta.html"}
  {:desc
-  "Wordotcomnodot is an essay on the condition of the word in the digital context. It presents an anthology of literature created for the Internet, a commented guide of websites on the creation and development of hypertext content, and a forum open to the public on the impact of electronic production on the printed culture.",
+  "Wordotcomnodot is an essay on the condition of the word in the digital context. It presents an anthology of literature created for the Internet, a commented guide of websites on the creation and development of hypertext content, and a forum open to the public on the impact of electronic production on the printed culture.",
   :date "2000",
   :link-from "Digital Art Archive",
   :desc-source
@@ -349,7 +349,7 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :link-from "Digital Art Archive",
   :desc-source
   "https://www.digitalartarchive.at/database/general/work/circler.html",
-  :artist "Kevin McCoy ",
+  :artist "Kevin McCoy",
   :title "Circler",
   :notes "",
   :url "https://artport.whitney.org/commissions/codedoc/McCoy/code_woc.html",
@@ -360,7 +360,7 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   "https://www.digitalartarchive.at/database/general/work/circler.html"}
  {:desc
   "Indeed, as Martin said, VERY competent programming, runs like a charm and is a pleasure to look at. I notice that Golan uses the \"official\" United Nations map projection, rather than a strict lat/lon projection. Don't you think it over-emphasizes Europe and Africa? I love the sense of humor (if you can call it humor) and the very \"professional\" code comments (\"...and a secret handshake. Ours is wicked cool.\"). I also very much appreciate the content-driven approach. Sometimes the axis \"description\" is a little forced and redundant, but often it is quite funny, and certainly points to the redundancy of political agendas in the first place. The funniest descriptions depend on the countries one chooses. This highlights a certain property common to many interactive and generative pieces, it really matters what the user does. This is not a bad thing, I think it is ultimately very much the point.",
-  :date " 2002",
+  :date "2002",
   :link-from "Digital Art Archive",
   :desc-source
   "https://www.digitalartarchive.at/database/general/work/axis.html",
@@ -374,7 +374,7 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :link-from-url
   "https://www.digitalartarchive.at/database/general/work/axis.html"}
  {:desc
-  "I love how the code \"eats itself.\" The writing style is not as smooth as Golan's, for example -- in code, if not in drawing, I definitely favor the \"easy on the eyes,\" but in the case of this work, it seems the only way to get the job done is through brute force. It's a fascinating piece because as I write code, I always have an image in mind of how the routines are calling each other, passing control here and there and back again, and it's great to see an actual picture of this happening. Not surprisingly, it is as boggling an image in actuality as it often is in my head.\" ",
+  "I love how the code \"eats itself.\" The writing style is not as smooth as Golan's, for example -- in code, if not in drawing, I definitely favor the \"easy on the eyes,\" but in the case of this work, it seems the only way to get the job done is through brute force. It's a fascinating piece because as I write code, I always have an image in mind of how the routines are calling each other, passing control here and there and back again, and it's great to see an actual picture of this happening. Not surprisingly, it is as boggling an image in actuality as it often is in my head.\"",
   :date "2002",
   :link-from "Digital Art Archive",
   :desc-source
@@ -451,11 +451,11 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :image "longest-sentence-2020-11-14 21-56-43.png",
   :tech "cgi"}
 
- {:desc "In the search for new forms of urbanity the influence of media technologies on the perception of and on the engagement with social constructed spaces becomes evident. ",
+ {:desc "In the search for new forms of urbanity the influence of media technologies on the perception of and on the engagement with social constructed spaces becomes evident.",
   :date "1997",
   :link-from "Digital Art Archive",
   :desc-source "https://www.digitalartarchive.at/database/general/work/io-dencies-series-tokyosao-pauloruhrgebietvenice.html",
-  :artist "Knowbotic Research ",
+  :artist "Knowbotic Research",
   :title "IO_dencies Series [Tokyo/Sao Paulo/Ruhrgebiet/Venice]",
   :notes "",
   :url "http://www.krcf.org/krcfhome/IODENS_SAOPAULO/1IOdencies.htm",
@@ -465,7 +465,7 @@ One could call «Digital Landfill» a work of automated Pop Art. The multiple la
   :link-from-url "https://www.digitalartarchive.at/database/general/work/io-dencies-series-tokyosao-pauloruhrgebietvenice.html"}
 
  {:desc
-  "\"I really love the hard edges and jarring animation of Scott's piece. It's also just plain funny, and weird, in a purely visual sense. I very much like how Scott's personality comes across in this work, as it does in all his work. Something I sometimes say, with gentle humor, when describing Scott's art: ",
+  "\"I really love the hard edges and jarring animation of Scott's piece. It's also just plain funny, and weird, in a purely visual sense. I very much like how Scott's personality comes across in this work, as it does in all his work. Something I sometimes say, with gentle humor, when describing Scott's art:",
   :date "2002",
   :link-from "Digital Art Archive",
   :desc-source

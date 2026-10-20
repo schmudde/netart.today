@@ -19,7 +19,7 @@
        [:a.link.link {:href "https://creativecommons.org/licenses/by/2.5/" :rel "license"} [:i {:class "fab fa-creative-commons"}] "&nbsp;" [:i {:class "fab fa-creative-commons-by"}]]]
       "&nbsp;"]]]
    [:p
-    [:a.link {:href "http://www.netart.today/"}
+    [:a.link {:href "https://www.broken.gallery/"}
       "Gallery 404"] " collects and displays screenshots and hyperlinks to prominent net.art artworks on the world wide web. These links point to a place where net.art "
     [:em "happened"] ". The links are displayed along side of more traditional media: written biographical information and images of the artwork’s current state."]
     [:p "The holdings of Gallery 404 no longer function as the artists originally intended. Each artwork has yielded to the passing of time. In a medium where calculations are made at unimaginable speeds, time itself seems to pass faster. Some of these artworks took less than a decade to decay into unrecognizable states."]
