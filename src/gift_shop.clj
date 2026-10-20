@@ -8,7 +8,7 @@
     [:img.db.ba.b--black-10 {:alt img-alt :title img-alt :src (str root img-url) :property "contentUrl"}]]
    [:figcaption
     [:small [:i img-alt] "&nbsp;"]]
-   [:meta {:property "acquireLicensePage" :content "https://schmud.de/pages/about.html"}]])
+   [:link {:property "acquireLicensePage" :href "https://schmud.de/pages/about.html"}]])
 
 (defn make-tags [tags]
   (->

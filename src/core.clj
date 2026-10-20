@@ -10,6 +10,7 @@
 
 (def artworks (edn/read-string (slurp "resources/art.edn")))
 (def metadata {:domain "netart.today"})
+(def site-url "https://www.broken.gallery/")
 (def jodi "https://asdfg.jodi.org/-------------------------------/-------------------------------/-------------------------------/-------------------------------/-----------------------401qe663/vb663e.html")
 (def analytics [:script {:data-goatcounter "https://gallery404.goatcounter.com/count"
                          :async true :src "//gc.zgo.at/count.js"}])
@@ -112,20 +113,23 @@
          "&nbsp;"
          [:a.link {:href (:url art)}  "retrieved " (:retrieved art)]]
         [:i (:title art)] "&nbsp;"]
-       [:link {:property "acquireLicensePage" :href "https://schmud.de/pages/about.html"}]]]
+       [:link {:property "acquireLicensePage" :href "https://schmud.de/pages/about.html"}]
+       [:link {:property "about" :href (:url art)}]]]
      ;; info
-     [:div.fn.fl-ns.w-40-l.pt3.pt0-l
-      [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2  (:title art)]
+     [:div.fn.fl-ns.w-40-l.pt3.pt0-l {:vocab "http://schema.org/" :about (:url art) :typeof "VisualArtwork"}
+      [:link {:property "url" :href (:url art)}]
+      [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2 {:property "name"} (:title art)]
       [:div
-       [:p.f3.mid-gray.lh-title (:artist art) [:br ]
-        [:time.f6.ttu.tracked.gray (:date art) ]]
-       [:blockquote.ml0.mt0.pl3.black-90.bl.bw2.b--blue [:p (:desc art)]
+       [:p.f3.mid-gray.lh-title [:span {:property "creator"} (:artist art)] [:br ]
+        (let [year (re-find #"\d{4}" (str (:date art)))]
+          [:time.f6.ttu.tracked.gray (when year {:property "dateCreated" :datetime year :content year}) (:date art)])]
+       [:blockquote.ml0.mt0.pl3.black-90.bl.bw2.b--blue [:div.mv3 {:property "description"} (:desc art)]
         [:cite.f6.ttu.tracked.fs-normal " ~ " [:a.link {:href (:desc-source art)} " source"]]]
        [:p "Original link via " [:a.link {:href (:link-from-url art)} (:link-from art)]
         (when current-archive
           [:span
            ", currently archived at "
-           [:a.link {:href (:current-archive-url art)} current-archive]])]]]
+           [:a.link {:href (:current-archive-url art) :property "archivedAt"} current-archive]])]]]
      ]))
 
 
@@ -165,13 +169,15 @@
    {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
    (head-template "resources/")
    [:body.sans-serif
-    [:main.flex.flex-column.min-vh-100
-     [:h1.f-headline.lh-solid.mb0 "Gallery 404"]
-     [:h2.f3.ph3.lh-solid.mt1 "The Museum of Broken net.art Art"]
+    [:main.flex.flex-column.min-vh-100 {:vocab "http://schema.org/" :about site-url :typeof "WebSite"}
+     [:link {:property "url" :href site-url}]
+     [:span {:property "creator" :typeof "Person"} [:meta {:property "name" :content "David Schmudde"}]]
+     [:h1.f-headline.lh-solid.mb0 {:property "name"} "Gallery 404"]
+     [:h2.f3.ph3.lh-solid.mt1 {:property "alternativeHeadline"} "The Museum of Broken net.art Art"]
      [:section.flex-auto
       [:div.pa3 (dispatch-link :first-artwork)]
       [:div.pa3
-       [:p.w-50-ns "The culture of a generation, lost to time."]
+       [:p.w-50-ns {:property "description"} "The culture of a generation, lost to time."]
        [:p.w-50-ns [:a.link.underline {:href "pages/about.html"} "About Gallery 404"] " and the preservation of digital artifacts."]
        [:br]
        [:div
@@ -179,7 +185,9 @@
         [:img.ph2 {:src (str "resources/img/icons/netscape-plugin.gif") :alt "netscape missing plugin icon" :class "icons"}]
         (map cited-icon cited-icons)]]]
      [:footer
-      [:p.ph3 [:i {:class "fas fa-palette"}] " The flashing net.art is " [:em "ASDFG.JODI.ORG"] " by " [:strong "JODI"] " (1998)."]]
+      [:p.ph3 {:vocab "http://schema.org/" :about "https://asdfg.jodi.org/" :typeof "VisualArtwork"}
+       [:link {:property "url" :href "https://asdfg.jodi.org/"}]
+       [:i {:class "fas fa-palette"}] " The flashing net.art is " [:em {:property "name"} "ASDFG.JODI.ORG"] " by " [:strong {:property "creator"} "JODI"] " (" [:span {:property "dateCreated"} "1998"] ")."]]
      [:div.h-100-ns.absolute-ns.top-0-ns.w-100 {:class "jodi"}
       [:iframe.h-100-ns.fr-ns {:src jodi :width 300 :title "JODI"}]]]
 
