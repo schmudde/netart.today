@@ -54,12 +54,15 @@
                 {:href "about.html"} "About"]
                [:a.f5.dib.ph2.link.dim
                 {:href "gift-shop.html"} "Gift Shop"]]]
-             [:div.tc {:property "license"}
+             [:div.tc {:vocab "http://schema.org/"}
               [:small
                [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"}
                 [:i {:class "fab fa-creative-commons"}] "&nbsp;"
                 [:i {:class "fab fa-creative-commons-by"}]]
-               [:span " David Schmudde 2025"]]]
+               " "
+               [:span {:property "copyrightHolder" :typeof "Person"} [:span {:property "name"} "David Schmudde"]]
+               " "
+               [:span {:property "copyrightYear"} "2026"]]]
              [:div.tc.mt3
               [:div
                [:a.f5.dib.ph2.link.dim

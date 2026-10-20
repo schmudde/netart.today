@@ -1,10 +1,10 @@
 (ns gift-shop
-  (:require [clojure.string :refer [lower-case]]
+  (:require [clojure.string :refer [lower-case join]]
             [clojure.edn :as edn]))
 
 (defn make-shop-image [root {resource-url :resource-url img-url :img-url img-alt :img-alt item-name :item-name}]
   [:figure.db.gift-shop-image.center {:vocab "http://schema.org/" :typeof "ImageObject"}
-   [:a.db.center.pb1.black.link.dim {:href resource-url}
+   [:a.db.center.pb1.black.link.dim {:href resource-url :property "about"}
     [:img.db.ba.b--black-10 {:alt img-alt :title img-alt :src (str root img-url) :property "contentUrl"}]]
    [:figcaption
     [:small [:i img-alt] "&nbsp;"]]
@@ -15,18 +15,18 @@
    (mapv #(str "#" (lower-case %) ", ") (butlast tags))
    (conj (str "#" (lower-case (last tags))))))
 
-(defn make-shop-info [root {item-name :item-name attr :attribution medium :medium desc :description download :download license :license license-url :license-url year :year}]
-  [:div.pb6.pb0-m.pb0-l
-   [:h2.lh-copy item-name]
-   [:p "by " [:strong attr] (when year (format " (%d)" year))]
-   [:small [:i {:class "fa fa-tags"}] "&nbsp;" (reduce str (make-tags medium))]
-   [:p desc]
+(defn make-shop-info [root {item-name :item-name attr :attribution medium :medium desc :description download :download license :license license-url :license-url year :year resource-url :resource-url}]
+  [:div.pb6.pb0-m.pb0-l {:vocab "http://schema.org/" :about resource-url :typeof "CreativeWork"}
+   [:h2.lh-copy {:property "name"} item-name]
+   [:p "by " [:strong {:property "creator"} attr] (when year [:span " (" [:span {:property "dateCreated"} year] ")"])]
+   [:small {:property "keywords" :content (join ", " medium)} [:i {:class "fa fa-tags"}] "&nbsp;" (reduce str (make-tags medium))]
+   [:div.mv3 {:property "description"} desc]
    (when download
      [:p.butt
       [:a.f6.link.dim.br3.ph3.pv2.mb2.dib.white.bg-dark-blue {:href (str root download)}
        [:i {:class "fa fa-download"}]
        "&nbsp; Download"]])
-   [:small [:i {:class "fas fa-balance-scale"}] "&nbsp;" [:a.link {:href license-url} license]]])
+   [:small [:i {:class "fas fa-balance-scale"}] "&nbsp;" [:a.link {:href license-url :property "license"} license]]])
 
 (defn gift-shop [root]
   (let [shop-items (edn/read-string (slurp "resources/gift-shop.edn"))
