@@ -76,7 +76,44 @@
                 {:href "mailto:d@schmud.de"}
                 [:i {:class "fas fa-envelope"}]]]]])
 
-(defn head-template [resource-url]
+(defn absolute-url [path]
+  (str site-url path))
+
+(defn summarize
+  "Plain-text excerpt for previews: strips HTML, keeps the first ~n characters at a word boundary."
+  [text n]
+  (let [plain (-> (str text)
+                  (str/replace #"<[^>]+>" " ")
+                  (str/replace #"&nbsp;" " ")
+                  (str/replace #"&(ldquo|rdquo);" "\"")
+                  (str/replace #"&(lsquo|rsquo);" "'")
+                  (str/replace #"&amp;" "&")
+                  (str/replace #"\s+" " ")
+                  str/trim)]
+    (if (<= (count plain) n)
+      plain
+      (str (str/replace (subs plain 0 n) #"\s+\S*$" "") "…"))))
+
+(def default-og
+  {:path ""
+   :title "Gallery 404"
+   :description "The culture of a generation, lost to time."
+   :image (u/get-image-url "resources/" (first artworks))})
+
+(defn artwork-og [art filename]
+  (let [year (re-find #"\d{4}" (str (:date art)))
+        artist (str/trim (str (:artist art)))]
+    {:path (str "pages/" filename)
+     :title (str (:title art)
+                 (when (seq artist) (str " by " artist))
+                 (when year (str " (" year ")")))
+     :description (summarize (:desc art) 200)
+     :image (u/get-image-url "resources/" art)}))
+
+(defn head-template
+  ([resource-url] (head-template resource-url {}))
+  ([resource-url og]
+  (let [{:keys [path title description image]} (merge default-og og)]
   [:head
    [:title "Gallery 404"]
    [:meta {:charset "utf-8"}]
@@ -90,13 +127,14 @@
    [:meta {:name "keywords" :content "netart rhizome Monoskop"}]
    [:meta {:name "twitter:card" :content "summary_large_image"}]
    [:meta {:name "twitter:creator" :content "@dschmudde"}]
-   [:meta {:property "og:url" :content site-url}]
-   [:meta {:property "og:title" :content "Gallery 404"}]
+   [:meta {:property "og:site_name" :content "Gallery 404"}]
+   [:meta {:property "og:url" :content (absolute-url path)}]
+   [:meta {:property "og:title" :content title}]
    [:meta {:property "og:author" :content "David Schmudde"}]
-   [:meta {:property "og:image" :content (str site-url (str/replace (u/get-image-url resource-url (first artworks)) #"^(\.\./)+" ""))}]
-   [:meta {:property "og:description" :content "The culture of a generation, lost to time."}]
+   [:meta {:property "og:image" :content (absolute-url image)}]
+   [:meta {:property "og:description" :content description}]
    [:link {:rel "stylesheet" :href (str resource-url "css/tachyons.min.css")}]
-   [:link {:rel "stylesheet" :href (str resource-url "css/netart.css")}]])
+   [:link {:rel "stylesheet" :href (str resource-url "css/netart.css")}]])))
 
 (defn art->hiccup [resource-url art]
   (let [img-url (u/get-image-url resource-url art)
@@ -197,7 +235,11 @@
 (defn make-about-page []
   (page/html5
    {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
-   (head-template "../resources/")
+   (head-template "../resources/"
+                  {:path "pages/about.html"
+                   :title "About Gallery 404"
+                   :description "Welcome to Gallery 404. We exclusively specialize in broken artworks. None of the works are for sale. You will find the exit just past the gift shop."
+                   :image "resources/img/netartdiagram.gif"})
    [:body.sans-serif
     [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
      header
@@ -213,7 +255,11 @@
 (defn make-gift-shop-page []
   (page/html5
    {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
-   (head-template "../resources/")
+   (head-template "../resources/"
+                  {:path "pages/gift-shop.html"
+                   :title "The Gift Shop at Gallery 404"
+                   :description "The Shop of Unbroken Digital Artifacts in the Commons."
+                   :image "resources/gift-shop/img/gallery-404-poster.png"})
    [:body.sans-serif
     [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
      header-gift-shop
@@ -226,19 +272,19 @@
     analytics]))
 
 (defn make-recycling-page
-  ([f]
+  ([og f]
    (page/html5
     {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
-    (head-template "../resources/")
+    (head-template "../resources/" og)
     [:body.sans-serif
      [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
       [:section.flex-auto.ph5-ns.ph3
        (f "../resources/")]]
      analytics]))
-  ([f path-to-artifact]
+  ([og f path-to-artifact]
    (page/html5
     {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
-    (head-template "../resources/")
+    (head-template "../resources/" og)
     [:body.sans-serif
      [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
       [:section.flex-auto.ph5-ns.ph3
@@ -250,18 +296,44 @@
   (doall (map #(let [destination (format "pages/restoration-project-final-%s.html" %1)
                      source (format "resources/img/restoration-project/%s/light-on-net.html" %1)]
                  (println destination) ;; build log
-                 (spit destination (make-recycling-page restore/final source)))
+                 (spit destination (make-recycling-page
+                                    {:path (str/replace destination #"^/" "")
+                                     :title "The net.art Restoration Project: Restoration Complete!"
+                                     :description "Light on the Net Project by Masaki Fujihata (1996)."
+                                     :image (format "resources/img/restoration-project/%s.png" %1)}
+                                    restore/final source)))
               (range 1 (inc no-of-artifacts) 1)))
-  (spit "pages/restoration-project-artifacts.html" (make-recycling-page (partial restore/artifacts no-of-artifacts)))
-  (spit "pages/restoration-project-recycling.html" (make-recycling-page restore/restoring))
-  (spit "pages/restoration-project-materials.html" (make-recycling-page restore/materials))
-  (spit "pages/restoration-project.html" (make-recycling-page restore/intro))))
+  (spit "pages/restoration-project-artifacts.html"
+        (make-recycling-page {:path "pages/restoration-project-artifacts.html"
+                              :title "The net.art Restoration Project: Possible Objects"
+                              :description (summarize "Our algorithms have created several options for a restored Light on the Net Project. Help train the LLM by selecting the best representation of this net.art classic." 200)
+                              :image "resources/img/restoration-project/1.png"}
+                             (partial restore/artifacts no-of-artifacts)))
+  (spit "pages/restoration-project-recycling.html"
+        (make-recycling-page {:path "pages/restoration-project-recycling.html"
+                              :title "The net.art Restoration Project: Restore"
+                              :description "LLMs have already looted our culture. In the absence of cultural governance, we have no choice but to relinquish the management of our digital artifacts to artificial intelligence."}
+                             restore/restoring))
+  (spit "pages/restoration-project-materials.html"
+        (make-recycling-page {:path "pages/restoration-project-materials.html"
+                              :title "The net.art Restoration Project: Materials"
+                              :description "Here is a condensed inventory of the materials used to build Light on the Net Project. A Large Language Model (LLM) will use what it can to restore the artwork."}
+                             restore/materials))
+  (spit "pages/restoration-project.html"
+        (make-recycling-page {:path "pages/restoration-project.html"
+                              :title "The net.art Restoration Project"
+                              :description "The world wide web is in decay. Much of what was created over its lifetime has disappeared from neglect or deliberate corporate purging."}
+                             restore/intro))))
 
 
 (defn make-windows-into-windows-page []
   (page/html5
       {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
-      (head-template "../resources/")
+      (head-template "../resources/"
+                     {:path "pages/windows-into-windows.html"
+                      :title "Windows Into Windows"
+                      :description "“Windows Into Windows” is a set of modified public domain artworks from the last millennium that each depict the view from the artist's window."
+                      :image "resources/wiw/img/overwrite-simulation-1.gif"})
       [:body.sans-serif
        [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
         header-gift-shop
@@ -276,7 +348,11 @@
 (defn make-news-page []
   (page/html5
       {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
-      (head-template "../resources/")
+      (head-template "../resources/"
+                     {:path "pages/press-release.html"
+                      :title "Gallery 404 Opens a Gift Shop Featuring a Unique Lineup of Artists and Scientists"
+                      :description "Gallery 404, an online art gallery dealing exclusively in broken net.art artworks, has opened a gift shop spotlighting the significance of the digital commons."
+                      :image "resources/gift-shop/img/gallery-404-poster.png"})
       [:body.sans-serif
        [:main.flex.flex-column.min-vh-100 ;; .ph5-ns.ph3.pv2
         header-gift-shop
@@ -295,7 +371,7 @@
     (spit (str "pages/" filename)
           (page/html5
            {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
-           (head-template "../resources/")
+           (head-template "../resources/" (artwork-og artwork filename))
            [:body.sans-serif
             [:main.flex.flex-column.min-vh-100
              header
