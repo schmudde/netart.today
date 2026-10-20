@@ -107,12 +107,12 @@
        [:img {:alt (:title art) :title resource-url :src img-url :property "contentUrl"}]
        [:figcaption
         [:small.fr
-         [:span {:property "license"}
+         [:span
           [:a.link {:href "https://creativecommons.org/licenses/by/4.0/" :rel "license"} [:i {:class "fab fa-creative-commons"}] "&nbsp;" [:i {:class "fab fa-creative-commons-by"}]]]
          "&nbsp;"
          [:a.link {:href (:url art)}  "retrieved " (:retrieved art)]]
         [:i (:title art)] "&nbsp;"]
-       [:meta {:property "acquireLicensePage" :content "https://schmud.de/pages/about.html"}]]]
+       [:link {:property "acquireLicensePage" :href "https://schmud.de/pages/about.html"}]]]
      ;; info
      [:div.fn.fl-ns.w-40-l.pt3.pt0-l
       [:h2.f2.lh-title.fw9.mb3.mt0.pt3.bt.bw2  (:title art)]
