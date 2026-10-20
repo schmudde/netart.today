@@ -126,6 +126,37 @@
      ]))
 
 
+(def chromium-license
+  {:credit "The Chromium Authors" :license "BSD-3" :license-url "https://github.com/chromium/chromium/blob/main/LICENSE" :brand "fa-chrome"})
+
+(def mozilla-license
+  {:credit "Mozilla" :license "Fair use" :license-url "https://www-archive.mozilla.org/foundation/trademarks/faq" :brand "fa-firefox-browser"})
+
+(def cited-icons
+  [(merge chromium-license
+          {:file "chrome-error_network_generic-trimmed.png" :alt "chrome can't find page icon"
+           :source "https://github.com/chromium/chromium/blob/main/components/resources/default_200_percent/neterror/error_network_generic.png"
+           :citation "The Chromium Authors, “error_network_generic.png” (200% scale), in Chromium Source Repository, GitHub, n.d. Accessed: Oct. 2026."})
+   (merge mozilla-license
+          {:file "mozilla-error-server-not-found-trimmed.svg" :alt "firefox can't find page icon"
+           :source "https://bugzilla.mozilla.org/attachment.cgi?id=8861720"
+           :citation "Mozilla, “mozilla-error-server-not-found.svg,” attachment to Bug 1358913, “[ux] error: server not found copy, design and illustration update,” Mozilla Bugzilla, 2017. Accessed: Oct. 2026."})
+   (merge chromium-license
+          {:file "chrome-favicon_sad_tab-trimmed.png" :alt "chrome crash icon"
+           :source "https://github.com/chromium/chromium/blob/main/components/resources/default_300_percent/crash/favicon_sad_tab.png"
+           :citation "The Chromium Authors, “favicon_sad_tab.png” (300% scale), in Chromium Source Repository, GitHub, n.d. Accessed: Oct. 2026."})
+   (merge chromium-license
+          {:file "chrome-200-error-offline-trimmed.png" :alt "chrome error offline icon"
+           :source "https://github.com/chromium/chromium/blob/main/components/neterror/resources/images/default_200_percent/offline/200-error-offline.png"
+           :citation "The Chromium Authors, “200-error-offline.png” (200% scale), in Chromium Source Repository, GitHub, n.d. Accessed: Oct. 2026."})])
+
+(defn cited-icon [{:keys [file alt source citation credit license license-url]}]
+  [:span {:vocab "http://schema.org/" :typeof "ImageObject"}
+   [:a {:href source :title (str citation " License: " license ".") :target "_blank" :rel "noopener noreferrer" :property "isBasedOn"}
+    [:img.ph2 {:src (str "resources/img/icons/cited/" file) :alt alt :class "icons" :property "contentUrl"}]]
+   [:link {:href license-url :rel "license" :property "license"}]
+   [:meta {:property "creditText" :content credit}]])
+
 (defn make-index-page [artwork]
   (page/html5
    {:lang "en" :itemscope "itemscope" :itemtype "http://schema.org/WebPage"}
@@ -143,10 +174,7 @@
        [:div
         [:img.ph2 {:src (str "resources/img/icons/netscape.png") :alt "netscape missing image icon" :class "icons"}]
         [:img.ph2 {:src (str "resources/img/icons/netscape-plugin.gif") :alt "netscape missing plugin icon" :class "icons"}]
-        [:img.ph2 {:src (str "resources/img/icons/cited/chrome-error_network_generic-trimmed.png") :alt "chrome can't find page icon" :class "icons"}]
-        [:img.ph2 {:src (str "resources/img/icons/cited/mozilla-error-server-not-found-trimmed.svg") :alt "firefox can't find page icon" :class "icons"}]
-        [:img.ph2 {:src (str "resources/img/icons/cited/chrome-favicon_sad_tab-trimmed.png") :alt "chrome crash icon" :class "icons"}]
-        [:img.ph2 {:src (str "resources/img/icons/cited/chrome-200-error-offline-trimmed.png") :alt "chrome error offline icon" :class "icons"}]]]]
+        (map cited-icon cited-icons)]]]
      [:footer
       [:p.ph3 [:i {:class "fas fa-palette"}] " The flashing net.art is " [:em "ASDFG.JODI.ORG"] " by " [:strong "JODI"] " (1998)."]]
      [:div.h-100-ns.absolute-ns.top-0-ns.w-100 {:class "jodi"}

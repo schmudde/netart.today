@@ -122,6 +122,14 @@ There are also interesting opportunities emerging on IPFS. For example, [The Ham
 - Keywords: fine art, internet history, net art, art preservation, telematic art
 - [Long tail keywords](https://keywordtool.io/): net art anthology, what is net art, what is net art, when did net.art begin, net artist, net art definition, net art examples, net art artists, net art exhibition
 
+# References
+
+- The Chromium Authors, “[200-disabled.png](https://github.com/chromium/chromium/blob/main/components/neterror/resources/images/default_200_percent/offline/200-disabled.png)”, in Chromium Source Repository, GitHub, n.d. Accessed: Oct. 2026. [Online]. License: [BSD-3](https://github.com/chromium/chromium/blob/main/LICENSE).
+- The Chromium Authors, “[200-error-offline.png](https://github.com/chromium/chromium/blob/main/components/neterror/resources/images/default_200_percent/offline/200-error-offline.png)”, in Chromium Source Repository, GitHub, n.d. Accessed: Oct. 2026. [Online]. License: [BSD-3](https://github.com/chromium/chromium/blob/main/LICENSE).
+- The Chromium Authors, “[error_network_generic.png](https://github.com/chromium/chromium/blob/main/components/resources/default_200_percent/neterror/error_network_generic.png)”, in Chromium Source Repository, GitHub, n.d. Accessed: Oct. 2026. [Online]. License: [BSD-3](https://github.com/chromium/chromium/blob/main/LICENSE).
+- The Chromium Authors, “[favicon_sad_tab.png](https://github.com/chromium/chromium/blob/main/components/resources/default_300_percent/crash/favicon_sad_tab.png)”, in Chromium Source Repository, GitHub, n.d. Accessed: Oct. 2026. [Online]. License: [BSD-3](https://github.com/chromium/chromium/blob/main/LICENSE).
+- Mozilla, “[mozilla-error-server-not-found.svg](https://bugzilla.mozilla.org/attachment.cgi?id=8861720),” attachment to [Bug 1358913](https://bugzilla.mozilla.org/show_bug.cgi?id=1358913), “[ux] error: server not found copy, design and illustration update,” Mozilla Bugzilla, 2017. Accessed: Oct. 2026. [Online]. License: "[Approval is not required for the following fair uses of the Mozilla marks](https://www-archive.mozilla.org/foundation/trademarks/faq)".
+
 # TODO
 
 - Add footer link to home and index (utility links), add index, and add exhibit numbers for each artwork (e.g. 3/31, 4/31, etc...)
